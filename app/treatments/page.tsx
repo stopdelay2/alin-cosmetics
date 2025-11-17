@@ -16,63 +16,76 @@ export const metadata: Metadata = {
 
 export default function TreatmentsPage() {
   return (
-    <div className="flex flex-col">
-      {/* Hero */}
-      <section className="bg-gradient-to-b from-cream-100 to-white py-20 relative overflow-hidden">
-        <div className="absolute top-10 left-10 w-32 h-32 bg-gold-100 rounded-full opacity-20 blur-3xl" />
-        <div className="container mx-auto px-4 relative z-10">
-          <div className="max-w-4xl mx-auto text-center space-y-6">
-            <div className="h-px w-20 bg-gold-300 mb-6 mx-auto" />
-            <h1 className="text-4xl md:text-5xl font-playfair font-bold text-gray-800">
+    <div className="flex flex-col overflow-x-hidden">
+      {/* Hero - Minimalist Black */}
+      <section className="min-h-[60vh] bg-black text-white relative overflow-hidden flex items-center justify-center">
+        {/* Decorative circles */}
+        <div className="absolute top-10 right-10 w-40 h-40 border-2 border-white/20 rounded-full" />
+        <div className="absolute bottom-10 left-10 w-64 h-64 border border-white/10 rounded-full" />
+        <div className="absolute top-1/3 right-1/4 w-32 h-32 bg-gold-400/10 rounded-full blur-2xl" />
+
+        <div className="container mx-auto px-6 md:px-8 lg:px-12 relative z-10">
+          <div className="max-w-4xl mx-auto text-center space-y-8">
+            <div className="flex items-center justify-center gap-4 mb-8">
+              <div className="h-px w-16 bg-white" />
+              <div className="w-3 h-3 bg-gold-400 rounded-full" />
+              <div className="h-px w-16 bg-white" />
+            </div>
+            <h1 className="text-5xl md:text-6xl lg:text-7xl font-playfair font-bold leading-tight">
               כל עור הוא עולם<br />לכן גם הטיפול שלך אישי
             </h1>
-            <p className="text-lg text-gray-600 leading-relaxed max-w-2xl mx-auto">
+            <p className="text-xl text-white/80 leading-relaxed max-w-2xl mx-auto">
               כל טיפול מותאם במיוחד לסוג העור שלך, למצבו ולמטרות שלך
             </p>
           </div>
         </div>
       </section>
 
-      {/* Treatments */}
-      <section className="py-20 bg-white">
-        <div className="container mx-auto px-4">
-          <div className="max-w-5xl mx-auto space-y-16">
+      {/* Treatments - White Background */}
+      <section className="py-32 bg-white relative">
+        {/* Decorative circles */}
+        <div className="absolute top-20 left-10 w-64 h-64 border border-black/5 rounded-full" />
+        <div className="absolute bottom-20 right-10 w-40 h-40 bg-gold-400/5 rounded-full blur-2xl" />
+
+        <div className="container mx-auto px-6 md:px-8 lg:px-12 relative z-10">
+          <div className="max-w-5xl mx-auto space-y-20">
             {treatments.map((treatment, index) => (
-              <div key={treatment.title}>
-                {index > 0 && <Separator className="my-12" />}
-                <div className="grid grid-cols-1 md:grid-cols-3 gap-8 items-start">
+              <div key={treatment.title} className="space-y-8">
+                {index > 0 && (
+                  <div className="h-px bg-black/10 my-16" />
+                )}
+
+                <div className="grid grid-cols-1 md:grid-cols-3 gap-12 items-start">
                   <div className="md:col-span-1">
-                    {/* Icon circle */}
-                    <div className="w-16 h-16 bg-cream-100 rounded-full flex items-center justify-center mb-6">
-                      <div className="w-12 h-12 bg-gold-100 rounded-full flex items-center justify-center">
-                        <Sparkles className="w-6 h-6 text-gold-400" />
-                      </div>
+                    {/* Number circle */}
+                    <div className="w-16 h-16 bg-black text-white rounded-full flex items-center justify-center mb-6">
+                      <span className="text-2xl font-bold">{index + 1}</span>
                     </div>
-                    <h2 className="text-3xl font-playfair font-bold text-gray-800 mb-2">
+                    <h2 className="text-4xl font-playfair font-bold text-black mb-4">
                       {treatment.title}
                     </h2>
+                    <div className="h-px w-12 bg-gold-400" />
                   </div>
-                  <div className="md:col-span-2 space-y-4">
-                    <p className="text-lg text-gray-700 leading-relaxed italic border-r-2 border-gold-200 pr-4">
+
+                  <div className="md:col-span-2 space-y-6">
+                    <p className="text-xl text-black/80 leading-relaxed italic">
                       {treatment.quote}
                     </p>
-                    <div className="space-y-3 pt-4">
+                    <div className="space-y-4 pt-4">
                       {treatment.benefits.map((benefit, i) => (
-                        <div key={i} className="flex items-start gap-3">
-                          <div className="w-2 h-2 rounded-full bg-gold-400 mt-2 flex-shrink-0" />
-                          <p className="text-gray-600">{benefit}</p>
+                        <div key={i} className="flex items-start gap-4">
+                          <div className="w-2 h-2 rounded-full bg-gold-400 mt-2.5 flex-shrink-0" />
+                          <p className="text-black/70 leading-relaxed">{benefit}</p>
                         </div>
                       ))}
                     </div>
                     {treatment.suitable && (
-                      <Card className="bg-cream-50 border-gold-100 mt-6">
-                        <CardContent className="p-4">
-                          <p className="text-sm text-gray-600">
-                            <span className="font-semibold">מתאים ל:</span>{" "}
-                            {treatment.suitable}
-                          </p>
-                        </CardContent>
-                      </Card>
+                      <div className="mt-6 p-6 border-2 border-black/10 rounded-none">
+                        <p className="text-sm text-black/70">
+                          <span className="font-bold text-black">מתאים ל: </span>
+                          {treatment.suitable}
+                        </p>
+                      </div>
                     )}
                   </div>
                 </div>
@@ -82,20 +95,28 @@ export default function TreatmentsPage() {
         </div>
       </section>
 
-      {/* CTA */}
-      <section className="py-20 bg-gradient-to-b from-cream-50 to-gold-100 relative overflow-hidden">
-        <div className="absolute top-10 right-20 w-24 h-24 border border-gold-200 rounded-full opacity-30" />
-        <div className="container mx-auto px-4 relative z-10">
-          <div className="max-w-3xl mx-auto text-center space-y-8">
-            <div className="h-px w-20 bg-gold-400 mb-6 mx-auto" />
-            <h2 className="text-3xl md:text-4xl font-playfair font-bold text-gray-800">
-              לא בטוחה איזה טיפול מתאים לך?
+      {/* CTA - Black Background */}
+      <section className="min-h-[60vh] bg-black text-white relative overflow-hidden flex items-center justify-center">
+        {/* Huge decorative circles */}
+        <div className="absolute top-1/2 left-1/2 w-[600px] h-[600px] border border-white/5 rounded-full -translate-x-1/2 -translate-y-1/2" />
+        <div className="absolute top-1/2 left-1/2 w-[400px] h-[400px] border border-white/10 rounded-full -translate-x-1/2 -translate-y-1/2" />
+
+        <div className="container mx-auto px-6 md:px-8 lg:px-12 relative z-10">
+          <div className="max-w-3xl mx-auto text-center space-y-10">
+            <div className="w-20 h-20 bg-gold-400 rounded-full mx-auto" />
+            <h2 className="text-4xl md:text-5xl font-playfair font-bold leading-tight">
+              לא בטוחה איזה טיפול<br />מתאים לך?
             </h2>
-            <p className="text-lg text-gray-700 leading-relaxed max-w-xl mx-auto">
+            <div className="h-px w-32 bg-white mx-auto" />
+            <p className="text-xl text-white/80 leading-relaxed max-w-xl mx-auto">
               בואי נדבר. אני כאן כדי לעזור לך למצוא את הטיפול המושלם לעור שלך
             </p>
-            <Button asChild size="lg">
-              <Link href="/contact">דברי איתי לבדוק איזה טיפול מתאים לך</Link>
+            <Button
+              asChild
+              size="lg"
+              className="bg-white text-black hover:bg-gold-400 hover:text-white border-0 text-lg px-12 py-6 h-auto mt-8"
+            >
+              <Link href="/contact">צרי קשר</Link>
             </Button>
           </div>
         </div>

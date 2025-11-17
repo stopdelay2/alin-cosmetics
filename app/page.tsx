@@ -356,22 +356,32 @@ const treatments = [
   {
     title: "רוזציאה ואדמומיות",
     description: "אם העור שלך מגיב לכל דבר זה המקום להרגיע אותו",
-    image: "/images/2.png",
+    image: "/images/roza.jpeg",
   },
   {
     title: "צלקות וכתמים",
     description: "כתמים לא צריכים להיות חלק ממך. נעבוד בהדרגה ובסבלנות עד שתראי שינוי",
-    image: "/images/2.png",
+    image: "/images/postakna.jpeg",
   },
   {
     title: "אנטי אייג'ינג עדין",
     description: "אין גיל לזוהר. מיצוק, לחות והחזרת הברק בלי חומרים קיצוניים",
-    image: "/images/2.png",
+    image: "/images/anti.jpeg",
   },
   {
     title: "מיקרונידלינג מבוקר",
     description: "טיפול מתקדם לעור עייף וצלקתי, עם יד עדינה ותוצאה שמרגישים",
-    image: "/images/2.png",
+    image: "/images/microble.jpeg",
+  },
+  {
+    title: "פוטותרפיה",
+    description: "טיפול באור לשיפור מרקם העור, הפחתת אדמומיות וטיפול באקנה",
+    image: "/images/phototerapi.jpeg",
+  },
+  {
+    title: "פיגמנטציה",
+    description: "טיפול ממוקד להבהרת כתמים כהים ואיחוד גוון העור",
+    image: "/images/pegment.jpeg",
   },
 ]
 

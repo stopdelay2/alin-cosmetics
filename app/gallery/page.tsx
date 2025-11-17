@@ -234,11 +234,11 @@ function GalleryGrid({ items }: { items: typeof allGalleryItems }) {
                 <p className="text-sm text-black/40 font-medium relative z-10">לפני</p>
               </div>
             </div>
-            <div className="p-6 space-y-3">
+            <div className="p-6 space-y-3 text-right">
               <h3 className="font-bold text-black text-lg">{item.title}</h3>
               <p className="text-sm text-black/70 leading-relaxed">{item.description}</p>
               {item.treatments && (
-                <div className="flex items-center gap-2 pt-2">
+                <div className="flex items-center gap-2 pt-2 flex-row-reverse justify-end">
                   <div className="w-2 h-2 bg-gold-400 rounded-full" />
                   <p className="text-xs text-black/60">
                     {item.treatments} טיפולים

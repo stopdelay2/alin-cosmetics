@@ -119,7 +119,7 @@ export default function AboutPage() {
             <div className="w-20 h-20 bg-gold-400 rounded-full mx-auto" />
 
             <h2 className="text-4xl md:text-5xl font-playfair font-bold">
-              הגישה שלי
+              התמדה, אמון וסבלנות
             </h2>
 
             <div className="h-px w-32 bg-white mx-auto" />
@@ -129,7 +129,7 @@ export default function AboutPage() {
                 "אם זה לא טוב לעור שלך - זה לא ייכנס לפנים שלך."
               </p>
               <p>
-                אני לא מאמינה ב"טיפולים קסם" או בהבטחות מוגזמות. כל עור הוא
+                אני לא מאמינה ב"טיפולי קסם" או בהבטחות מוגזמות. כל עור הוא
                 שונה, וצריך זמן, סבלנות וטיפול מותאם.
               </p>
               <p>
@@ -138,7 +138,7 @@ export default function AboutPage() {
                 איכוּתיים ועדינים.
               </p>
               <p>
-                הסטודיו שלי קטן, ביתי ושקט. כאן את לא עוד מספר בתור - את נשמעת,
+                בקליניקה שלי קטנה, ביתית ושקטה. כאן את לא עוד מספר בתור - את נשמעת,
                 נראית, ומקבלת בדיוק את הטיפול שהעור שלך צריך.
               </p>
             </div>

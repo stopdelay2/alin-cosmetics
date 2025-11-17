@@ -226,9 +226,9 @@ function GalleryGrid({ items }: { items: typeof allGalleryItems }) {
           <CardContent className="p-0 space-y-0">
             <div className="grid grid-cols-2 gap-0">
               <div className="aspect-square bg-gold-400/5 flex items-center justify-center border-l border-b border-black/10 relative overflow-hidden">
-                {item.afterImage ? (
+                {item.id === 1 ? (
                   <img
-                    src={item.afterImage}
+                    src="/images/1after.jpeg"
                     alt="אחרי הטיפול"
                     className="w-full h-full object-cover"
                     loading="eager"
@@ -241,9 +241,9 @@ function GalleryGrid({ items }: { items: typeof allGalleryItems }) {
                 )}
               </div>
               <div className="aspect-square bg-black/5 flex items-center justify-center border-b border-black/10 relative overflow-hidden">
-                {item.beforeImage ? (
+                {item.id === 1 ? (
                   <img
-                    src={item.beforeImage}
+                    src="/images/1before.jpeg"
                     alt="לפני הטיפול"
                     className="w-full h-full object-cover"
                     loading="eager"

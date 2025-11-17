@@ -161,7 +161,7 @@ export default function HomePage() {
             <InstagramEmbed url="https://www.instagram.com/p/DQ407GQjqfD/" />
             <InstagramEmbed url="https://www.instagram.com/p/DQqwUpoiG9P/" />
             <InstagramEmbed url="https://www.instagram.com/p/DQ9YeDSiN_G/" />
-            <InstagramEmbed url="https://www.instagram.com/reel/DRHGJtViD7u/" />
+            <InstagramEmbed url="https://www.instagram.com/p/DRHGJtViD7u/" />
           </div>
 
           {/* Follow Buttons */}

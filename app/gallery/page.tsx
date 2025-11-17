@@ -226,12 +226,32 @@ function GalleryGrid({ items }: { items: typeof allGalleryItems }) {
           <CardContent className="p-0 space-y-0">
             <div className="grid grid-cols-2 gap-0">
               <div className="aspect-square bg-gold-400/5 flex items-center justify-center border-l border-b border-black/10 relative overflow-hidden">
-                <div className="absolute inset-0 bg-gradient-to-br from-gold-400/5 to-transparent" />
-                <p className="text-sm text-black/40 font-medium relative z-10">אחרי</p>
+                {item.afterImage ? (
+                  <img
+                    src={item.afterImage}
+                    alt="אחרי הטיפול"
+                    className="w-full h-full object-cover"
+                  />
+                ) : (
+                  <>
+                    <div className="absolute inset-0 bg-gradient-to-br from-gold-400/5 to-transparent" />
+                    <p className="text-sm text-black/40 font-medium relative z-10">אחרי</p>
+                  </>
+                )}
               </div>
               <div className="aspect-square bg-black/5 flex items-center justify-center border-b border-black/10 relative overflow-hidden">
-                <div className="absolute inset-0 bg-gradient-to-br from-black/5 to-transparent" />
-                <p className="text-sm text-black/40 font-medium relative z-10">לפני</p>
+                {item.beforeImage ? (
+                  <img
+                    src={item.beforeImage}
+                    alt="לפני הטיפול"
+                    className="w-full h-full object-cover"
+                  />
+                ) : (
+                  <>
+                    <div className="absolute inset-0 bg-gradient-to-br from-black/5 to-transparent" />
+                    <p className="text-sm text-black/40 font-medium relative z-10">לפני</p>
+                  </>
+                )}
               </div>
             </div>
             <div className="p-6 space-y-3 text-right">
@@ -260,6 +280,8 @@ const allGalleryItems = [
     title: "שיפור באקנה דלקתית",
     description: "הפחתה משמעותית בפצעונות ואדמומיות",
     treatments: "6",
+    beforeImage: "/images/1before.jpeg",
+    afterImage: "/images/1after.jpeg",
   },
   {
     id: 2,

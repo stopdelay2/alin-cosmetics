@@ -8,7 +8,13 @@ export function WhatsAppButton() {
 
   const handleClick = () => {
     const url = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(message)}`
-    window.open(url, "_blank")
+
+    // Track conversion in Google Ads
+    if (typeof window !== 'undefined' && (window as any).gtag_report_conversion) {
+      (window as any).gtag_report_conversion(url)
+    } else {
+      window.open(url, "_blank")
+    }
   }
 
   return (

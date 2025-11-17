@@ -52,6 +52,26 @@ export default function RootLayout({
           `}
         </Script>
 
+        {/* Google Ads WhatsApp Conversion Tracking */}
+        <Script id="google-ads-whatsapp-conversion" strategy="afterInteractive">
+          {`
+            function gtag_report_conversion(url) {
+              var callback = function () {
+                if (typeof(url) != 'undefined') {
+                  window.location = url;
+                }
+              };
+              gtag('event', 'conversion', {
+                  'send_to': 'AW-17738121003/zmGOCPOT2MEbEKv-mIpC',
+                  'value': 1.0,
+                  'currency': 'ILS',
+                  'event_callback': callback
+              });
+              return false;
+            }
+          `}
+        </Script>
+
         <Navigation />
         <main className="min-h-screen">
           {children}

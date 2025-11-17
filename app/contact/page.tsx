@@ -25,7 +25,12 @@ export default function ContactPage() {
     const message = `שלום אלין,\n\nשמי ${formData.name}\n${formData.message}\n\nמספר הטלפון שלי: ${formData.phone}`
     const url = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(message)}`
 
-    window.open(url, "_blank")
+    // Track conversion in Google Ads
+    if (typeof window !== 'undefined' && (window as any).gtag_report_conversion) {
+      (window as any).gtag_report_conversion(url)
+    } else {
+      window.open(url, "_blank")
+    }
 
     // Reset form
     setTimeout(() => {
@@ -147,11 +152,16 @@ export default function ContactPage() {
 
                     <Card className="border-gold-100 hover:shadow-md transition-all duration-300">
                       <CardContent className="p-6">
-                        <a
-                          href="https://wa.me/972543175631"
-                          target="_blank"
-                          rel="noopener noreferrer"
-                          className="flex items-center gap-4 group"
+                        <button
+                          onClick={() => {
+                            const url = "https://wa.me/972543175631"
+                            if (typeof window !== 'undefined' && (window as any).gtag_report_conversion) {
+                              (window as any).gtag_report_conversion(url)
+                            } else {
+                              window.open(url, "_blank")
+                            }
+                          }}
+                          className="flex items-center gap-4 group w-full text-right"
                         >
                           <div className="w-12 h-12 rounded-full bg-[#25D366]/10 flex items-center justify-center group-hover:bg-[#25D366]/20 transition-colors">
                             <Mail className="w-5 h-5 text-[#25D366]" />
@@ -160,7 +170,7 @@ export default function ContactPage() {
                             <p className="font-medium text-gray-800">וואטסאפ</p>
                             <p className="text-gray-600">שלחי הודעה ישירה</p>
                           </div>
-                        </a>
+                        </button>
                       </CardContent>
                     </Card>
 

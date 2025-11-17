@@ -157,11 +157,10 @@ export default function HomePage() {
           </div>
 
           {/* Instagram Reels Grid */}
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 max-w-7xl mx-auto">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-6xl mx-auto">
             <InstagramEmbed url="https://www.instagram.com/p/DQ407GQjqfD/" />
             <InstagramEmbed url="https://www.instagram.com/p/DQqwUpoiG9P/" />
             <InstagramEmbed url="https://www.instagram.com/p/DQ9YeDSiN_G/" />
-            <InstagramEmbed url="https://www.instagram.com/p/DRHGJtViD7u/" />
           </div>
 
           {/* Follow Buttons */}

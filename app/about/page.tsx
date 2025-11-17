@@ -5,10 +5,10 @@ import { Button } from "@/components/ui/button"
 import { Heart, Star, Shield, Sparkles, Award, Users } from "lucide-react"
 
 export const metadata: Metadata = {
-  title: "אודות אלין | Alin Cosmetics",
+  title: "אודות אלין קוסמטיקס | Alin Cosmetics",
   description: "קוסמטיקאית רפואית מוסמכת בקריית ים. טיפולי פנים מקצועיים עם לב, בסביבה ביתית ושקטה.",
   openGraph: {
-    title: "אודות אלין | Alin Cosmetics",
+    title: "אודות אלין קוסמטיקס | Alin Cosmetics",
     description: "קוסמטיקאית רפואית מוסמכת בקריית ים. טיפולי פנים מקצועיים עם לב, בסביבה ביתית ושקטה.",
   },
 }

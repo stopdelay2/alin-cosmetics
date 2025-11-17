@@ -63,7 +63,7 @@ export default function HomePage() {
                 טיפול פנים עדין, מקצועי ומותאם אישית
               </p>
 
-              <div className="flex flex-col sm:flex-row gap-4 items-start pt-8 -mt-5 sm:mt-0">
+              <div className="flex flex-col sm:flex-row gap-4 items-start pt-2 sm:pt-8">
                 <Button
                   asChild
                   size="lg"

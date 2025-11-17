@@ -18,15 +18,22 @@ export function WhatsAppButton() {
   }
 
   return (
-    <button
-      onClick={handleClick}
-      className="fixed bottom-6 left-6 z-50 flex items-center justify-center w-16 h-16 bg-[#25D366] hover:bg-[#20BD5A] text-white rounded-full shadow-lg transition-all duration-300 hover:scale-110 animate-bounce-subtle"
-      aria-label="שליחת הודעה בוואטסאפ"
+    <div
+      className="fixed bottom-6 left-6 z-50 flex flex-col items-center gap-2"
       style={{
         animation: 'bounce-subtle 3s ease-in-out infinite'
       }}
     >
-      <MessageCircle className="w-8 h-8" />
+      <div className="bg-white text-black px-4 py-2 rounded-full shadow-lg text-sm font-medium whitespace-nowrap">
+        זמינה בשבילך
+      </div>
+      <button
+        onClick={handleClick}
+        className="flex items-center justify-center w-16 h-16 bg-[#25D366] hover:bg-[#20BD5A] text-white rounded-full shadow-lg transition-all duration-300 hover:scale-110"
+        aria-label="שליחת הודעה בוואטסאפ"
+      >
+        <MessageCircle className="w-8 h-8" />
+      </button>
       <style jsx>{`
         @keyframes bounce-subtle {
           0%, 100% {
@@ -37,6 +44,6 @@ export function WhatsAppButton() {
           }
         }
       `}</style>
-    </button>
+    </div>
   )
 }

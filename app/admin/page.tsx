@@ -4,6 +4,8 @@ import { Button } from "@/components/ui/button"
 import { FileText, Image, MessageSquare, Plus } from "lucide-react"
 import { prisma } from "@/lib/prisma"
 
+export const dynamic = 'force-dynamic'
+
 export default async function AdminPage() {
   const [postsCount, galleryCount, testimonialsCount] = await Promise.all([
     prisma.post.count(),

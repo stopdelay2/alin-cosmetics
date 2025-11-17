@@ -4,6 +4,8 @@ import { Card, CardContent } from "@/components/ui/card"
 import { Plus, Edit, Trash2 } from "lucide-react"
 import { prisma } from "@/lib/prisma"
 
+export const dynamic = 'force-dynamic'
+
 export default async function GalleryPage() {
   const items = await prisma.galleryItem.findMany({
     orderBy: { order: "asc" },

@@ -1,5 +1,6 @@
 import { Metadata } from "next"
 import Link from "next/link"
+import Image from "next/image"
 import { Button } from "@/components/ui/button"
 import { Heart, Star, Shield, Sparkles, Award, Users } from "lucide-react"
 
@@ -51,8 +52,14 @@ export default function AboutPage() {
               </div>
 
               <div className="relative">
-                <div className="aspect-[3/4] bg-white/5 border-2 border-white/20 rounded-none flex items-center justify-center backdrop-blur-sm">
-                  <p className="text-sm text-white/40">תמונת אלין</p>
+                <div className="aspect-[3/4] relative border-2 border-white/20 rounded-none overflow-hidden">
+                  <Image
+                    src="/images/alinalin.jpeg"
+                    alt="אלין - קוסמטיקאית רפואית"
+                    fill
+                    className="object-cover"
+                    priority
+                  />
                 </div>
                 <div className="absolute -bottom-6 -right-6 w-24 h-24 border border-gold-400 rounded-full" />
               </div>

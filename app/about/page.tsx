@@ -6,10 +6,10 @@ import { Heart, Star, Shield, Sparkles, Award, Users } from "lucide-react"
 
 export const metadata: Metadata = {
   title: "אודות אלין קוסמטיקס | Alin Cosmetics",
-  description: "קוסמטיקאית רפואית מוסמכת בקריית ים. טיפולי פנים מקצועיים עם לב, בסביבה ביתית ושקטה.",
+  description: "קוסמטיקאית מוסמכת בקריית ים. טיפולי פנים מקצועיים עם לב, בסביבה ביתית ושקטה.",
   openGraph: {
     title: "אודות אלין קוסמטיקס | Alin Cosmetics",
-    description: "קוסמטיקאית רפואית מוסמכת בקריית ים. טיפולי פנים מקצועיים עם לב, בסביבה ביתית ושקטה.",
+    description: "קוסמטיקאית מוסמכת בקריית ים. טיפולי פנים מקצועיים עם לב, בסביבה ביתית ושקטה.",
   },
 }
 
@@ -38,7 +38,7 @@ export default function AboutPage() {
 
                 <div className="text-xl text-white/80 leading-relaxed space-y-6">
                   <p>
-                    קוסמטיקאית רפואית מוסמכת עם תשוקה אמיתית לטיפול בעור.
+                    קוסמטיקאית מוסמכת עם תשוקה אמיתית לטיפול בעור.
                   </p>
                   <p>
                     אחרי שנים בתחום החלטתי לפתוח מקום קטן וביתי בקריית ים, מקום
@@ -55,7 +55,7 @@ export default function AboutPage() {
                 <div className="relative border-2 border-white/20 rounded-none overflow-hidden">
                   <img
                     src="/images/alinalin.jpeg"
-                    alt="אלין - קוסמטיקאית רפואית"
+                    alt="אלין - קוסמטיקאית מוסמכת"
                     className="w-full h-auto"
                     loading="eager"
                   />
@@ -230,7 +230,7 @@ const values = [
 const certifications = [
   {
     icon: <Award className="w-8 h-8 text-white" />,
-    text: "קוסמטיקאית רפואית מוסמכת",
+    text: "קוסמטיקאית מוסמכת",
   },
   {
     icon: <Sparkles className="w-8 h-8 text-white" />,

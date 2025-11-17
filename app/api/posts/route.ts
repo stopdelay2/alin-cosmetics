@@ -1,0 +1,41 @@
+import { NextRequest, NextResponse } from "next/server"
+import { prisma } from "@/lib/prisma"
+
+export async function GET() {
+  try {
+    const posts = await prisma.post.findMany({
+      where: { published: true },
+      orderBy: { createdAt: "desc" },
+    })
+    return NextResponse.json(posts)
+  } catch (error) {
+    return NextResponse.json(
+      { error: "Failed to fetch posts" },
+      { status: 500 }
+    )
+  }
+}
+
+export async function POST(request: NextRequest) {
+  try {
+    const body = await request.json()
+    const post = await prisma.post.create({
+      data: {
+        title: body.title,
+        slug: body.slug,
+        content: body.content,
+        excerpt: body.excerpt || null,
+        published: body.published || false,
+        metaTitle: body.metaTitle || null,
+        metaDescription: body.metaDescription || null,
+        ogImage: body.ogImage || null,
+      },
+    })
+    return NextResponse.json(post, { status: 201 })
+  } catch (error) {
+    return NextResponse.json(
+      { error: "Failed to create post" },
+      { status: 500 }
+    )
+  }
+}

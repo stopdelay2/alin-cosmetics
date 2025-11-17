@@ -1,8 +1,7 @@
 import { Metadata } from "next"
 import Link from "next/link"
 import { Button } from "@/components/ui/button"
-import { Card, CardContent } from "@/components/ui/card"
-import { Heart, Star, Shield, Sparkles } from "lucide-react"
+import { Heart, Star, Shield, Sparkles, Award, Users } from "lucide-react"
 
 export const metadata: Metadata = {
   title: "אודות אלין | Alin Cosmetics",
@@ -15,17 +14,28 @@ export const metadata: Metadata = {
 
 export default function AboutPage() {
   return (
-    <div className="flex flex-col">
-      {/* Hero */}
-      <section className="bg-gradient-to-b from-cream-100 to-white py-20">
-        <div className="container mx-auto px-4">
-          <div className="max-w-4xl mx-auto">
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
-              <div className="space-y-6">
-                <h1 className="text-4xl md:text-5xl font-playfair font-bold text-gray-800">
-                  שלום, אני אלין
+    <div className="flex flex-col overflow-x-hidden">
+      {/* Hero - Black Background */}
+      <section className="min-h-[70vh] bg-black text-white relative overflow-hidden flex items-center">
+        {/* Decorative circles */}
+        <div className="absolute top-10 left-10 w-40 h-40 border-2 border-white/20 rounded-full" />
+        <div className="absolute bottom-10 right-10 w-64 h-64 border border-white/10 rounded-full" />
+        <div className="absolute top-1/2 left-1/3 w-32 h-32 bg-gold-400/10 rounded-full blur-2xl" />
+
+        <div className="container mx-auto px-6 md:px-8 lg:px-12 relative z-10">
+          <div className="max-w-6xl mx-auto">
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-16 items-center">
+              <div className="space-y-8">
+                <div className="flex items-center gap-4 mb-8">
+                  <div className="h-px w-16 bg-white" />
+                  <div className="w-3 h-3 bg-gold-400 rounded-full" />
+                </div>
+
+                <h1 className="text-5xl md:text-6xl lg:text-7xl font-playfair font-bold leading-tight">
+                  שלום,<br />אני אלין
                 </h1>
-                <div className="text-lg text-gray-600 leading-relaxed space-y-4">
+
+                <div className="text-xl text-white/80 leading-relaxed space-y-6">
                   <p>
                     קוסמטיקאית רפואית מוסמכת עם תשוקה אמיתית לטיפול בעור.
                   </p>
@@ -39,55 +49,77 @@ export default function AboutPage() {
                   </p>
                 </div>
               </div>
+
               <div className="relative">
-                <div className="aspect-[3/4] bg-gradient-to-br from-gold-100 to-cream-100 rounded-lg flex items-center justify-center">
-                  <p className="text-sm text-gray-500">תמונת אלין</p>
+                <div className="aspect-[3/4] bg-white/5 border-2 border-white/20 rounded-none flex items-center justify-center backdrop-blur-sm">
+                  <p className="text-sm text-white/40">תמונת אלין</p>
                 </div>
+                <div className="absolute -bottom-6 -right-6 w-24 h-24 border border-gold-400 rounded-full" />
               </div>
             </div>
           </div>
         </div>
       </section>
 
-      {/* Values */}
-      <section className="py-20 bg-white">
-        <div className="container mx-auto px-4">
+      {/* Values - White Background */}
+      <section className="py-32 bg-white relative">
+        {/* Decorative circles */}
+        <div className="absolute top-20 right-10 w-64 h-64 border border-black/5 rounded-full" />
+        <div className="absolute bottom-20 left-10 w-40 h-40 bg-gold-400/5 rounded-full blur-2xl" />
+
+        <div className="container mx-auto px-6 md:px-8 lg:px-12 relative z-10">
           <div className="max-w-5xl mx-auto">
-            <h2 className="text-3xl md:text-4xl font-playfair font-bold text-gray-800 text-center mb-12">
-              הערכים שלי
-            </h2>
+            <div className="text-center mb-16">
+              <div className="flex items-center justify-center gap-4 mb-6">
+                <div className="w-12 h-12 border-2 border-black rounded-full" />
+                <h2 className="text-4xl md:text-5xl font-playfair font-bold text-black">
+                  הערכים שלי
+                </h2>
+                <div className="h-px w-20 bg-black" />
+              </div>
+            </div>
+
             <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-              {values.map((value) => (
-                <Card key={value.title} className="border-gold-100 bg-cream-50">
-                  <CardContent className="p-6 space-y-3">
-                    <div className="flex items-center gap-3">
-                      <div className="w-12 h-12 rounded-full bg-gold-100 flex items-center justify-center">
-                        {value.icon}
-                      </div>
-                      <h3 className="text-xl font-playfair font-semibold text-gray-800">
-                        {value.title}
-                      </h3>
+              {values.map((value, index) => (
+                <div
+                  key={value.title}
+                  className="p-8 border-2 border-black/10 hover:border-gold-400 transition-all duration-300 space-y-4 group"
+                >
+                  <div className="flex items-center gap-4">
+                    <div className="w-12 h-12 rounded-full bg-black group-hover:bg-gold-400 flex items-center justify-center transition-colors">
+                      {value.icon}
                     </div>
-                    <p className="text-gray-600 leading-relaxed">
-                      {value.description}
-                    </p>
-                  </CardContent>
-                </Card>
+                    <h3 className="text-2xl font-playfair font-bold text-black">
+                      {value.title}
+                    </h3>
+                  </div>
+                  <p className="text-black/70 leading-relaxed">
+                    {value.description}
+                  </p>
+                </div>
               ))}
             </div>
           </div>
         </div>
       </section>
 
-      {/* Philosophy */}
-      <section className="py-20 bg-cream-50">
-        <div className="container mx-auto px-4">
-          <div className="max-w-3xl mx-auto text-center space-y-8">
-            <h2 className="text-3xl md:text-4xl font-playfair font-bold text-gray-800">
+      {/* Philosophy - Black Background */}
+      <section className="py-32 bg-black text-white relative overflow-hidden">
+        {/* Decorative circles */}
+        <div className="absolute top-1/2 left-1/2 w-[600px] h-[600px] border border-white/5 rounded-full -translate-x-1/2 -translate-y-1/2" />
+
+        <div className="container mx-auto px-6 md:px-8 lg:px-12 relative z-10">
+          <div className="max-w-3xl mx-auto text-center space-y-10">
+            <div className="w-20 h-20 bg-gold-400 rounded-full mx-auto" />
+
+            <h2 className="text-4xl md:text-5xl font-playfair font-bold">
               הגישה שלי
             </h2>
-            <div className="space-y-6 text-lg text-gray-700 leading-relaxed">
-              <p className="italic">
+
+            <div className="h-px w-32 bg-white mx-auto" />
+
+            <div className="space-y-8 text-xl text-white/80 leading-relaxed">
+              <p className="italic text-2xl text-white">
                 "אם זה לא טוב לעור שלך - זה לא ייכנס לפנים שלך."
               </p>
               <p>
@@ -108,40 +140,54 @@ export default function AboutPage() {
         </div>
       </section>
 
-      {/* Certifications */}
-      <section className="py-20 bg-white">
-        <div className="container mx-auto px-4">
-          <div className="max-w-4xl mx-auto">
-            <h2 className="text-3xl font-playfair font-bold text-gray-800 text-center mb-12">
-              הסמכות והתמחויות
-            </h2>
+      {/* Certifications - White Background */}
+      <section className="py-32 bg-white relative">
+        <div className="container mx-auto px-6 md:px-8 lg:px-12">
+          <div className="max-w-6xl mx-auto">
+            <div className="text-center mb-16">
+              <h2 className="text-4xl md:text-5xl font-playfair font-bold text-black mb-4">
+                הסמכות והתמחויות
+              </h2>
+              <div className="h-px w-20 bg-gold-400 mx-auto" />
+            </div>
+
             <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
               {certifications.map((cert, index) => (
-                <Card key={index} className="border-gold-100 text-center">
-                  <CardContent className="p-6 space-y-2">
-                    <div className="text-2xl mb-2">{cert.icon}</div>
-                    <p className="text-sm text-gray-700 font-medium">
-                      {cert.text}
-                    </p>
-                  </CardContent>
-                </Card>
+                <div
+                  key={index}
+                  className="p-6 border-2 border-black/10 text-center space-y-4 hover:bg-black hover:text-white transition-all duration-300 group"
+                >
+                  <div className="w-16 h-16 rounded-full bg-black group-hover:bg-gold-400 flex items-center justify-center mx-auto transition-colors">
+                    {cert.icon}
+                  </div>
+                  <p className="text-sm font-medium leading-relaxed">
+                    {cert.text}
+                  </p>
+                </div>
               ))}
             </div>
           </div>
         </div>
       </section>
 
-      {/* CTA */}
-      <section className="py-20 bg-gradient-to-b from-cream-50 to-gold-100">
-        <div className="container mx-auto px-4">
-          <div className="max-w-3xl mx-auto text-center space-y-8">
-            <h2 className="text-3xl md:text-4xl font-playfair font-bold text-gray-800">
+      {/* CTA - Black Background */}
+      <section className="min-h-[60vh] bg-black text-white relative overflow-hidden flex items-center justify-center">
+        <div className="absolute top-1/2 left-1/2 w-[400px] h-[400px] border border-white/10 rounded-full -translate-x-1/2 -translate-y-1/2" />
+
+        <div className="container mx-auto px-6 md:px-8 lg:px-12 relative z-10">
+          <div className="max-w-3xl mx-auto text-center space-y-10">
+            <h2 className="text-4xl md:text-5xl font-playfair font-bold">
               בואי נכיר
             </h2>
-            <p className="text-lg text-gray-700 leading-relaxed">
+            <div className="h-px w-32 bg-white mx-auto" />
+            <p className="text-xl text-white/80 leading-relaxed">
               מוזמנת לשיחת היכרות חינם או לקבוע תור לטיפול ראשון
             </p>
-            <Button asChild size="lg">
+            <Button
+              asChild
+              size="lg"
+              className="bg-white text-black hover:bg-gold-400 hover:text-white border-0 text-lg px-12 py-6 h-auto mt-8"
+            >
               <Link href="/contact">צרי קשר</Link>
             </Button>
           </div>
@@ -153,25 +199,25 @@ export default function AboutPage() {
 
 const values = [
   {
-    icon: <Heart className="w-6 h-6 text-gold-400" />,
+    icon: <Heart className="w-6 h-6 text-white" />,
     title: "טיפול מהלב",
     description:
       "כל טיפול מתחיל מהקשבה אמיתית לצרכים שלך. אני כאן כדי לעזור, לא למכור.",
   },
   {
-    icon: <Shield className="w-6 h-6 text-gold-400" />,
+    icon: <Shield className="w-6 h-6 text-white" />,
     title: "בטיחות ראשונה",
     description:
       "רק חומרים דרמטולוגיים איכותיים ומוכחים. לא מתפשרת על העור שלך.",
   },
   {
-    icon: <Sparkles className="w-6 h-6 text-gold-400" />,
+    icon: <Sparkles className="w-6 h-6 text-white" />,
     title: "גישה אישית",
     description:
       "אין שני סוגי עור זהים. כל טיפול מותאם במיוחד עבורך ועבור מצב העור שלך.",
   },
   {
-    icon: <Star className="w-6 h-6 text-gold-400" />,
+    icon: <Star className="w-6 h-6 text-white" />,
     title: "תוצאות אמיתיות",
     description:
       "לא מבטיחה ניסים, אבל מבטיחה עבודה מסורה לשיפור העור שלך לאורך זמן.",
@@ -180,27 +226,27 @@ const values = [
 
 const certifications = [
   {
-    icon: "🎓",
+    icon: <Award className="w-8 h-8 text-white" />,
     text: "קוסמטיקאית רפואית מוסמכת",
   },
   {
-    icon: "💉",
+    icon: <Sparkles className="w-8 h-8 text-white" />,
     text: "התמחות במיקרונידלינג ופילינגים",
   },
   {
-    icon: "🌸",
+    icon: <Heart className="w-8 h-8 text-white" />,
     text: "התמחות בטיפול בעור רגיש",
   },
   {
-    icon: "✨",
+    icon: <Star className="w-8 h-8 text-white" />,
     text: "קורסי העשרה באקנה ורוזציאה",
   },
   {
-    icon: "🔬",
+    icon: <Shield className="w-8 h-8 text-white" />,
     text: "עדכון מתמיד בטכנולוגיות חדשות",
   },
   {
-    icon: "💚",
+    icon: <Users className="w-8 h-8 text-white" />,
     text: "שנות ניסיון עם מאות לקוחות",
   },
 ]

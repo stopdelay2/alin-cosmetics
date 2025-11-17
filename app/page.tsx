@@ -4,7 +4,7 @@ import Link from "next/link"
 import Image from "next/image"
 import { Button } from "@/components/ui/button"
 import { Card, CardContent } from "@/components/ui/card"
-import { Sparkles, MapPin, Phone, Instagram } from "lucide-react"
+import { Sparkles, MapPin, Phone, Instagram, Youtube } from "lucide-react"
 import { useEffect, useState } from "react"
 import { Navigation } from "@/components/navigation"
 
@@ -163,28 +163,50 @@ export default function HomePage() {
             <InstagramEmbed url="https://www.instagram.com/p/DQ9YeDSiN_G/" />
           </div>
 
-          {/* Follow Button */}
+          {/* Follow Buttons */}
           <div className="text-center mt-12">
-            <Button
-              asChild
-              variant="outline"
-              size="lg"
-              className="border-2 transition-colors duration-1000"
-              style={{
-                borderColor: scrollProgress > 0.2 ? 'white' : 'black',
-                color: scrollProgress > 0.2 ? 'white' : 'black',
-              }}
-            >
-              <a
-                href="https://instagram.com/alin.cosmetics__"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="flex items-center gap-2"
+            <div className="flex flex-wrap items-center justify-center gap-4">
+              <Button
+                asChild
+                variant="outline"
+                size="lg"
+                className="border-2 transition-colors duration-1000"
+                style={{
+                  borderColor: scrollProgress > 0.2 ? 'white' : 'black',
+                  color: scrollProgress > 0.2 ? 'white' : 'black',
+                }}
               >
-                <Instagram className="w-5 h-5" />
-                עקבו אחרינו באינסטגרם
-              </a>
-            </Button>
+                <a
+                  href="https://instagram.com/alin.cosmetics__"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="flex items-center gap-2"
+                >
+                  <Instagram className="w-5 h-5" />
+                  עקבו אחרינו באינסטגרם
+                </a>
+              </Button>
+              <Button
+                asChild
+                variant="outline"
+                size="lg"
+                className="border-2 transition-colors duration-1000"
+                style={{
+                  borderColor: scrollProgress > 0.2 ? 'white' : 'black',
+                  color: scrollProgress > 0.2 ? 'white' : 'black',
+                }}
+              >
+                <a
+                  href="https://www.youtube.com/@AlinCosmeticsIsrael"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="flex items-center gap-2"
+                >
+                  <Youtube className="w-5 h-5" />
+                  הרשמו לערוץ היוטיוב
+                </a>
+              </Button>
+            </div>
           </div>
         </div>
       </section>
@@ -323,6 +345,18 @@ export default function HomePage() {
                 className="text-lg hover:text-gold-400 transition-colors"
               >
                 @alin.cosmetics__
+              </a>
+            </div>
+            <div className="w-px h-6 bg-white/20 hidden sm:block" />
+            <div className="flex items-center gap-3">
+              <Youtube className="w-6 h-6 text-gold-400" />
+              <a
+                href="https://www.youtube.com/@AlinCosmeticsIsrael"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-lg hover:text-gold-400 transition-colors"
+              >
+                AlinCosmeticsIsrael
               </a>
             </div>
           </div>

@@ -6,7 +6,7 @@ import { Card, CardContent } from "@/components/ui/card"
 import { Input } from "@/components/ui/input"
 import { Label } from "@/components/ui/label"
 import { Textarea } from "@/components/ui/textarea"
-import { Phone, MapPin, Instagram, Clock, Mail } from "lucide-react"
+import { Phone, MapPin, Instagram, Clock, Mail, Youtube } from "lucide-react"
 
 export default function ContactPage() {
   const [formData, setFormData] = useState({
@@ -41,14 +41,26 @@ export default function ContactPage() {
 
   return (
     <div className="flex flex-col">
-      {/* Hero */}
-      <section className="bg-gradient-to-b from-cream-100 to-white py-20">
-        <div className="container mx-auto px-4">
-          <div className="max-w-4xl mx-auto text-center space-y-6">
-            <h1 className="text-4xl md:text-5xl font-playfair font-bold text-gray-800">
-              בואי נדבר על העור שלך
+      {/* Hero - Black Background */}
+      <section className="min-h-[60vh] bg-black text-white relative overflow-hidden flex items-center justify-center">
+        {/* Decorative circles */}
+        <div className="absolute top-10 right-10 w-40 h-40 border-2 border-white/20 rounded-full" />
+        <div className="absolute bottom-10 left-10 w-64 h-64 border border-white/10 rounded-full" />
+        <div className="absolute top-1/3 right-1/4 w-32 h-32 bg-gold-400/10 rounded-full blur-2xl" />
+
+        <div className="container mx-auto px-6 md:px-8 lg:px-12 relative z-10">
+          <div className="max-w-4xl mx-auto text-center space-y-8">
+            <div className="flex items-center justify-center gap-4 mb-8">
+              <div className="h-px w-16 bg-white" />
+              <div className="w-3 h-3 bg-gold-400 rounded-full" />
+              <div className="h-px w-16 bg-white" />
+            </div>
+
+            <h1 className="text-5xl md:text-6xl lg:text-7xl font-playfair font-bold leading-tight">
+              בואי נדבר<br />על העור שלך
             </h1>
-            <p className="text-lg text-gray-600 leading-relaxed">
+
+            <p className="text-xl text-white/80 leading-relaxed">
               מוזמנת ליצור קשר בכל דרך שנוחה לך
             </p>
           </div>
@@ -56,17 +68,29 @@ export default function ContactPage() {
       </section>
 
       {/* Contact Form & Info */}
-      <section className="py-20 bg-white">
-        <div className="container mx-auto px-4">
+      <section className="py-32 bg-white relative">
+        {/* Decorative circles */}
+        <div className="absolute top-20 left-10 w-64 h-64 border border-black/5 rounded-full" />
+        <div className="absolute bottom-20 right-10 w-40 h-40 bg-gold-400/5 rounded-full blur-2xl" />
+
+        <div className="container mx-auto px-6 md:px-8 lg:px-12 relative z-10">
           <div className="max-w-6xl mx-auto">
-            <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
+            <div className="grid grid-cols-1 lg:grid-cols-2 gap-16">
               {/* Form */}
               <div>
-                <Card className="border-gold-100">
+                <div className="mb-8">
+                  <div className="flex items-center gap-4 mb-6">
+                    <div className="w-12 h-12 border-2 border-black rounded-full" />
+                    <div className="h-px flex-1 bg-gold-400" />
+                  </div>
+                  <h2 className="text-4xl font-playfair font-bold text-black mb-4 leading-tight">
+                    מלאי כמה פרטים<br />ונעבור ישר לייעוץ בווטסאפ
+                  </h2>
+                  <p className="text-black/70">הטופס יפתח את וואטסאפ עם ההודעה שלך</p>
+                </div>
+
+                <Card className="border-2 border-black/10 rounded-none shadow-none">
                   <CardContent className="p-8">
-                    <h2 className="text-2xl font-playfair font-bold text-gray-800 mb-6">
-                      שלחי הודעה
-                    </h2>
                     <form onSubmit={handleSubmit} className="space-y-6">
                       <div className="space-y-2">
                         <Label htmlFor="name">שם מלא</Label>
@@ -111,14 +135,11 @@ export default function ContactPage() {
                       <Button
                         type="submit"
                         size="lg"
-                        className="w-full"
+                        className="w-full bg-black text-white hover:bg-gold-400 hover:text-black transition-colors text-lg py-6"
                         disabled={isSubmitting}
                       >
-                        {isSubmitting ? "שולחת..." : "שלחי הודעה"}
+                        {isSubmitting ? "מעביר לוואטסאפ..." : "לייעוץ בוואטסאפ"}
                       </Button>
-                      <p className="text-xs text-gray-500 text-center">
-                        לחיצה על הכפתור תפתח את וואטסאפ עם ההודעה
-                      </p>
                     </form>
                   </CardContent>
                 </Card>
@@ -126,107 +147,131 @@ export default function ContactPage() {
 
               {/* Contact Info */}
               <div className="space-y-8">
-                <div>
-                  <h2 className="text-2xl font-playfair font-bold text-gray-800 mb-6">
+                <div className="mb-8">
+                  <div className="flex items-center gap-4 mb-6">
+                    <div className="h-px flex-1 bg-gold-400" />
+                    <div className="w-12 h-12 border-2 border-black rounded-full" />
+                  </div>
+                  <h2 className="text-4xl font-playfair font-bold text-black mb-4">
                     פרטי התקשרות
                   </h2>
-                  <div className="space-y-6">
-                    <Card className="border-gold-100 hover:shadow-md transition-all duration-300">
-                      <CardContent className="p-6">
-                        <a
-                          href="tel:0543175631"
-                          className="flex items-center gap-4 group"
-                        >
-                          <div className="w-12 h-12 rounded-full bg-gold-100 flex items-center justify-center group-hover:bg-gold-200 transition-colors">
-                            <Phone className="w-5 h-5 text-gold-400" />
-                          </div>
-                          <div>
-                            <p className="font-medium text-gray-800">טלפון</p>
-                            <p className="text-gray-600" dir="ltr">
-                              054-3175631
-                            </p>
-                          </div>
-                        </a>
-                      </CardContent>
-                    </Card>
+                </div>
 
-                    <Card className="border-gold-100 hover:shadow-md transition-all duration-300">
-                      <CardContent className="p-6">
-                        <button
-                          onClick={() => {
-                            const url = "https://wa.me/972543175631"
-                            if (typeof window !== 'undefined' && (window as any).gtag_report_conversion) {
-                              (window as any).gtag_report_conversion(url)
-                            } else {
-                              window.open(url, "_blank")
-                            }
-                          }}
-                          className="flex items-center gap-4 group w-full text-right"
-                        >
-                          <div className="w-12 h-12 rounded-full bg-[#25D366]/10 flex items-center justify-center group-hover:bg-[#25D366]/20 transition-colors">
-                            <Mail className="w-5 h-5 text-[#25D366]" />
-                          </div>
-                          <div>
-                            <p className="font-medium text-gray-800">וואטסאפ</p>
-                            <p className="text-gray-600">שלחי הודעה ישירה</p>
-                          </div>
-                        </button>
-                      </CardContent>
-                    </Card>
+                <div className="space-y-4">
+                  <Card className="border-2 border-black/10 rounded-none shadow-none hover:border-gold-400 transition-all duration-300">
+                    <CardContent className="p-6">
+                      <a
+                        href="tel:0543175631"
+                        className="flex items-center gap-4 group"
+                      >
+                        <div className="w-14 h-14 border-2 border-black rounded-full flex items-center justify-center group-hover:bg-black group-hover:text-white transition-all">
+                          <Phone className="w-6 h-6 text-current" />
+                        </div>
+                        <div>
+                          <p className="font-bold text-black text-lg">טלפון</p>
+                          <p className="text-black/70" dir="ltr">
+                            054-3175631
+                          </p>
+                        </div>
+                      </a>
+                    </CardContent>
+                  </Card>
 
-                    <Card className="border-gold-100 hover:shadow-md transition-all duration-300">
-                      <CardContent className="p-6">
-                        <a
-                          href="https://instagram.com/alin.cosmetics__"
-                          target="_blank"
-                          rel="noopener noreferrer"
-                          className="flex items-center gap-4 group"
-                        >
-                          <div className="w-12 h-12 rounded-full bg-gradient-to-br from-purple-400 to-pink-400 flex items-center justify-center group-hover:from-purple-500 group-hover:to-pink-500 transition-all">
-                            <Instagram className="w-5 h-5 text-white" />
-                          </div>
-                          <div>
-                            <p className="font-medium text-gray-800">אינסטגרם</p>
-                            <p className="text-gray-600">@alin.cosmetics__</p>
-                          </div>
-                        </a>
-                      </CardContent>
-                    </Card>
+                  <Card className="border-2 border-black/10 rounded-none shadow-none hover:border-gold-400 transition-all duration-300">
+                    <CardContent className="p-6">
+                      <button
+                        onClick={() => {
+                          const url = "https://wa.me/972543175631"
+                          if (typeof window !== 'undefined' && (window as any).gtag_report_conversion) {
+                            (window as any).gtag_report_conversion(url)
+                          } else {
+                            window.open(url, "_blank")
+                          }
+                        }}
+                        className="flex items-center gap-4 group w-full text-right"
+                      >
+                        <div className="w-14 h-14 border-2 border-[#25D366] rounded-full flex items-center justify-center group-hover:bg-[#25D366] group-hover:text-white transition-all">
+                          <Mail className="w-6 h-6 text-current" />
+                        </div>
+                        <div>
+                          <p className="font-bold text-black text-lg">וואטסאפ</p>
+                          <p className="text-black/70">שלחי הודעה ישירה</p>
+                        </div>
+                      </button>
+                    </CardContent>
+                  </Card>
 
-                    <Card className="border-gold-100">
-                      <CardContent className="p-6">
-                        <div className="flex items-center gap-4">
-                          <div className="w-12 h-12 rounded-full bg-gold-100 flex items-center justify-center">
-                            <MapPin className="w-5 h-5 text-gold-400" />
-                          </div>
-                          <div>
-                            <p className="font-medium text-gray-800">מיקום</p>
-                            <p className="text-gray-600">קריית ים</p>
+                  <Card className="border-2 border-black/10 rounded-none shadow-none hover:border-gold-400 transition-all duration-300">
+                    <CardContent className="p-6">
+                      <a
+                        href="https://instagram.com/alin.cosmetics__"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="flex items-center gap-4 group"
+                      >
+                        <div className="w-14 h-14 border-2 border-black rounded-full flex items-center justify-center group-hover:bg-gradient-to-br group-hover:from-purple-400 group-hover:to-pink-400 group-hover:border-transparent transition-all">
+                          <Instagram className="w-6 h-6 text-current group-hover:text-white" />
+                        </div>
+                        <div>
+                          <p className="font-bold text-black text-lg">אינסטגרם</p>
+                          <p className="text-black/70">@alin.cosmetics__</p>
+                        </div>
+                      </a>
+                    </CardContent>
+                  </Card>
+
+                  <Card className="border-2 border-black/10 rounded-none shadow-none hover:border-gold-400 transition-all duration-300">
+                    <CardContent className="p-6">
+                      <a
+                        href="https://www.youtube.com/@AlinCosmeticsIsrael"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="flex items-center gap-4 group"
+                      >
+                        <div className="w-14 h-14 border-2 border-[#FF0000] rounded-full flex items-center justify-center group-hover:bg-[#FF0000] group-hover:text-white transition-all">
+                          <Youtube className="w-6 h-6 text-current" />
+                        </div>
+                        <div>
+                          <p className="font-bold text-black text-lg">יוטיוב</p>
+                          <p className="text-black/70">AlinCosmeticsIsrael</p>
+                        </div>
+                      </a>
+                    </CardContent>
+                  </Card>
+
+                  <Card className="border-2 border-black/10 rounded-none shadow-none">
+                    <CardContent className="p-6">
+                      <div className="flex items-center gap-4">
+                        <div className="w-14 h-14 border-2 border-black rounded-full flex items-center justify-center">
+                          <MapPin className="w-6 h-6 text-current" />
+                        </div>
+                        <div>
+                          <p className="font-bold text-black text-lg">מיקום</p>
+                          <p className="text-black/70">שדרות ג'בוטינסקי, קריית ים</p>
+                        </div>
+                      </div>
+                    </CardContent>
+                  </Card>
+
+                  <Card className="border-2 border-black/10 rounded-none shadow-none">
+                    <CardContent className="p-6">
+                      <div className="flex items-start gap-4">
+                        <div className="w-14 h-14 border-2 border-black rounded-full flex items-center justify-center flex-shrink-0">
+                          <Clock className="w-6 h-6 text-current" />
+                        </div>
+                        <div>
+                          <p className="font-bold text-black text-lg mb-3">
+                            שעות פעילות
+                          </p>
+                          <div className="space-y-2 text-black/70">
+                            <p>ראשון - חמישי: 9:00 - 20:00</p>
+                            <p>שישי: 9:00 - 14:00</p>
+                            <p>שבת: סגור</p>
                           </div>
                         </div>
-                      </CardContent>
-                    </Card>
-
-                    <Card className="border-gold-100">
-                      <CardContent className="p-6">
-                        <div className="flex items-start gap-4">
-                          <div className="w-12 h-12 rounded-full bg-gold-100 flex items-center justify-center flex-shrink-0">
-                            <Clock className="w-5 h-5 text-gold-400" />
-                          </div>
-                          <div>
-                            <p className="font-medium text-gray-800 mb-2">
-                              שעות פעילות
-                            </p>
-                            <div className="space-y-1 text-sm text-gray-600">
-                              <p>ראשון - חמישי: 9:00 - 20:00</p>
-                              <p>שישי: 9:00 - 14:00</p>
-                              <p>שבת: סגור</p>
-                            </div>
-                          </div>
-                        </div>
-                      </CardContent>
-                    </Card>
-                  </div>
+                      </div>
+                    </CardContent>
+                  </Card>
                 </div>
               </div>
             </div>
@@ -234,21 +279,32 @@ export default function ContactPage() {
         </div>
       </section>
 
-      {/* FAQ Section */}
-      <section className="py-20 bg-cream-50">
-        <div className="container mx-auto px-4">
+      {/* FAQ Section - Black Background */}
+      <section className="py-32 bg-black text-white relative overflow-hidden">
+        {/* Decorative circles */}
+        <div className="absolute top-1/2 left-1/2 w-[600px] h-[600px] border border-white/5 rounded-full -translate-x-1/2 -translate-y-1/2" />
+
+        <div className="container mx-auto px-6 md:px-8 lg:px-12 relative z-10">
           <div className="max-w-4xl mx-auto">
-            <h2 className="text-3xl font-playfair font-bold text-gray-800 text-center mb-12">
-              שאלות נפוצות
-            </h2>
+            <div className="text-center mb-16">
+              <div className="flex items-center justify-center gap-4 mb-6">
+                <div className="h-px w-16 bg-white" />
+                <div className="w-3 h-3 bg-gold-400 rounded-full" />
+                <div className="h-px w-16 bg-white" />
+              </div>
+              <h2 className="text-4xl md:text-5xl font-playfair font-bold">
+                שאלות נפוצות
+              </h2>
+            </div>
+
             <div className="space-y-6">
               {faqs.map((faq, index) => (
-                <Card key={index} className="border-gold-100">
-                  <CardContent className="p-6">
-                    <h3 className="font-semibold text-gray-800 mb-2">
+                <Card key={index} className="border-2 border-white/10 rounded-none shadow-none bg-transparent hover:border-gold-400 transition-colors">
+                  <CardContent className="p-8">
+                    <h3 className="font-bold text-white text-xl mb-3">
                       {faq.question}
                     </h3>
-                    <p className="text-gray-600 leading-relaxed">
+                    <p className="text-white/80 leading-relaxed">
                       {faq.answer}
                     </p>
                   </CardContent>

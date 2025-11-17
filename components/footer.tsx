@@ -1,6 +1,6 @@
 import Link from "next/link"
 import Image from "next/image"
-import { Instagram, Phone, MapPin } from "lucide-react"
+import { Instagram, Phone, MapPin, Youtube } from "lucide-react"
 
 export function Footer() {
   return (
@@ -80,6 +80,15 @@ export function Footer() {
               >
                 <Instagram className="w-4 h-4" />
                 <span>alin.cosmetics__</span>
+              </a>
+              <a
+                href="https://www.youtube.com/@AlinCosmeticsIsrael"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="flex items-center gap-2 text-sm text-gray-600 hover:text-gold-400 transition-colors"
+              >
+                <Youtube className="w-4 h-4" />
+                <span>AlinCosmeticsIsrael</span>
               </a>
             </div>
           </div>

@@ -231,6 +231,7 @@ function GalleryGrid({ items }: { items: typeof allGalleryItems }) {
                     src={item.afterImage}
                     alt="אחרי הטיפול"
                     className="w-full h-full object-cover"
+                    loading="eager"
                   />
                 ) : (
                   <>
@@ -245,6 +246,7 @@ function GalleryGrid({ items }: { items: typeof allGalleryItems }) {
                     src={item.beforeImage}
                     alt="לפני הטיפול"
                     className="w-full h-full object-cover"
+                    loading="eager"
                   />
                 ) : (
                   <>

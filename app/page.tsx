@@ -107,6 +107,88 @@ export default function HomePage() {
         <Navigation placement="afterHero" />
       </div>
 
+      {/* Instagram Reels Section */}
+      <section
+        className="py-24 relative overflow-hidden transition-colors duration-1000"
+        style={{
+          backgroundColor: `rgb(${255 - scrollProgress * 255}, ${255 - scrollProgress * 255}, ${255 - scrollProgress * 255})`
+        }}
+      >
+        {/* Decorative circles */}
+        <div
+          className="absolute top-20 right-10 w-40 h-40 border rounded-full transition-colors duration-1000"
+          style={{
+            borderColor: scrollProgress > 0.2 ? 'rgba(255,255,255,0.1)' : 'rgba(0,0,0,0.05)'
+          }}
+        />
+        <div
+          className="absolute bottom-20 left-10 w-64 h-64 rounded-full blur-2xl transition-opacity duration-1000"
+          style={{
+            backgroundColor: scrollProgress > 0.2 ? 'rgba(212,175,55,0.1)' : 'rgba(212,175,55,0.05)'
+          }}
+        />
+
+        <div className="container mx-auto px-6 md:px-8 lg:px-12 relative z-10">
+          {/* Section Title */}
+          <div className="text-center mb-16">
+            <div className="inline-flex items-center gap-4 mb-6">
+              <div
+                className="h-px w-16 transition-colors duration-1000"
+                style={{ backgroundColor: scrollProgress > 0.2 ? 'white' : 'black' }}
+              />
+              <Instagram className="w-8 h-8 text-gold-400" />
+              <div
+                className="h-px w-16 transition-colors duration-1000"
+                style={{ backgroundColor: scrollProgress > 0.2 ? 'white' : 'black' }}
+              />
+            </div>
+            <h2
+              className="text-3xl md:text-4xl font-playfair font-bold mb-4 transition-colors duration-1000"
+              style={{ color: scrollProgress > 0.2 ? 'white' : 'black' }}
+            >
+              מהאינסטגרם שלנו
+            </h2>
+            <p
+              className="transition-colors duration-1000"
+              style={{ color: scrollProgress > 0.2 ? 'rgba(255,255,255,0.8)' : 'rgb(75,85,99)' }}
+            >
+              הצצה לעולם הטיפולים שלנו
+            </p>
+          </div>
+
+          {/* Instagram Reels Grid */}
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-6xl mx-auto">
+            <InstagramEmbed url="https://www.instagram.com/p/DQ407GQjqfD/" />
+            <InstagramEmbed url="https://www.instagram.com/p/DQqwUpoiG9P/" />
+            <InstagramEmbed url="https://www.instagram.com/p/DQ9YeDSiN_G/" />
+          </div>
+
+          {/* Follow Button */}
+          <div className="text-center mt-12">
+            <Button
+              asChild
+              variant="outline"
+              size="lg"
+              className="border-2 transition-colors duration-1000"
+              style={{
+                borderColor: scrollProgress > 0.2 ? 'white' : 'black',
+                color: scrollProgress > 0.2 ? 'white' : 'black',
+              }}
+            >
+              <a
+                href="https://instagram.com/alin.cosmetics__"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="flex items-center gap-2"
+              >
+                <Instagram className="w-5 h-5" />
+                עקבו אחרינו באינסטגרם
+              </a>
+            </Button>
+          </div>
+        </div>
+      </section>
+
       {/* Treatments Section - Minimalist Grid */}
       <section
         className="py-32 relative transition-colors duration-1000"
@@ -292,3 +374,48 @@ const treatments = [
     image: "/images/2.png",
   },
 ]
+
+// Instagram Embed Component
+function InstagramEmbed({ url }: { url: string }) {
+  useEffect(() => {
+    // Load Instagram embed script
+    const script = document.createElement('script')
+    script.src = '//www.instagram.com/embed.js'
+    script.async = true
+    document.body.appendChild(script)
+
+    // Process embeds when script loads
+    if ((window as any).instgrm) {
+      (window as any).instgrm.Embeds.process()
+    }
+
+    return () => {
+      // Cleanup
+      const existingScript = document.querySelector('script[src="//www.instagram.com/embed.js"]')
+      if (existingScript) {
+        existingScript.remove()
+      }
+    }
+  }, [])
+
+  return (
+    <div className="flex justify-center">
+      <blockquote
+        className="instagram-media"
+        data-instgrm-permalink={url}
+        data-instgrm-version="14"
+        style={{
+          background: '#FFF',
+          border: '0',
+          borderRadius: '3px',
+          boxShadow: '0 0 1px 0 rgba(0,0,0,0.5),0 1px 10px 0 rgba(0,0,0,0.15)',
+          margin: '1px',
+          maxWidth: '540px',
+          minWidth: '326px',
+          padding: '0',
+          width: 'calc(100% - 2px)',
+        }}
+      />
+    </div>
+  )
+}

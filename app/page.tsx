@@ -45,7 +45,7 @@ export default function HomePage() {
 
         {/* Content Overlay - Positioned Left */}
         <div className="relative z-20 container mx-auto px-6 md:px-8 lg:px-12 py-20">
-          <div className="max-w-7xl mx-auto flex justify-start">
+          <div className="max-w-7xl mx-auto flex justify-end">
             <div className="max-w-2xl space-y-8">
               {/* Small accent line */}
               <div className="flex items-center gap-4 mb-8">
@@ -326,7 +326,7 @@ export default function HomePage() {
           <div className="flex flex-col sm:flex-row gap-6 justify-center items-center pt-8">
             <div className="flex items-center gap-3">
               <MapPin className="w-6 h-6 text-gold-400" />
-              <span className="text-lg">קריית ים</span>
+              <span className="text-lg">שדרות ג'בוטינסקי, קריית ים</span>
             </div>
             <div className="w-px h-6 bg-white/20 hidden sm:block" />
             <div className="flex items-center gap-3">

@@ -52,12 +52,13 @@ export default function AboutPage() {
               </div>
 
               <div className="relative">
-                <div className="aspect-[16/9] relative border-2 border-white/20 rounded-none overflow-hidden">
+                <div className="relative border-2 border-white/20 rounded-none overflow-hidden">
                   <Image
                     src="/images/alinalin.jpeg"
                     alt="אלין - קוסמטיקאית רפואית"
-                    fill
-                    className="object-cover"
+                    width={1344}
+                    height={768}
+                    className="w-full h-auto"
                     priority
                     quality={100}
                   />

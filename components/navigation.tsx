@@ -16,12 +16,19 @@ const navItems = [
   { href: "/contact", label: "צור קשר" },
 ]
 
-export function Navigation() {
+export function Navigation({ placement = "top" }: { placement?: "top" | "afterHero" }) {
   const pathname = usePathname()
   const [isOpen, setIsOpen] = useState(false)
 
+  // Hide top navigation on homepage for desktop only
+  const hideOnHomepageDesktop = placement === "top" && pathname === "/"
+
   return (
-    <nav className="sticky top-0 z-40 w-full bg-white/95 backdrop-blur-sm border-b border-gold-100">
+    <nav className={cn(
+      "sticky top-0 z-40 w-full bg-white/95 backdrop-blur-sm border-b border-gold-100",
+      hideOnHomepageDesktop && "lg:hidden",
+      placement === "afterHero" && "static"
+    )}>
       <div className="container mx-auto px-4">
         <div className="flex items-center justify-between h-28 md:h-32">
           {/* Logo */}

@@ -6,6 +6,7 @@ import { Button } from "@/components/ui/button"
 import { Card, CardContent } from "@/components/ui/card"
 import { Sparkles, MapPin, Phone, Instagram } from "lucide-react"
 import { useEffect, useState } from "react"
+import { Navigation } from "@/components/navigation"
 
 export default function HomePage() {
   const [scrollY, setScrollY] = useState(0)
@@ -100,6 +101,11 @@ export default function HomePage() {
           }}
         />
       </section>
+
+      {/* Navigation after hero - Desktop only */}
+      <div className="hidden lg:block">
+        <Navigation placement="afterHero" />
+      </div>
 
       {/* Treatments Section - Minimalist Grid */}
       <section

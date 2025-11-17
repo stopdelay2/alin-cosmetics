@@ -22,11 +22,16 @@ export const metadata: Metadata = {
   title: "Alin Cosmetics | קוסמטיקאית רפואית בקריית ים",
   description: "טיפולי פנים מקצועיים ועדינים. מתמחה באקנה, רוזציאה, פיגמנטציה ואנטי אייג'ינג. קריית ים, חיפה והסביבה.",
   keywords: "קוסמטיקאית רפואית, טיפולי פנים, אקנה, רוזציאה, מיקרונידלינג, קריית ים, חיפה",
+  icons: {
+    icon: '/images/logo.png',
+    apple: '/images/logo.png',
+  },
   openGraph: {
     title: "Alin Cosmetics | קוסמטיקאית רפואית בקריית ים",
     description: "טיפולי פנים מקצועיים ועדינים. מתמחה באקנה, רוזציאה, פיגמנטציה ואנטי אייג'ינג.",
     type: "website",
     locale: "he_IL",
+    images: ['/images/logo.png'],
   },
 }
 

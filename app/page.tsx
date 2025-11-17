@@ -263,26 +263,26 @@ const treatments = [
   {
     title: "אקנה ועור מגורה",
     description: "נחזיר לעור שלך שקט. טיפול עדין שמנקה בלי לייבש ומאזן בלי להכאיב",
-    image: "/images/treatment-acne.jpg",
+    image: "/images/2.png",
   },
   {
     title: "רוזציאה ואדמומיות",
     description: "אם העור שלך מגיב לכל דבר זה המקום להרגיע אותו",
-    image: "/images/treatment-rosacea.jpg",
+    image: "/images/2.png",
   },
   {
     title: "צלקות וכתמים",
     description: "כתמים לא צריכים להיות חלק ממך. נעבוד בהדרגה ובסבלנות עד שתראי שינוי",
-    image: "/images/treatment-pigmentation.jpg",
+    image: "/images/2.png",
   },
   {
     title: "אנטי אייג'ינג עדין",
     description: "אין גיל לזוהר. מיצוק, לחות והחזרת הברק בלי חומרים קיצוניים",
-    image: "/images/treatment-antiaging.jpg",
+    image: "/images/2.png",
   },
   {
     title: "מיקרונידלינג מבוקר",
     description: "טיפול מתקדם לעור עייף וצלקתי, עם יד עדינה ותוצאה שמרגישים",
-    image: "/images/treatment-microneedling.jpg",
+    image: "/images/2.png",
   },
 ]

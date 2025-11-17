@@ -1,5 +1,6 @@
 import { Metadata } from "next"
 import Link from "next/link"
+import Image from "next/image"
 import { Button } from "@/components/ui/button"
 import { Card, CardContent } from "@/components/ui/card"
 import { Separator } from "@/components/ui/separator"
@@ -55,22 +56,36 @@ export default function TreatmentsPage() {
                   <div className="h-px bg-black/10 my-16" />
                 )}
 
-                <div className="grid grid-cols-1 md:grid-cols-3 gap-12 items-start">
-                  <div className="md:col-span-1">
-                    {/* Number circle */}
-                    <div className="w-16 h-16 bg-black text-white rounded-full flex items-center justify-center mb-6">
+                <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-start">
+                  {/* Image Section */}
+                  <div className="relative h-80 lg:h-96 overflow-hidden rounded-none border-2 border-black/10">
+                    {treatment.image && (
+                      <Image
+                        src={treatment.image}
+                        alt={treatment.title}
+                        fill
+                        className="object-cover"
+                      />
+                    )}
+                    {/* Number circle overlay */}
+                    <div className="absolute top-6 right-6 w-16 h-16 bg-black text-white rounded-full flex items-center justify-center">
                       <span className="text-2xl font-bold">{index + 1}</span>
                     </div>
-                    <h2 className="text-4xl font-playfair font-bold text-black mb-4">
-                      {treatment.title}
-                    </h2>
-                    <div className="h-px w-12 bg-gold-400" />
                   </div>
 
-                  <div className="md:col-span-2 space-y-6">
+                  {/* Content Section */}
+                  <div className="space-y-6">
+                    <div>
+                      <h2 className="text-4xl font-playfair font-bold text-black mb-4">
+                        {treatment.title}
+                      </h2>
+                      <div className="h-px w-12 bg-gold-400 mb-6" />
+                    </div>
+
                     <p className="text-xl text-black/80 leading-relaxed italic">
                       {treatment.quote}
                     </p>
+
                     <div className="space-y-4 pt-4">
                       {treatment.benefits.map((benefit, i) => (
                         <div key={i} className="flex items-start gap-4">
@@ -79,6 +94,7 @@ export default function TreatmentsPage() {
                         </div>
                       ))}
                     </div>
+
                     {treatment.suitable && (
                       <div className="mt-6 p-6 border-2 border-black/10 rounded-none">
                         <p className="text-sm text-black/70">
@@ -137,30 +153,7 @@ const treatments = [
       "חומרים דרמטולוגיים מותאמים",
     ],
     suitable: "עור שמני, מעורב, נוטה לפצעונים ודלקות",
-  },
-  {
-    title: "פיגמנטציה",
-    quote: "כתמים לא צריכים להיות חלק ממך. נעבוד בהדרגה ובסבלנות עד שתראי שינוי.",
-    benefits: [
-      "הבהרת כתמים קיימים בהדרגה",
-      "איחוד גוון העור",
-      "טיפול עדין בהיפרפיגמנטציה",
-      "מניעת היווצרות כתמים חדשים",
-      "שיפור מרקם ומראה העור",
-    ],
-    suitable: "כתמי עור, מלזמה, היפרפיגמנטציה, כתמי שמש",
-  },
-  {
-    title: "אנטי אייג'ינג",
-    quote: "אין גיל לזוהר. מיצוק, לחות והחזרת הברק בלי חומרים קיצוניים.",
-    benefits: [
-      "מיצוק והידוק העור",
-      "הפחתת קמטים וקווי הבעה",
-      "שיפור אלסטיות העור",
-      "החזרת לחות ועשירות לעור",
-      "זוהר טבעי וגוון אחיד",
-    ],
-    suitable: "עור בוגר, יבש, עור עם קמטים וסימני הזדקנות",
+    image: "/images/2.png",
   },
   {
     title: "רוזציאה",
@@ -173,6 +166,33 @@ const treatments = [
       "טיפול בחומרים עדינים ומיוחדים",
     ],
     suitable: "עור רגיש, רוזציאה, אדמומיות כרונית, עור מגרה",
+    image: "/images/roza.jpeg",
+  },
+  {
+    title: "צלקות וכתמים",
+    quote: "כתמים לא צריכים להיות חלק ממך. נעבוד בהדרגה ובסבלנות עד שתראי שינוי.",
+    benefits: [
+      "הפחתת צלקות ופוסט אקנה",
+      "שיפור מרקם העור",
+      "טיפול בכתמים כהים",
+      "איחוד גוון העור",
+      "החזרת חלקות לעור",
+    ],
+    suitable: "צלקות, פוסט אקנה, כתמים, מרקם לא אחיד",
+    image: "/images/postakna.jpeg",
+  },
+  {
+    title: "אנטי אייג'ינג",
+    quote: "אין גיל לזוהר. מיצוק, לחות והחזרת הברק בלי חומרים קיצוניים.",
+    benefits: [
+      "מיצוק והידוק העור",
+      "הפחתת קמטים וקווי הבעה",
+      "שיפור אלסטיות העור",
+      "החזרת לחות ועשירות לעור",
+      "זוהר טבעי וגוון אחיד",
+    ],
+    suitable: "עור בוגר, יבש, עור עם קמטים וסימני הזדקנות",
+    image: "/images/anti.jpeg",
   },
   {
     title: "מיקרונידלינג מבוקר",
@@ -185,6 +205,7 @@ const treatments = [
       "תוצאות ניכרות ומצטברות",
     ],
     suitable: "צלקות, נקבוביות מורחבות, מרקם לא אחיד, עור עייף",
+    image: "/images/microble.jpeg",
   },
   {
     title: "פוטותרפיה",
@@ -197,5 +218,19 @@ const treatments = [
       "איחוד גוון העור",
     ],
     suitable: "אקנה, אדמומיות, עור שמני, נזקי שמש",
+    image: "/images/phototerapi.jpeg",
+  },
+  {
+    title: "פיגמנטציה",
+    quote: "כתמים לא צריכים להיות חלק ממך. נעבוד בהדרגה ובסבלנות עד שתראי שינוי.",
+    benefits: [
+      "הבהרת כתמים קיימים בהדרגה",
+      "איחוד גוון העור",
+      "טיפול עדין בהיפרפיגמנטציה",
+      "מניעת היווצרות כתמים חדשים",
+      "שיפור מרקם ומראה העור",
+    ],
+    suitable: "כתמי עור, מלזמה, היפרפיגמנטציה, כתמי שמש",
+    image: "/images/pegment.jpeg",
   },
 ]

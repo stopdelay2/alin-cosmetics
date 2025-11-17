@@ -59,11 +59,11 @@ export default function HomePage() {
                 רגע של הקשבה
               </h1>
 
-              <p className="text-xl md:text-2xl text-white/90 leading-relaxed max-w-xl drop-shadow-lg">
+              <p className="text-xl md:text-2xl text-white/90 leading-relaxed max-w-xl drop-shadow-lg mb-4 sm:mb-0">
                 טיפול פנים עדין, מקצועי ומותאם אישית
               </p>
 
-              <div className="flex flex-col sm:flex-row gap-4 items-start pt-2 sm:pt-8">
+              <div className="flex flex-col sm:flex-row gap-4 items-start sm:pt-8">
                 <Button
                   asChild
                   size="lg"

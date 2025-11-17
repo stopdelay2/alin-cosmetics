@@ -247,7 +247,7 @@ export default function ContactPage() {
                         </div>
                         <div>
                           <p className="font-bold text-black text-lg">מיקום</p>
-                          <p className="text-black/70">שדרות ג'בוטינסקי, קריית ים</p>
+                          <p className="text-black/70">שדרות ז'בוטינסקי, קריית ים</p>
                         </div>
                       </div>
                     </CardContent>

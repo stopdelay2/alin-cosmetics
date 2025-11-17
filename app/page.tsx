@@ -326,7 +326,7 @@ export default function HomePage() {
           <div className="flex flex-col sm:flex-row gap-6 justify-center items-center pt-8">
             <div className="flex items-center gap-3">
               <MapPin className="w-6 h-6 text-gold-400" />
-              <span className="text-lg">שדרות ג'בוטינסקי, קריית ים</span>
+              <span className="text-lg">שדרות ז'בוטינסקי, קריית ים</span>
             </div>
             <div className="w-px h-6 bg-white/20 hidden sm:block" />
             <div className="flex items-center gap-3">

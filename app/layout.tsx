@@ -31,7 +31,7 @@ export const metadata: Metadata = {
     description: "טיפולי פנים מקצועיים ועדינים. מתמחה באקנה, רוזציאה, פיגמנטציה ואנטי אייג'ינג.",
     type: "website",
     locale: "he_IL",
-    images: ['/images/logo.png'],
+    images: ['/images/1.png'],
   },
 }
 

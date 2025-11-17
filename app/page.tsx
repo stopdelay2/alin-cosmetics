@@ -20,7 +20,7 @@ export default function HomePage() {
   const scrollProgress = Math.min(scrollY / 800, 1)
 
   return (
-    <div className="flex flex-col">
+    <div className="flex flex-col overflow-x-hidden">
       {/* Hero Section - Full Image */}
       <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
         {/* Full Background Image */}

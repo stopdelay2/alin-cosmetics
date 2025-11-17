@@ -109,8 +109,8 @@ export default function TestimonialsPage() {
           <div className="max-w-5xl mx-auto">
             <div className="grid grid-cols-1 md:grid-cols-3 gap-16 text-center">
               {stats.map((stat, index) => (
-                <div key={index} className="space-y-4">
-                  <div className="w-24 h-24 rounded-full border-2 border-gold-400 flex items-center justify-center mx-auto mb-6">
+                <div key={index} className="space-y-6">
+                  <div className="w-40 h-40 rounded-full border-2 border-gold-400 flex items-center justify-center mx-auto">
                     <div className="text-4xl md:text-5xl font-playfair font-bold text-gold-400">
                       {stat.number}
                     </div>

@@ -1,5 +1,6 @@
 import type { Metadata } from "next"
 import { Playfair_Display, Inter } from "next/font/google"
+import Script from "next/script"
 import "./globals.css"
 import { Navigation } from "@/components/navigation"
 import { Footer } from "@/components/footer"
@@ -37,6 +38,20 @@ export default function RootLayout({
   return (
     <html lang="he" dir="rtl" className={`${playfair.variable} ${inter.variable}`}>
       <body className="antialiased">
+        {/* Google Ads Pixel */}
+        <Script
+          src="https://www.googletagmanager.com/gtag/js?id=AW-17738121003"
+          strategy="afterInteractive"
+        />
+        <Script id="google-ads" strategy="afterInteractive">
+          {`
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+            gtag('config', 'AW-17738121003');
+          `}
+        </Script>
+
         <Navigation />
         <main className="min-h-screen">
           {children}

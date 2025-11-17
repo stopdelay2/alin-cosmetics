@@ -125,9 +125,6 @@ export default function AboutPage() {
             <div className="h-px w-32 bg-white mx-auto" />
 
             <div className="space-y-8 text-xl text-white/80 leading-relaxed">
-              <p className="italic text-2xl text-white">
-                "אם זה לא טוב לעור שלך - זה לא ייכנס לפנים שלך."
-              </p>
               <p>
                 אני לא מאמינה ב"טיפולי קסם" או בהבטחות מוגזמות. כל עור הוא
                 שונה, וצריך זמן, סבלנות וטיפול מותאם.

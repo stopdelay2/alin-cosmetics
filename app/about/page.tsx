@@ -53,14 +53,11 @@ export default function AboutPage() {
 
               <div className="relative">
                 <div className="relative border-2 border-white/20 rounded-none overflow-hidden">
-                  <Image
+                  <img
                     src="/images/alinalin.jpeg"
                     alt="אלין - קוסמטיקאית רפואית"
-                    width={1344}
-                    height={768}
                     className="w-full h-auto"
-                    priority
-                    quality={100}
+                    loading="eager"
                   />
                 </div>
                 <div className="absolute -bottom-6 -right-6 w-24 h-24 border border-gold-400 rounded-full" />

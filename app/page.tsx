@@ -183,7 +183,7 @@ export default function HomePage() {
                   className="flex items-center gap-2"
                 >
                   <Instagram className="w-5 h-5" />
-                  עקבו אחרינו באינסטגרם
+                  עקבי אחרינו באינסטגרם
                 </a>
               </Button>
               <Button
@@ -203,7 +203,7 @@ export default function HomePage() {
                   className="flex items-center gap-2"
                 >
                   <Youtube className="w-5 h-5" />
-                  הרשמו לערוץ היוטיוב
+                  הרשמי לערוץ היוטיוב
                 </a>
               </Button>
             </div>

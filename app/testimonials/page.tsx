@@ -169,7 +169,7 @@ export default async function TestimonialsPage() {
             <div className="w-20 h-20 bg-gold-400 rounded-full mx-auto" />
 
             <h2 className="text-4xl md:text-5xl font-playfair font-bold text-white">
-              את יכולה להיות הבאה
+              ראיתי נשים רבות שעשו שינוי אמיתי - עכשיו תורך.
             </h2>
 
             <div className="h-px w-32 bg-gold-400 mx-auto" />

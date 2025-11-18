@@ -305,6 +305,37 @@ export default function HomePage() {
         />
       </section>
 
+      {/* About Me CTA - Story Section */}
+      <section className="py-32 bg-white relative overflow-hidden">
+        {/* Decorative circles */}
+        <div className="absolute top-1/2 left-1/2 w-[600px] h-[600px] border border-black/5 rounded-full -translate-x-1/2 -translate-y-1/2" />
+
+        <div className="container mx-auto px-6 md:px-8 lg:px-12 relative z-10">
+          <div className="max-w-3xl mx-auto text-center space-y-10">
+            <div className="w-20 h-20 bg-gold-400 rounded-full mx-auto" />
+
+            <h2 className="text-4xl md:text-5xl lg:text-6xl font-playfair font-bold text-black leading-tight">
+              אני אלין,<br />וזה הסיפור שלי
+            </h2>
+
+            <div className="h-px w-32 bg-gold-400 mx-auto" />
+
+            <p className="text-xl text-black/70 leading-relaxed">
+              קוסמטיקאית מוסמכת עם תשוקה אמיתית לטיפול בעור.<br />
+              כל טיפול מתחיל מהלב, והתוצאה היא ביטחון חדש.
+            </p>
+
+            <Button
+              asChild
+              size="lg"
+              className="bg-black text-white hover:bg-gold-400 hover:text-black border-0 text-lg px-12 py-6 h-auto mt-8"
+            >
+              <Link href="/about">קראי את הסיפור המלא</Link>
+            </Button>
+          </div>
+        </div>
+      </section>
+
       {/* Contact CTA - Dramatic */}
       <section className="min-h-screen flex items-center justify-center bg-black text-white relative overflow-hidden">
         {/* Huge decorative circle */}

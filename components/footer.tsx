@@ -32,25 +32,31 @@ export function Footer() {
                 href="/treatments"
                 className="text-sm text-gray-600 hover:text-gold-400 transition-colors"
               >
-                טיפולים
+                טיפולים ותוצאות
               </Link>
               <Link
                 href="/about"
                 className="text-sm text-gray-600 hover:text-gold-400 transition-colors"
               >
-                אודות
+                הסיפור שלי
               </Link>
               <Link
                 href="/testimonials"
                 className="text-sm text-gray-600 hover:text-gold-400 transition-colors"
               >
-                המלצות
+                לקוחות משתפות
+              </Link>
+              <Link
+                href="/gallery"
+                className="text-sm text-gray-600 hover:text-gold-400 transition-colors"
+              >
+                לפני ואחרי
               </Link>
               <Link
                 href="/contact"
                 className="text-sm text-gray-600 hover:text-gold-400 transition-colors"
               >
-                צור קשר
+                קביעת תור
               </Link>
             </div>
           </div>

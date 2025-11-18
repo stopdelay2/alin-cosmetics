@@ -1,111 +1,274 @@
-import Link from "next/link"
+"use client"
+
+import { useState, useEffect } from "react"
 import { Button } from "@/components/ui/button"
-import { Card, CardContent } from "@/components/ui/card"
-import { Plus, Edit, Trash2, Star } from "lucide-react"
-import { prisma } from "@/lib/prisma"
+import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
+import { Input } from "@/components/ui/input"
+import { Label } from "@/components/ui/label"
+import { Textarea } from "@/components/ui/textarea"
+import { Trash2, Plus, Star } from "lucide-react"
 
-export const dynamic = 'force-dynamic'
+interface Testimonial {
+  id: string
+  name: string
+  text: string
+  treatment: string | null
+  published: boolean
+  order: number
+  createdAt: string
+  updatedAt: string
+}
 
-export default async function TestimonialsPage() {
-  const testimonials = await prisma.testimonial.findMany({
-    orderBy: { order: "asc" },
+export default function AdminTestimonialsPage() {
+  const [testimonials, setTestimonials] = useState<Testimonial[]>([])
+  const [isLoading, setIsLoading] = useState(true)
+  const [showAddForm, setShowAddForm] = useState(false)
+  const [formData, setFormData] = useState({
+    name: "",
+    text: "",
+    treatment: "",
+    published: true,
+    order: 0,
   })
 
+  useEffect(() => {
+    fetchTestimonials()
+  }, [])
+
+  const fetchTestimonials = async () => {
+    try {
+      const response = await fetch("/api/testimonials")
+      const data = await response.json()
+      setTestimonials(data)
+    } catch (error) {
+      console.error("Error fetching testimonials:", error)
+    } finally {
+      setIsLoading(false)
+    }
+  }
+
+  const handleDelete = async (id: string) => {
+    if (!confirm("האם את בטוחה שאת רוצה למחוק ביקורת זו?")) {
+      return
+    }
+
+    try {
+      const response = await fetch(\`/api/testimonials/\${id}\`, {
+        method: "DELETE",
+      })
+
+      if (response.ok) {
+        setTestimonials(testimonials.filter((t) => t.id !== id))
+      } else {
+        alert("שגיאה במחיקת הביקורת")
+      }
+    } catch (error) {
+      console.error("Error deleting testimonial:", error)
+      alert("שגיאה במחיקת הביקורת")
+    }
+  }
+
+  const handleSubmit = async (e: React.FormEvent) => {
+    e.preventDefault()
+
+    try {
+      const response = await fetch("/api/testimonials", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify(formData),
+      })
+
+      if (response.ok) {
+        const newTestimonial = await response.json()
+        setTestimonials([...testimonials, newTestimonial])
+        setFormData({
+          name: "",
+          text: "",
+          treatment: "",
+          published: true,
+          order: 0,
+        })
+        setShowAddForm(false)
+        alert("הביקורת נוספה בהצלחה!")
+      } else {
+        alert("שגיאה בהוספת הביקורת")
+      }
+    } catch (error) {
+      console.error("Error adding testimonial:", error)
+      alert("שגיאה בהוספת הביקורת")
+    }
+  }
+
+  if (isLoading) {
+    return (
+      <div className="min-h-screen bg-cream-50 flex items-center justify-center">
+        <div className="text-xl">טוען...</div>
+      </div>
+    )
+  }
+
   return (
-    <div className="space-y-6">
-      <div className="flex items-center justify-between">
-        <div>
-          <h2 className="text-3xl font-playfair font-bold text-gray-800">
-            ניהול המלצות
-          </h2>
-          <p className="text-gray-600 mt-1">
-            {testimonials.length} המלצות במערכת
+    <div className="min-h-screen bg-cream-50 py-12">
+      <div className="container mx-auto px-4 max-w-6xl">
+        {/* Header */}
+        <div className="mb-8">
+          <h1 className="text-4xl font-playfair font-bold mb-4">
+            ניהול ביקורות
+          </h1>
+          <p className="text-gray-600">
+            סה״כ {testimonials.length} ביקורות במערכת
           </p>
         </div>
-        <Button asChild>
-          <Link href="/admin/testimonials/new">
-            <Plus className="w-4 h-4 ml-2" />
-            המלצה חדשה
-          </Link>
-        </Button>
-      </div>
 
-      {testimonials.length === 0 ? (
-        <Card>
-          <CardContent className="p-12 text-center">
-            <p className="text-gray-500 mb-4">אין המלצות עדיין</p>
-            <Button asChild>
-              <Link href="/admin/testimonials/new">הוסף המלצה ראשונה</Link>
-            </Button>
-          </CardContent>
-        </Card>
-      ) : (
-        <div className="space-y-4">
+        {/* Add Button */}
+        <div className="mb-8">
+          <Button
+            onClick={() => setShowAddForm(!showAddForm)}
+            className="bg-black text-white hover:bg-gold-400 hover:text-black"
+          >
+            <Plus className="w-4 h-4 ml-2" />
+            הוספת ביקורת חדשה
+          </Button>
+        </div>
+
+        {/* Add Form */}
+        {showAddForm && (
+          <Card className="mb-8 border-2 border-gold-400">
+            <CardHeader>
+              <CardTitle>ביקורת חדשה</CardTitle>
+            </CardHeader>
+            <CardContent>
+              <form onSubmit={handleSubmit} className="space-y-4">
+                <div className="space-y-2">
+                  <Label htmlFor="name">שם מלא *</Label>
+                  <Input
+                    id="name"
+                    value={formData.name}
+                    onChange={(e) =>
+                      setFormData({ ...formData, name: e.target.value })
+                    }
+                    required
+                  />
+                </div>
+
+                <div className="space-y-2">
+                  <Label htmlFor="treatment">סוג הטיפול</Label>
+                  <Input
+                    id="treatment"
+                    value={formData.treatment}
+                    onChange={(e) =>
+                      setFormData({ ...formData, treatment: e.target.value })
+                    }
+                    placeholder="לדוגמה: טיפול אקנה"
+                  />
+                </div>
+
+                <div className="space-y-2">
+                  <Label htmlFor="text">טקסט הביקורת *</Label>
+                  <Textarea
+                    id="text"
+                    value={formData.text}
+                    onChange={(e) =>
+                      setFormData({ ...formData, text: e.target.value })
+                    }
+                    rows={4}
+                    required
+                  />
+                </div>
+
+                <div className="space-y-2">
+                  <Label htmlFor="order">סדר תצוגה</Label>
+                  <Input
+                    id="order"
+                    type="number"
+                    value={formData.order}
+                    onChange={(e) =>
+                      setFormData({
+                        ...formData,
+                        order: parseInt(e.target.value),
+                      })
+                    }
+                  />
+                  <p className="text-sm text-gray-500">
+                    מספר נמוך יוצג ראשון
+                  </p>
+                </div>
+
+                <div className="flex gap-4">
+                  <Button
+                    type="submit"
+                    className="bg-black text-white hover:bg-gold-400 hover:text-black"
+                  >
+                    שמירה
+                  </Button>
+                  <Button
+                    type="button"
+                    variant="outline"
+                    onClick={() => setShowAddForm(false)}
+                  >
+                    ביטול
+                  </Button>
+                </div>
+              </form>
+            </CardContent>
+          </Card>
+        )}
+
+        {/* Testimonials List */}
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
           {testimonials.map((testimonial) => (
-            <Card key={testimonial.id} className="hover:shadow-md transition-shadow">
-              <CardContent className="p-6">
-                <div className="flex items-start justify-between">
-                  <div className="flex-1">
-                    <div className="flex items-center gap-2 mb-3">
-                      <div className="w-10 h-10 rounded-full bg-gold-100 flex items-center justify-center">
-                        <span className="text-gold-400 font-semibold">
-                          {testimonial.name.charAt(0)}
-                        </span>
-                      </div>
-                      <div>
-                        <h3 className="font-semibold text-gray-800">
-                          {testimonial.name}
-                        </h3>
-                        {testimonial.treatment && (
-                          <p className="text-sm text-gray-500">
-                            {testimonial.treatment}
-                          </p>
-                        )}
-                      </div>
-                      {testimonial.published ? (
-                        <span className="px-2 py-1 text-xs bg-green-100 text-green-700 rounded-full">
-                          פעיל
-                        </span>
-                      ) : (
-                        <span className="px-2 py-1 text-xs bg-gray-100 text-gray-700 rounded-full">
-                          מוסתר
-                        </span>
-                      )}
-                    </div>
-                    <div className="flex gap-1 mb-2">
-                      {[...Array(5)].map((_, i) => (
-                        <Star
-                          key={i}
-                          className="w-4 h-4 fill-gold-400 text-gold-400"
-                        />
-                      ))}
-                    </div>
-                    <p className="text-gray-700 italic">"{testimonial.text}"</p>
-                  </div>
-                  <div className="flex items-center gap-2">
-                    <Button asChild variant="outline" size="sm">
-                      <Link href={`/admin/testimonials/${testimonial.id}`}>
-                        <Edit className="w-4 h-4" />
-                      </Link>
-                    </Button>
-                    <form action={`/api/testimonials/${testimonial.id}`} method="POST">
-                      <input type="hidden" name="_method" value="DELETE" />
-                      <Button
-                        type="submit"
-                        variant="outline"
-                        size="sm"
-                        className="text-red-600 hover:text-red-700"
-                      >
-                        <Trash2 className="w-4 h-4" />
-                      </Button>
-                    </form>
+            <Card key={testimonial.id} className="relative">
+              <CardContent className="p-6 space-y-4">
+                {/* Delete Button */}
+                <button
+                  onClick={() => handleDelete(testimonial.id)}
+                  className="absolute top-4 left-4 p-2 hover:bg-red-50 rounded-lg transition-colors group"
+                  title="מחק ביקורת"
+                >
+                  <Trash2 className="w-5 h-5 text-gray-400 group-hover:text-red-500" />
+                </button>
+
+                {/* Stars */}
+                <div className="flex gap-1 pt-8">
+                  {[...Array(5)].map((_, i) => (
+                    <Star
+                      key={i}
+                      className="w-4 h-4 fill-gold-400 text-gold-400"
+                    />
+                  ))}
+                </div>
+
+                {/* Text */}
+                <p className="text-gray-700 leading-relaxed">"{testimonial.text}"</p>
+
+                {/* Author */}
+                <div className="pt-4 border-t border-gray-100">
+                  <p className="font-bold text-black">{testimonial.name}</p>
+                  {testimonial.treatment && (
+                    <p className="text-sm text-gray-500">
+                      {testimonial.treatment}
+                    </p>
+                  )}
+                  <div className="flex gap-4 mt-2 text-xs text-gray-400">
+                    <span>סדר: {testimonial.order}</span>
+                    <span>
+                      נוצר: {new Date(testimonial.createdAt).toLocaleDateString("he-IL")}
+                    </span>
                   </div>
                 </div>
               </CardContent>
             </Card>
           ))}
         </div>
-      )}
+
+        {testimonials.length === 0 && (
+          <div className="text-center py-12">
+            <p className="text-gray-500 text-lg">אין ביקורות עדיין</p>
+          </div>
+        )}
+      </div>
     </div>
   )
 }

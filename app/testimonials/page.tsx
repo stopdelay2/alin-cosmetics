@@ -2,6 +2,7 @@ import { Metadata } from "next"
 import Link from "next/link"
 import { Button } from "@/components/ui/button"
 import { Star, Quote } from "lucide-react"
+import { prisma } from "@/lib/prisma"
 
 export const metadata: Metadata = {
   title: "המלצות לקוחות | Alin Cosmetics",
@@ -12,7 +13,14 @@ export const metadata: Metadata = {
   },
 }
 
-export default function TestimonialsPage() {
+export default async function TestimonialsPage() {
+  const testimonials = await prisma.testimonial.findMany({
+    where: { published: true },
+    orderBy: [
+      { order: "asc" },
+      { createdAt: "desc" },
+    ],
+  })
   return (
     <div className="flex flex-col overflow-x-hidden">
       {/* Hero - Black Background */}
@@ -155,49 +163,6 @@ export default function TestimonialsPage() {
     </div>
   )
 }
-
-const testimonials = [
-  {
-    text: "לא האמנתי שיום אחד אצא מהבית בלי מייקאפ. אחרי שנים של מאבק באקנה, אלין הצליחה לתת לי את העור שתמיד חלמתי עליו. היא לא רק מקצועית, היא באמת מקשיבה ומבינה.",
-    name: "שרה כהן",
-    treatment: "טיפול אקנה",
-  },
-  {
-    text: "אלין פשוט הצילה לי את העור ואת הביטחון שלי. הכתמים שהיו לי בפנים הפכו להיות כמעט בלתי נראים. והכי חשוב - היא עשתה את זה בעדינות ובסבלנות.",
-    name: "מיכל לוי",
-    treatment: "טיפול פיגמנטציה",
-  },
-  {
-    text: "תחושת רוגע מהכניסה ועד הסוף. מקצועית, נקייה, רגועה. כל טיפול אצל אלין זה כמו מתנה שאני נותנת לעצמי. והתוצאות מדברות בעד עצמן.",
-    name: "רונית שלום",
-    treatment: "טיפול אנטי אייג'ינג",
-  },
-  {
-    text: "העור שלי תמיד היה רגיש ומגיב לכל דבר. אלין מצאה את השילוב המושלם של חומרים שעובדים בשבילי בלי לגרום לגירוי. סוף סוף מצאתי מישהי שמבינה את העור שלי.",
-    name: "דנה אברהם",
-    treatment: "טיפול רוזציאה",
-  },
-  {
-    text: "הייתי סקפטית לגבי מיקרונידלינג, אבל אלין הסבירה לי הכל בסבלנות. התוצאות היו מדהימות - הצלקות נעלמו, והעור נראה חלק וזוהר. היא באמת אמנית במה שהיא עושה.",
-    name: "יעל מזרחי",
-    treatment: "מיקרונידלינג",
-  },
-  {
-    text: "אחרי שנסעתי לקוסמטיקאיות שונות ולא מצאתי את מה שחיפשתי, הגעתי לאלין. מהפעם הראשונה הבנתי שהיא שונה - היא באמת מתעניינת, מקדישה זמן, ולא ממהרת.",
-    name: "תמר ביטון",
-    treatment: "טיפול פנים מקצועי",
-  },
-  {
-    text: "כל חברות שלי שואלות אותי מה קרה לעור שלי. אני מספרת להן על אלין וכולן רוצות לבוא. זה הטיפול הכי טוב שעשיתי אי פעם, ואני לא עוזבת אותה.",
-    name: "נועה גולדשטיין",
-    treatment: "טיפול אקנה ופוסט אקנה",
-  },
-  {
-    text: "בגיל 45 חשבתי שהעור שלי לא יכול יותר להשתפר. אלין הוכיחה לי שטעיתי. העור שלי נראה מוצק, זוהר ובריא יותר מתמיד. והיא עושה את זה בעדינות ובאהבה.",
-    name: "אורית כהן",
-    treatment: "אנטי אייג'ינג",
-  },
-]
 
 const stats = [
   {

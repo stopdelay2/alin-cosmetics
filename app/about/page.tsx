@@ -38,15 +38,13 @@ export default function AboutPage() {
 
                 <div className="text-xl text-white/80 leading-relaxed space-y-6">
                   <p>
-                    קוסמטיקאית מוסמכת עם תשוקה אמיתית לטיפול בעור.
+                    קוסמטיקאית מוסמכת שמאמינה שטיפול טוב מתחיל מהקשבה — לעור, לנפש, ולרצון שלך להרגיש שוב טוב עם עצמך.
                   </p>
                   <p>
-                    אחרי שנים בתחום החלטתי לפתוח מקום קטן וביתי בקריית ים, מקום
-                    שבו נשים ירגישו נינוחות, בטוחות, ורואות שינוי אמיתי בעור.
+                    אחרי למעלה מ־8 שנות ניסיון בתחום, פתחתי ב־קריית ים קליניקה אינטימית ושקטה — מקום שבו נשים מרגישות נינוחות, בטוחות, ומקבלות טיפול שבאמת משנה את העור.
                   </p>
                   <p>
-                    אני מאמינה שטיפול טוב מתחיל מהלב - והתוצאה היא לא רק עור
-                    בריא, אלא ביטחון חדש.
+                    לא מרפאה גדולה ולא "סלון יופי", אלא מרחב של אמון, מקצועיות והקשבה אמיתית.
                   </p>
                 </div>
               </div>
@@ -180,18 +178,19 @@ export default function AboutPage() {
         <div className="container mx-auto px-6 md:px-8 lg:px-12 relative z-10">
           <div className="max-w-3xl mx-auto text-center space-y-10">
             <h2 className="text-4xl md:text-5xl font-playfair font-bold">
-              בואי נכיר
+              רוצה לדעת מה באמת מתאים לעור שלך?
             </h2>
             <div className="h-px w-32 bg-white mx-auto" />
             <p className="text-xl text-white/80 leading-relaxed">
-              מוזמנת לשיחת היכרות חינם או לקבוע תור לטיפול ראשון
+              מוזמנת לשיחת היכרות אישית ללא התחייבות –<br />
+              רגע קטן של הקשבה שיכול לשנות הכול.
             </p>
             <Button
               asChild
               size="lg"
               className="bg-white text-black hover:bg-gold-400 hover:text-white border-0 text-lg px-12 py-6 h-auto mt-8"
             >
-              <Link href="/contact">צרי קשר</Link>
+              <Link href="/contact">קבעי תור ראשון</Link>
             </Button>
           </div>
         </div>
@@ -205,25 +204,31 @@ const values = [
     icon: <Heart className="w-6 h-6 text-white" />,
     title: "טיפול מהלב",
     description:
-      "כל טיפול מתחיל מהקשבה אמיתית לצרכים שלך. אני כאן כדי לעזור, לא למכור.",
+      "כל טיפול מתחיל בהקשבה אמיתית. אני כאן כדי לעזור – לא למכור.",
   },
   {
     icon: <Shield className="w-6 h-6 text-white" />,
-    title: "בטיחות ראשונה",
+    title: "בטיחות לפני הכול",
     description:
-      "רק חומרים דרמטולוגיים איכותיים ומוכחים. לא מתפשרת על העור שלך.",
+      "עובדת רק עם חומרים דרמטולוגיים מאושרים ומוכחים.",
   },
   {
     icon: <Sparkles className="w-6 h-6 text-white" />,
     title: "גישה אישית",
     description:
-      "אין שני סוגי עור זהים. כל טיפול מותאם במיוחד עבורך ועבור מצב העור שלך.",
+      "כל עור הוא עולם בפני עצמו. לכן אין טיפול אחד שמתאים לכולן.",
   },
   {
     icon: <Star className="w-6 h-6 text-white" />,
     title: "תוצאות אמיתיות",
     description:
-      "לא מבטיחה ניסים, אבל מבטיחה עבודה מסורה לשיפור העור שלך לאורך זמן.",
+      "לא הבטחות שווא – אלא תהליך אמיתי לשיפור העור לאורך זמן.",
+  },
+  {
+    icon: <Heart className="w-6 h-6 text-white" />,
+    title: "אמון, סבלנות והתמדה",
+    description:
+      "שינוי אמיתי מגיע רק מהשילוב הזה, ביחד איתך.",
   },
 ]
 

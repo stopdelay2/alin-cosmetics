@@ -17,8 +17,7 @@ export function Footer() {
               className="h-24 w-auto object-contain mb-4"
             />
             <p className="text-sm text-gray-600 leading-relaxed">
-              קוסמטיקאית מוסמכת עם לב. טיפולי פנים מקצועיים, עדינים ומותאמים אישית
-              בסביבה שקטה ובטוחה.
+              טיפולי פנים עדינים, מותאמים אישית, במקום שבו העור שלך סוף סוף נושם.
             </p>
           </div>
 

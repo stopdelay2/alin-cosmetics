@@ -107,6 +107,35 @@ export default function HomePage() {
         <Navigation placement="afterHero" />
       </div>
 
+      {/* Soft CTA Section */}
+      <section className="py-24 bg-cream-50 relative overflow-hidden">
+        {/* Decorative circles */}
+        <div className="absolute top-1/2 left-1/2 w-[500px] h-[500px] border border-gold-400/10 rounded-full -translate-x-1/2 -translate-y-1/2" />
+
+        <div className="container mx-auto px-6 md:px-8 lg:px-12 relative z-10">
+          <div className="max-w-3xl mx-auto text-center space-y-8">
+            <div className="inline-flex items-center gap-4 mb-4">
+              <div className="h-px w-12 bg-gold-400" />
+              <Sparkles className="w-5 h-5 text-gold-400" />
+              <div className="h-px w-12 bg-gold-400" />
+            </div>
+
+            <p className="text-2xl md:text-3xl font-playfair text-black/80 leading-relaxed">
+              הרשי לעצמך שעה של שקט ורוגע.<br />
+              פני לטיפול הראשון שלך עכשיו.
+            </p>
+
+            <Button
+              asChild
+              size="lg"
+              className="bg-black text-white hover:bg-gold-400 hover:text-black border-0 text-lg px-10 py-6 h-auto mt-6"
+            >
+              <Link href="/contact">קבעי תור ראשוני</Link>
+            </Button>
+          </div>
+        </div>
+      </section>
+
       {/* Instagram Reels Section */}
       <section
         className="py-24 relative overflow-hidden transition-colors duration-1000"
@@ -320,11 +349,17 @@ export default function HomePage() {
 
             <div className="h-px w-32 bg-gold-400 mx-auto" />
 
-            <p className="text-xl text-black/70 leading-relaxed">
-              קוסמטיקאית מוסמכת עם אהבה אמיתית לעור ולנשים שמבקשות להרגיש יפות ובטוחות.<br />
-              כל טיפול בקליניקה שלי נולד מהקשבה, מגע עדין ותשומת לב אמיתית לפרטים הקטנים<br />
-              כי יופי מתחיל כשאת מרגישה טוב עם עצמך.
-            </p>
+            <div className="space-y-6">
+              <p className="text-lg text-gold-400 font-medium">
+                קוסמטיקאית מוסמכת עם ניסיון של מעל 8 שנים בעבודה עם עור רגיש ובעייתי
+              </p>
+
+              <p className="text-xl text-black/70 leading-relaxed">
+                אהבה אמיתית לעור ולנשים שמבקשות להרגיש יפות ובטוחות.<br />
+                כל טיפול בקליניקה שלי נולד מהקשבה, מגע עדין ותשומת לב אמיתית לפרטים הקטנים<br />
+                כי יופי מתחיל כשאת מרגישה טוב עם עצמך.
+              </p>
+            </div>
 
             <Button
               asChild
@@ -332,6 +367,40 @@ export default function HomePage() {
               className="bg-black text-white hover:bg-gold-400 hover:text-black border-0 text-lg px-12 py-6 h-auto mt-8"
             >
               <Link href="/about">קראי את הסיפור שלי והכירי את הדרך שהפכה תשוקה למקצוע ולשליחות</Link>
+            </Button>
+          </div>
+        </div>
+      </section>
+
+      {/* Consultation CTA - Soft */}
+      <section className="py-24 bg-cream-50 relative overflow-hidden">
+        {/* Decorative circles */}
+        <div className="absolute top-1/2 left-1/4 w-[400px] h-[400px] border border-gold-400/10 rounded-full -translate-x-1/2 -translate-y-1/2" />
+        <div className="absolute bottom-20 right-10 w-64 h-64 bg-gold-400/5 rounded-full" />
+
+        <div className="container mx-auto px-6 md:px-8 lg:px-12 relative z-10">
+          <div className="max-w-2xl mx-auto text-center space-y-8">
+            <div className="inline-flex items-center gap-4 mb-4">
+              <div className="h-px w-12 bg-gold-400" />
+              <div className="w-3 h-3 bg-gold-400 rounded-full" />
+              <div className="h-px w-12 bg-gold-400" />
+            </div>
+
+            <h2 className="text-3xl md:text-4xl font-playfair font-bold text-black">
+              רוצה לדעת מה מתאים לעור שלך?
+            </h2>
+
+            <p className="text-lg text-black/70 leading-relaxed">
+              קבעי שיחת ייעוץ קצרה ללא התחייבות.<br />
+              נבין ביחד מה העור שלך באמת צריך.
+            </p>
+
+            <Button
+              asChild
+              size="lg"
+              className="bg-black text-white hover:bg-gold-400 hover:text-black border-0 text-lg px-10 py-6 h-auto mt-6"
+            >
+              <Link href="/contact">שיחת ייעוץ ללא התחייבות</Link>
             </Button>
           </div>
         </div>
@@ -417,37 +486,37 @@ export default function HomePage() {
 const treatments = [
   {
     title: "אקנה ועור מגורה",
-    description: "נחזיר לעור שלך שקט. טיפול עדין שמנקה בלי לייבש ומאזן בלי להכאיב",
+    description: "נחזיר לעור שלך שקט וברק. טיפול שמנקה ומאזן בעדינות, בלי לגרות את העור.",
     image: "/images/2.png",
   },
   {
     title: "רוזציאה ואדמומיות",
-    description: "אם העור שלך מגיב לכל דבר זה המקום להרגיע אותו",
+    description: "רוגע אמיתי לעור רגיש. טיפול שמפחית אדמומיות ומחזיר ביטחון ונוחות יומיומית.",
     image: "/images/roza.jpeg",
   },
   {
     title: "צלקות וכתמים",
-    description: "כתמים לא צריכים להיות חלק ממך. נעבוד בהדרגה ובסבלנות עד שתראי שינוי",
+    description: "בהירות חדשה לעור שלך. תהליך הדרגתי שמחזיר אחידות ומרקם חלק.",
     image: "/images/postakna.jpeg",
   },
   {
     title: "אנטי אייג'ינג עדין",
-    description: "אין גיל לזוהר. מיצוק, לחות והחזרת הברק בלי חומרים קיצוניים",
+    description: "עור מוצק וזוהר בכל גיל. מיצוק עדין, החזרת לחות ושיפור מרקם העור בלי חומרים קיצוניים.",
     image: "/images/anti.jpeg",
   },
   {
     title: "מיקרונידלינג מבוקר",
-    description: "טיפול מתקדם לעור עייף וצלקתי, עם יד עדינה ותוצאה שמרגישים",
+    description: "חידוש אמיתי לעור עייף וצלקתי. טיפול מתקדם עם יד עדינה ותוצאות נראות לעין.",
     image: "/images/microble.jpeg",
   },
   {
     title: "פוטותרפיה",
-    description: "טיפול באור לשיפור מרקם העור, הפחתת אדמומיות וטיפול באקנה",
+    description: "אור מרפא לעור שלך. שיפור מרקם, הפחתת אדמומיות וטיפול יעיל באקנה.",
     image: "/images/phototerapi.jpeg",
   },
   {
     title: "פיגמנטציה",
-    description: "טיפול ממוקד להבהרת כתמים כהים ואיחוד גוון העור",
+    description: "גוון אחיד ובהיר יותר. טיפול ממוקד שמעניק לעור מראה צעיר ורענן.",
     image: "/images/pegment.jpeg",
   },
 ]

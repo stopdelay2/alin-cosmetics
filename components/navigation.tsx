@@ -8,12 +8,12 @@ import { Menu, X } from "lucide-react"
 import { useState } from "react"
 
 const navItems = [
-  { href: "/", label: "בית" },
-  { href: "/treatments", label: "טיפולים" },
-  { href: "/about", label: "אודות" },
-  { href: "/testimonials", label: "המלצות" },
-  { href: "/gallery", label: "גלריה" },
-  { href: "/contact", label: "צור קשר" },
+  { href: "/", label: "היופי שלך מתחיל כאן" },
+  { href: "/treatments", label: "טיפולים ותוצאות" },
+  { href: "/about", label: "הסיפור שלי" },
+  { href: "/testimonials", label: "לקוחות משתפות" },
+  { href: "/gallery", label: "לפני ואחרי" },
+  { href: "/contact", label: "קביעת תור" },
 ]
 
 export function Navigation({ placement = "top" }: { placement?: "top" | "afterHero" }) {

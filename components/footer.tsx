@@ -85,7 +85,7 @@ export function Footer() {
                 className="flex items-center gap-2 text-sm text-gray-600 hover:text-gold-400 transition-colors"
               >
                 <Instagram className="w-4 h-4" />
-                <span>alin.cosmetics__</span>
+                <span dir="ltr">alin.cosmetics__</span>
               </a>
               <a
                 href="https://www.youtube.com/@AlinCosmeticsIsrael"

@@ -214,7 +214,7 @@ export default function ContactPage() {
                         </div>
                         <div>
                           <p className="font-bold text-black text-lg">אינסטגרם</p>
-                          <p className="text-black/70">@alin.cosmetics__</p>
+                          <p className="text-black/70" dir="ltr">@alin.cosmetics__</p>
                         </div>
                       </a>
                     </CardContent>

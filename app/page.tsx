@@ -374,6 +374,7 @@ export default function HomePage() {
                 target="_blank"
                 rel="noopener noreferrer"
                 className="text-lg hover:text-gold-400 transition-colors"
+                dir="ltr"
               >
                 @alin.cosmetics__
               </a>

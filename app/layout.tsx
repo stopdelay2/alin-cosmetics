@@ -31,7 +31,15 @@ export const metadata: Metadata = {
     description: "טיפולי פנים מקצועיים ועדינים. מתמחה באקנה, רוזציאה, פיגמנטציה ואנטי אייג'ינג.",
     type: "website",
     locale: "he_IL",
-    images: ['/images/1.png'],
+    url: 'https://alin-cosmetics.vercel.app',
+    images: [
+      {
+        url: '/images/1.png',
+        width: 1200,
+        height: 630,
+        alt: 'Alin Cosmetics - קוסמטיקאית מוסמכת',
+      }
+    ],
   },
 }
 

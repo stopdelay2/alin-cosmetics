@@ -315,14 +315,15 @@ export default function HomePage() {
             <div className="w-20 h-20 bg-gold-400 rounded-full mx-auto" />
 
             <h2 className="text-4xl md:text-5xl lg:text-6xl font-playfair font-bold text-black leading-tight">
-              אני אלין,<br />וזה הסיפור שלי
+              אני אלין,
             </h2>
 
             <div className="h-px w-32 bg-gold-400 mx-auto" />
 
             <p className="text-xl text-black/70 leading-relaxed">
-              קוסמטיקאית מוסמכת עם תשוקה אמיתית לטיפול בעור.<br />
-              כל טיפול מתחיל מהלב, והתוצאה היא ביטחון חדש.
+              קוסמטיקאית מוסמכת עם אהבה אמיתית לעור ולנשים שמבקשות להרגיש יפות ובטוחות.<br />
+              כל טיפול בקליניקה שלי נולד מהקשבה, מגע עדין ותשומת לב אמיתית לפרטים הקטנים —<br />
+              כי יופי מתחיל כשאת מרגישה טוב עם עצמך.
             </p>
 
             <Button
@@ -330,7 +331,7 @@ export default function HomePage() {
               size="lg"
               className="bg-black text-white hover:bg-gold-400 hover:text-black border-0 text-lg px-12 py-6 h-auto mt-8"
             >
-              <Link href="/about">קראי את הסיפור המלא</Link>
+              <Link href="/about">קראי את הסיפור שלי והכירי את הדרך שהפכה תשוקה למקצוע ולשליחות</Link>
             </Button>
           </div>
         </div>

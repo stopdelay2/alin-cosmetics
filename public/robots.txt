@@ -43,4 +43,4 @@ User-agent: DotBot
 Disallow: /
 
 # Sitemap location
-Sitemap: https://alin-cosmetics.vercel.app/sitemap.xml
+Sitemap: https://alincosmetics.com/sitemap.xml

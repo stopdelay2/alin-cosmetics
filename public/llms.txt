@@ -11,7 +11,7 @@ Alin Cosmetics is a professional medical aesthetics clinic located in Kiryat Yam
 - **WhatsApp**: +972-54-3175631
 - **Instagram**: @alin.cosmetics__
 - **YouTube**: @AlinCosmeticsIsrael
-- **Website**: https://alin-cosmetics.vercel.app
+- **Website**: https://alincosmetics.com
 
 ## Services Offered
 1. **Acne Treatments** - Professional treatment for inflammatory and cystic acne

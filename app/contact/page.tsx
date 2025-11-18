@@ -25,6 +25,14 @@ export default function ContactPage() {
     const message = `שלום אלין,\n\nשמי ${formData.name}\n${formData.message}\n\nמספר הטלפון שלי: ${formData.phone}`
     const url = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(message)}`
 
+    // Track conversion in Facebook Pixel
+    if (typeof window !== 'undefined' && (window as any).fbq) {
+      (window as any).fbq('track', 'Contact', {
+        content_name: 'WhatsApp Form Submit',
+        content_category: 'Contact'
+      })
+    }
+
     // Track conversion in Google Ads
     if (typeof window !== 'undefined' && (window as any).gtag_report_conversion) {
       (window as any).gtag_report_conversion(url)
@@ -182,6 +190,15 @@ export default function ContactPage() {
                       <button
                         onClick={() => {
                           const url = "https://wa.me/972543175631"
+
+                          // Track conversion in Facebook Pixel
+                          if (typeof window !== 'undefined' && (window as any).fbq) {
+                            (window as any).fbq('track', 'Contact', {
+                              content_name: 'WhatsApp Direct Click',
+                              content_category: 'Contact'
+                            })
+                          }
+
                           if (typeof window !== 'undefined' && (window as any).gtag_report_conversion) {
                             (window as any).gtag_report_conversion(url)
                           } else {

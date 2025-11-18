@@ -9,6 +9,14 @@ export function WhatsAppButton() {
   const handleClick = () => {
     const url = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(message)}`
 
+    // Track conversion in Facebook Pixel
+    if (typeof window !== 'undefined' && (window as any).fbq) {
+      (window as any).fbq('track', 'Contact', {
+        content_name: 'WhatsApp Button Click',
+        content_category: 'Contact'
+      })
+    }
+
     // Track conversion in Google Ads
     if (typeof window !== 'undefined' && (window as any).gtag_report_conversion) {
       (window as any).gtag_report_conversion(url)

@@ -175,7 +175,7 @@ export default async function TestimonialsPage() {
             <div className="h-px w-32 bg-gold-400 mx-auto" />
 
             <p className="text-xl text-white/70 leading-relaxed">
-              בואי לחוות את השינוי בעור ובביטחון שלך
+              בואי לחוות את השינוי בעור הפנים ובבטחון שלך
             </p>
 
             <Button
@@ -198,7 +198,7 @@ const stats = [
     label: "נשים מרוצות",
   },
   {
-    number: "5",
+    number: "8",
     label: "שנות ניסיון",
   },
   {

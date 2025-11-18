@@ -107,35 +107,6 @@ export default function HomePage() {
         <Navigation placement="afterHero" />
       </div>
 
-      {/* Soft CTA Section */}
-      <section className="py-24 bg-cream-50 relative overflow-hidden">
-        {/* Decorative circles */}
-        <div className="absolute top-1/2 left-1/2 w-[500px] h-[500px] border border-gold-400/10 rounded-full -translate-x-1/2 -translate-y-1/2" />
-
-        <div className="container mx-auto px-6 md:px-8 lg:px-12 relative z-10">
-          <div className="max-w-3xl mx-auto text-center space-y-8">
-            <div className="inline-flex items-center gap-4 mb-4">
-              <div className="h-px w-12 bg-gold-400" />
-              <Sparkles className="w-5 h-5 text-gold-400" />
-              <div className="h-px w-12 bg-gold-400" />
-            </div>
-
-            <p className="text-2xl md:text-3xl font-playfair text-black/80 leading-relaxed">
-              הרשי לעצמך שעה של שקט ורוגע.<br />
-              פני לטיפול הראשון שלך עכשיו.
-            </p>
-
-            <Button
-              asChild
-              size="lg"
-              className="bg-black text-white hover:bg-gold-400 hover:text-black border-0 text-lg px-10 py-6 h-auto mt-6"
-            >
-              <Link href="/contact">קבעי תור ראשוני</Link>
-            </Button>
-          </div>
-        </div>
-      </section>
-
       {/* Instagram Reels Section */}
       <section
         className="py-24 relative overflow-hidden transition-colors duration-1000"

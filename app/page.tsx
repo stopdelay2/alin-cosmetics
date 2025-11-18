@@ -361,12 +361,16 @@ export default function HomePage() {
               </p>
             </div>
 
+            <p className="text-lg text-black/60 leading-relaxed">
+              והכירי את הדרך שהפכה תשוקה למקצוע ולשליחות
+            </p>
+
             <Button
               asChild
               size="lg"
               className="bg-black text-white hover:bg-gold-400 hover:text-black border-0 text-lg px-12 py-6 h-auto mt-8"
             >
-              <Link href="/about">קראי את הסיפור שלי והכירי את הדרך שהפכה תשוקה למקצוע ולשליחות</Link>
+              <Link href="/about">קראי את הסיפור שלי</Link>
             </Button>
           </div>
         </div>

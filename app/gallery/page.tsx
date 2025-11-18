@@ -228,9 +228,9 @@ function GalleryGrid({ items }: { items: typeof allGalleryItems }) {
               <div className="aspect-square bg-gold-400/5 flex items-center justify-center border-l border-b border-black/10 relative overflow-hidden">
                 {item.id === 1 ? (
                   <img
-                    src="/public/images/1after.jpeg"
+                    src="/images/1after.jpeg"
                     alt="אחרי הטיפול"
-                    className="w-full h-full object-cover"
+                    className="w-full h-auto"
                     loading="eager"
                   />
                 ) : (
@@ -243,9 +243,9 @@ function GalleryGrid({ items }: { items: typeof allGalleryItems }) {
               <div className="aspect-square bg-black/5 flex items-center justify-center border-b border-black/10 relative overflow-hidden">
                 {item.id === 1 ? (
                   <img
-                    src="/public/images/1before.jpeg"
+                    src="/images/1before.jpeg"
                     alt="לפני הטיפול"
-                    className="w-full h-full object-cover"
+                    className="w-full h-auto"
                     loading="eager"
                   />
                 ) : (

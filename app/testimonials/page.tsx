@@ -3,6 +3,7 @@ import Link from "next/link"
 import { Button } from "@/components/ui/button"
 import { Star, Quote } from "lucide-react"
 import { prisma } from "@/lib/prisma"
+import { TestimonialForm } from "@/components/testimonial-form"
 
 export const metadata: Metadata = {
   title: "המלצות לקוחות | Alin Cosmetics",
@@ -131,29 +132,56 @@ export default async function TestimonialsPage() {
         </div>
       </section>
 
-      {/* CTA - White Background */}
+      {/* Add Testimonial Form - White Background */}
       <section className="py-32 bg-white relative">
         {/* Decorative circles */}
-        <div className="absolute top-1/2 left-1/2 w-[400px] h-[400px] border border-black/5 rounded-full -translate-x-1/2 -translate-y-1/2" />
+        <div className="absolute top-20 right-10 w-64 h-64 border border-black/5 rounded-full" />
+        <div className="absolute bottom-20 left-10 w-40 h-40 bg-gold-400/5 rounded-full blur-2xl" />
+
+        <div className="container mx-auto px-6 md:px-8 lg:px-12 relative z-10">
+          <div className="max-w-2xl mx-auto">
+            <div className="text-center mb-12">
+              <div className="flex items-center justify-center gap-4 mb-6">
+                <div className="h-px w-16 bg-black" />
+                <div className="w-3 h-3 bg-gold-400 rounded-full" />
+                <div className="h-px w-16 bg-black" />
+              </div>
+              <h2 className="text-4xl md:text-5xl font-playfair font-bold text-black mb-4">
+                שתפי את החוויה שלך
+              </h2>
+              <p className="text-lg text-black/70">
+                קיבלת טיפול? נשמח לשמוע מה היה לך!
+              </p>
+            </div>
+
+            <TestimonialForm />
+          </div>
+        </div>
+      </section>
+
+      {/* CTA - Black Background */}
+      <section className="py-32 bg-black text-white relative">
+        {/* Decorative circles */}
+        <div className="absolute top-1/2 left-1/2 w-[400px] h-[400px] border border-white/5 rounded-full -translate-x-1/2 -translate-y-1/2" />
 
         <div className="container mx-auto px-6 md:px-8 lg:px-12 relative z-10">
           <div className="max-w-3xl mx-auto text-center space-y-10">
             <div className="w-20 h-20 bg-gold-400 rounded-full mx-auto" />
 
-            <h2 className="text-4xl md:text-5xl font-playfair font-bold text-black">
+            <h2 className="text-4xl md:text-5xl font-playfair font-bold text-white">
               את יכולה להיות הבאה
             </h2>
 
-            <div className="h-px w-32 bg-black mx-auto" />
+            <div className="h-px w-32 bg-gold-400 mx-auto" />
 
-            <p className="text-xl text-black/70 leading-relaxed">
+            <p className="text-xl text-white/70 leading-relaxed">
               בואי לחוות את השינוי בעור ובביטחון שלך
             </p>
 
             <Button
               asChild
               size="lg"
-              className="bg-black text-white hover:bg-gold-400 hover:text-black border-0 text-lg px-12 py-6 h-auto mt-8"
+              className="bg-white text-black hover:bg-gold-400 hover:text-black border-0 text-lg px-12 py-6 h-auto mt-8"
             >
               <Link href="/contact">קבעי תור עכשיו</Link>
             </Button>

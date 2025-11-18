@@ -53,7 +53,7 @@ export default function AdminTestimonialsPage() {
     }
 
     try {
-      const response = await fetch(\`/api/testimonials/\${id}\`, {
+      const response = await fetch(`/api/testimonials/${id}`, {
         method: "DELETE",
       })
 

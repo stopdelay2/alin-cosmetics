@@ -22,7 +22,7 @@ export default function ContactPage() {
 
     // Redirect to WhatsApp with the message
     const phoneNumber = "972543175631"
-    const message = `שלום אלין,\n\nשמי ${formData.name}\n${formData.message}\n\nמספר הטלפון שלי: ${formData.phone}`
+    const message = `שלום אלין,\n\nשמי ${formData.name}\n${formData.message ? formData.message : 'מעוניינת לקבל מידע נוסף'}\n\nמספר הטלפון שלי: ${formData.phone}`
     const url = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(message)}`
 
     // Track conversion in Facebook Pixel
@@ -40,9 +40,10 @@ export default function ContactPage() {
     // Track conversion in Google Ads
     if (typeof window !== 'undefined' && (window as any).gtag_report_conversion) {
       (window as any).gtag_report_conversion(url)
-    } else {
-      window.open(url, "_blank")
     }
+
+    // Always open WhatsApp
+    window.open(url, "_blank")
 
     // Reset form
     setTimeout(() => {

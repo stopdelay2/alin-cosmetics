@@ -15,6 +15,10 @@ export function WhatsAppButton() {
         content_name: 'WhatsApp Button Click',
         content_category: 'Contact'
       })
+      (window as any).fbq('track', 'Lead', {
+        content_name: 'WhatsApp Button Click',
+        content_category: 'Contact'
+      })
     }
 
     // Track conversion in Google Ads

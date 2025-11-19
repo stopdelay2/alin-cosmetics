@@ -31,6 +31,10 @@ export default function ContactPage() {
         content_name: 'WhatsApp Form Submit',
         content_category: 'Contact'
       })
+      (window as any).fbq('track', 'Lead', {
+        content_name: 'WhatsApp Form Submit',
+        content_category: 'Contact'
+      })
     }
 
     // Track conversion in Google Ads
@@ -194,6 +198,10 @@ export default function ContactPage() {
                           // Track conversion in Facebook Pixel
                           if (typeof window !== 'undefined' && (window as any).fbq) {
                             (window as any).fbq('track', 'Contact', {
+                              content_name: 'WhatsApp Direct Click',
+                              content_category: 'Contact'
+                            })
+                            (window as any).fbq('track', 'Lead', {
                               content_name: 'WhatsApp Direct Click',
                               content_category: 'Contact'
                             })

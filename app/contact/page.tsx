@@ -69,11 +69,11 @@ export default function ContactPage() {
             </div>
 
             <h1 className="text-5xl md:text-6xl lg:text-7xl font-playfair font-bold leading-tight">
-              רוצה שנדבר בוואטסאפ<br />על העור שלך?
+              בואי נדבר<br />על העור שלך
             </h1>
 
             <p className="text-xl text-white/80 leading-relaxed">
-              לחיצה אחת פותחת לך צ'אט אישי בוואטסאפ, בלי התחייבות
+              מוזמנת ליצור קשר בכל דרך שנוחה לך
             </p>
           </div>
         </div>

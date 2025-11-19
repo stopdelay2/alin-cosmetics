@@ -57,6 +57,12 @@ export function Footer() {
               >
                 קביעת תור
               </Link>
+              <Link
+                href="/privacy"
+                className="text-sm text-gray-600 hover:text-gold-400 transition-colors"
+              >
+                מדיניות פרטיות
+              </Link>
             </div>
           </div>
 

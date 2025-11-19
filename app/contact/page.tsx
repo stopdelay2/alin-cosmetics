@@ -69,11 +69,11 @@ export default function ContactPage() {
             </div>
 
             <h1 className="text-5xl md:text-6xl lg:text-7xl font-playfair font-bold leading-tight">
-              בואי נדבר<br />על העור שלך
+              רוצה שנדבר בוואטסאפ<br />על העור שלך?
             </h1>
 
             <p className="text-xl text-white/80 leading-relaxed">
-              מוזמנת ליצור קשר בכל דרך שנוחה לך
+              לחיצה אחת פותחת לך צ'אט אישי בוואטסאפ, בלי התחייבות
             </p>
           </div>
         </div>
@@ -88,73 +88,146 @@ export default function ContactPage() {
         <div className="container mx-auto px-6 md:px-8 lg:px-12 relative z-10">
           <div className="max-w-6xl mx-auto">
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-16">
-              {/* Form */}
-              <div>
-                <div className="mb-8">
-                  <div className="flex items-center gap-4 mb-6">
-                    <div className="w-12 h-12 border-2 border-black rounded-full" />
-                    <div className="h-px flex-1 bg-gold-400" />
+              {/* WhatsApp & Form */}
+              <div className="space-y-12">
+                {/* Direct WhatsApp Button Section */}
+                <div>
+                  <div className="mb-6">
+                    <div className="flex items-center gap-4 mb-6">
+                      <div className="w-12 h-12 border-2 border-black rounded-full" />
+                      <div className="h-px flex-1 bg-gold-400" />
+                    </div>
+                    <h2 className="text-3xl md:text-4xl font-playfair font-bold text-black mb-4 leading-tight">
+                      רוצה לשאול שאלה קצרה<br />על העור שלך?
+                    </h2>
+                    <p className="text-black/70 text-lg leading-relaxed">
+                      לחצי וייפתח לך וואטסאפ בצ'אט אישי איתי.
+                    </p>
                   </div>
-                  <h2 className="text-4xl font-playfair font-bold text-black mb-4 leading-tight">
-                    מלאי כמה פרטים<br />ונעבור ישר לייעוץ בווטסאפ
-                  </h2>
-                  <p className="text-black/70">הטופס יפתח את וואטסאפ עם ההודעה שלך</p>
+
+                  <Button
+                    onClick={() => {
+                      const url = "https://wa.me/972543175631"
+
+                      // Track conversion in Facebook Pixel
+                      if (typeof window !== 'undefined' && (window as any).fbq) {
+                        (window as any).fbq('track', 'Contact', {
+                          content_name: 'WhatsApp Primary Button',
+                          content_category: 'Contact'
+                        })
+                        (window as any).fbq('track', 'Lead', {
+                          content_name: 'WhatsApp Primary Button',
+                          content_category: 'Contact'
+                        })
+                      }
+
+                      if (typeof window !== 'undefined' && (window as any).gtag_report_conversion) {
+                        (window as any).gtag_report_conversion(url)
+                      } else {
+                        window.open(url, "_blank")
+                      }
+                    }}
+                    size="lg"
+                    className="w-full bg-[#25D366] text-white hover:bg-[#128C7E] transition-colors text-xl py-8 shadow-lg hover:shadow-xl"
+                  >
+                    לפתיחת וואטסאפ עכשיו
+                  </Button>
+
+                  <div className="mt-4 space-y-2">
+                    <p className="text-sm text-black/60 text-center">
+                      אפשר לשאול, להתלבט ולקבל כיוון לפני שמחליטים על טיפול.
+                    </p>
+                    <p className="text-xs text-black/50 text-center">
+                      לא מצרפת לקבוצות. שיחה אישית בלבד.
+                    </p>
+                  </div>
                 </div>
 
-                <Card className="border-2 border-black/10 rounded-none shadow-none">
-                  <CardContent className="p-8">
-                    <form onSubmit={handleSubmit} className="space-y-6">
-                      <div className="space-y-2">
-                        <Label htmlFor="name">שם מלא</Label>
-                        <Input
-                          id="name"
-                          value={formData.name}
-                          onChange={(e) =>
-                            setFormData({ ...formData, name: e.target.value })
-                          }
-                          placeholder="השם שלך"
-                          required
-                        />
-                      </div>
+                {/* Divider */}
+                <div className="flex items-center gap-4">
+                  <div className="h-px flex-1 bg-black/10" />
+                  <span className="text-black/40 text-sm">או</span>
+                  <div className="h-px flex-1 bg-black/10" />
+                </div>
 
-                      <div className="space-y-2">
-                        <Label htmlFor="phone">טלפון</Label>
-                        <Input
-                          id="phone"
-                          type="tel"
-                          value={formData.phone}
-                          onChange={(e) =>
-                            setFormData({ ...formData, phone: e.target.value })
-                          }
-                          placeholder="050-1234567"
-                          required
-                        />
-                      </div>
+                {/* Form Section */}
+                <div>
+                  <div className="mb-6">
+                    <h3 className="text-xl font-bold text-black mb-2">
+                      מעדיפה להשאיר פרטים ונדבר כשנוח לך?
+                    </h3>
+                    <p className="text-black/60 text-sm">
+                      השאירי מספר ואני אחזור אלייך בוואטסאפ עם תשובה אישית.
+                    </p>
+                  </div>
 
-                      <div className="space-y-2">
-                        <Label htmlFor="message">הודעה</Label>
-                        <Textarea
-                          id="message"
-                          value={formData.message}
-                          onChange={(e) =>
-                            setFormData({ ...formData, message: e.target.value })
-                          }
-                          placeholder="ספרי לי על מה את רוצה לשמוע..."
-                          required
-                        />
-                      </div>
+                  <Card className="border-2 border-black/10 rounded-none shadow-none">
+                    <CardContent className="p-6">
+                      <form onSubmit={handleSubmit} className="space-y-4">
+                        <div className="space-y-2">
+                          <Label htmlFor="name" className="text-sm">שם פרטי</Label>
+                          <Input
+                            id="name"
+                            value={formData.name}
+                            onChange={(e) =>
+                              setFormData({ ...formData, name: e.target.value })
+                            }
+                            placeholder="איך לפנות אלייך?"
+                            required
+                            className="border-black/20"
+                          />
+                        </div>
 
-                      <Button
-                        type="submit"
-                        size="lg"
-                        className="w-full bg-black text-white hover:bg-gold-400 hover:text-black transition-colors text-lg py-6"
-                        disabled={isSubmitting}
-                      >
-                        {isSubmitting ? "מעביר לוואטסאפ..." : "לייעוץ בוואטסאפ"}
-                      </Button>
-                    </form>
-                  </CardContent>
-                </Card>
+                        <div className="space-y-2">
+                          <Label htmlFor="phone" className="text-sm">טלפון</Label>
+                          <Input
+                            id="phone"
+                            type="tel"
+                            value={formData.phone}
+                            onChange={(e) =>
+                              setFormData({ ...formData, phone: e.target.value })
+                            }
+                            placeholder="מספר לנייד"
+                            required
+                            className="border-black/20"
+                          />
+                        </div>
+
+                        <div className="space-y-2">
+                          <Label htmlFor="message" className="text-sm">איך אפשר לעזור לך? <span className="text-black/50">(לא חובה)</span></Label>
+                          <Textarea
+                            id="message"
+                            value={formData.message}
+                            onChange={(e) =>
+                              setFormData({ ...formData, message: e.target.value })
+                            }
+                            placeholder="לדוגמה: אקנה, יובש, פיגמנטציה..."
+                            rows={3}
+                            className="border-black/20"
+                          />
+                        </div>
+
+                        <Button
+                          type="submit"
+                          size="lg"
+                          className="w-full bg-black text-white hover:bg-gold-400 hover:text-black transition-colors text-base py-6"
+                          disabled={isSubmitting}
+                        >
+                          {isSubmitting ? "שולחת..." : "שליחת פרטים לחזרה בוואטסאפ"}
+                        </Button>
+
+                        <div className="pt-2 space-y-1">
+                          <p className="text-xs text-black/50 text-center">
+                            ⏱️ זמן תגובה ממוצע: עד חצי שעה
+                          </p>
+                          <p className="text-xs text-black/50 text-center">
+                            אין התחייבות לטיפול. קודם מדברות, אחר כך מחליטות.
+                          </p>
+                        </div>
+                      </form>
+                    </CardContent>
+                  </Card>
+                </div>
               </div>
 
               {/* Contact Info */}

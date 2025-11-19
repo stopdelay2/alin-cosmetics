@@ -137,7 +137,7 @@ export default function HomePage() {
                 className="h-px w-16 transition-colors duration-1000"
                 style={{ backgroundColor: scrollProgress > 0.2 ? 'white' : 'black' }}
               />
-              <Instagram className="w-8 h-8 text-gold-400" />
+              <Youtube className="w-8 h-8 text-gold-400" />
               <div
                 className="h-px w-16 transition-colors duration-1000"
                 style={{ backgroundColor: scrollProgress > 0.2 ? 'white' : 'black' }}
@@ -147,7 +147,7 @@ export default function HomePage() {
               className="text-3xl md:text-4xl font-playfair font-bold mb-4 transition-colors duration-1000"
               style={{ color: scrollProgress > 0.2 ? 'white' : 'black' }}
             >
-              מהאינסטגרם שלנו
+              מהיוטיוב שלנו
             </h2>
             <p
               className="transition-colors duration-1000"
@@ -157,11 +157,35 @@ export default function HomePage() {
             </p>
           </div>
 
-          {/* Instagram Reels Grid */}
+          {/* YouTube Shorts Grid */}
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-6xl mx-auto">
-            <InstagramEmbed url="https://www.instagram.com/p/DQ407GQjqfD/" />
-            <InstagramEmbed url="https://www.instagram.com/p/DQqwUpoiG9P/" />
-            <InstagramEmbed url="https://www.instagram.com/p/DQ9YeDSiN_G/" />
+            <div className="aspect-[9/16] w-full max-w-[315px] mx-auto">
+              <iframe
+                src="https://www.youtube.com/embed/-lruYYi_IkY"
+                title="YouTube Shorts"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                allowFullScreen
+                className="w-full h-full rounded-lg"
+              />
+            </div>
+            <div className="aspect-[9/16] w-full max-w-[315px] mx-auto">
+              <iframe
+                src="https://www.youtube.com/embed/zomzced34n0"
+                title="YouTube Shorts"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                allowFullScreen
+                className="w-full h-full rounded-lg"
+              />
+            </div>
+            <div className="aspect-[9/16] w-full max-w-[315px] mx-auto">
+              <iframe
+                src="https://www.youtube.com/embed/lvFQcJFMec0"
+                title="YouTube Shorts"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                allowFullScreen
+                className="w-full h-full rounded-lg"
+              />
+            </div>
           </div>
 
           {/* Follow Buttons */}

@@ -26,20 +26,28 @@ export default function ContactPage() {
     const url = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(message)}`
 
     // Track conversion in Facebook Pixel
-    if (typeof window !== 'undefined' && (window as any).fbq) {
-      (window as any).fbq('track', 'Contact', {
-        content_name: 'WhatsApp Form Submit',
-        content_category: 'Contact'
-      })
-      (window as any).fbq('track', 'Lead', {
-        content_name: 'WhatsApp Form Submit',
-        content_category: 'Contact'
-      })
+    try {
+      if (typeof window !== 'undefined' && (window as any).fbq) {
+        (window as any).fbq('track', 'Contact', {
+          content_name: 'WhatsApp Form Submit',
+          content_category: 'Contact'
+        })
+        (window as any).fbq('track', 'Lead', {
+          content_name: 'WhatsApp Form Submit',
+          content_category: 'Contact'
+        })
+      }
+    } catch (error) {
+      console.log('Facebook Pixel tracking failed:', error)
     }
 
     // Track conversion in Google Ads
-    if (typeof window !== 'undefined' && (window as any).gtag_report_conversion) {
-      (window as any).gtag_report_conversion(url)
+    try {
+      if (typeof window !== 'undefined' && (window as any).gtag_report_conversion) {
+        (window as any).gtag_report_conversion(url)
+      }
+    } catch (error) {
+      console.log('Google Ads tracking failed:', error)
     }
 
     // Always open WhatsApp
@@ -111,20 +119,28 @@ export default function ContactPage() {
                       const url = "https://wa.me/972543175631"
 
                       // Track conversion in Facebook Pixel
-                      if (typeof window !== 'undefined' && (window as any).fbq) {
-                        (window as any).fbq('track', 'Contact', {
-                          content_name: 'WhatsApp Primary Button',
-                          content_category: 'Contact'
-                        })
-                        (window as any).fbq('track', 'Lead', {
-                          content_name: 'WhatsApp Primary Button',
-                          content_category: 'Contact'
-                        })
+                      try {
+                        if (typeof window !== 'undefined' && (window as any).fbq) {
+                          (window as any).fbq('track', 'Contact', {
+                            content_name: 'WhatsApp Primary Button',
+                            content_category: 'Contact'
+                          })
+                          (window as any).fbq('track', 'Lead', {
+                            content_name: 'WhatsApp Primary Button',
+                            content_category: 'Contact'
+                          })
+                        }
+                      } catch (error) {
+                        console.log('Facebook Pixel tracking failed:', error)
                       }
 
                       // Track conversion in Google Ads
-                      if (typeof window !== 'undefined' && (window as any).gtag_report_conversion) {
-                        (window as any).gtag_report_conversion(url)
+                      try {
+                        if (typeof window !== 'undefined' && (window as any).gtag_report_conversion) {
+                          (window as any).gtag_report_conversion(url)
+                        }
+                      } catch (error) {
+                        console.log('Google Ads tracking failed:', error)
                       }
 
                       // Always open WhatsApp

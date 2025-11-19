@@ -10,23 +10,32 @@ export function WhatsAppButton() {
     const url = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(message)}`
 
     // Track conversion in Facebook Pixel
-    if (typeof window !== 'undefined' && (window as any).fbq) {
-      (window as any).fbq('track', 'Contact', {
-        content_name: 'WhatsApp Button Click',
-        content_category: 'Contact'
-      })
-      (window as any).fbq('track', 'Lead', {
-        content_name: 'WhatsApp Button Click',
-        content_category: 'Contact'
-      })
+    try {
+      if (typeof window !== 'undefined' && (window as any).fbq) {
+        (window as any).fbq('track', 'Contact', {
+          content_name: 'WhatsApp Button Click',
+          content_category: 'Contact'
+        })
+        (window as any).fbq('track', 'Lead', {
+          content_name: 'WhatsApp Button Click',
+          content_category: 'Contact'
+        })
+      }
+    } catch (error) {
+      console.log('Facebook Pixel tracking failed:', error)
     }
 
     // Track conversion in Google Ads
-    if (typeof window !== 'undefined' && (window as any).gtag_report_conversion) {
-      (window as any).gtag_report_conversion(url)
-    } else {
-      window.open(url, "_blank")
+    try {
+      if (typeof window !== 'undefined' && (window as any).gtag_report_conversion) {
+        (window as any).gtag_report_conversion(url)
+      }
+    } catch (error) {
+      console.log('Google Ads tracking failed:', error)
     }
+
+    // Always open WhatsApp
+    window.open(url, "_blank")
   }
 
   return (

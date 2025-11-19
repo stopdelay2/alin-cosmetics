@@ -7,6 +7,7 @@ import { Card, CardContent } from "@/components/ui/card"
 import { Sparkles, MapPin, Phone, Instagram, Youtube } from "lucide-react"
 import { useEffect, useState } from "react"
 import { Navigation } from "@/components/navigation"
+import { FAQSection } from "@/components/faq-section"
 
 export default function HomePage() {
   const [scrollY, setScrollY] = useState(0)
@@ -53,12 +54,12 @@ export default function HomePage() {
                 <div className="w-3 h-3 bg-gold-400 rounded-full" />
               </div>
 
-              <h1 className="text-5xl md:text-6xl lg:text-7xl xl:text-8xl font-playfair font-bold text-white leading-tight drop-shadow-2xl">
+              <div className="text-5xl md:text-6xl lg:text-7xl xl:text-8xl font-playfair font-bold text-white leading-tight drop-shadow-2xl">
                 לפעמים<br />
                 העור שלנו<br />
                 פשוט מבקש<br />
                 רגע של הקשבה
-              </h1>
+              </div>
 
               <p className="text-xl md:text-2xl text-white/90 leading-relaxed max-w-xl drop-shadow-lg mb-4 sm:mb-0">
                 טיפול פנים עדין, מקצועי ומותאם אישית
@@ -454,6 +455,9 @@ export default function HomePage() {
           </div>
         </div>
       </section>
+
+      {/* FAQ Section */}
+      <FAQSection />
     </div>
   )
 }

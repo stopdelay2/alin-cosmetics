@@ -114,7 +114,7 @@ export default function AdminTestimonialsPage() {
       <div className="container mx-auto px-4 max-w-6xl">
         {/* Header */}
         <div className="mb-8">
-          <h1 className="text-4xl font-playfair font-bold mb-4">
+          <h1 className="text-4xl font-bold mb-4">
             ניהול ביקורות
           </h1>
           <p className="text-gray-600">

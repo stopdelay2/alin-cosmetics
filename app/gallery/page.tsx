@@ -31,7 +31,7 @@ export default function GalleryPage() {
               <div className="h-px w-16 bg-white" />
             </div>
 
-            <h1 className="text-5xl md:text-6xl lg:text-7xl font-playfair font-bold leading-tight">
+            <h1 className="text-5xl md:text-6xl lg:text-7xl font-bold leading-tight">
               תוצאות של נשים<br />שבחרו בעצמן
             </h1>
 
@@ -170,7 +170,7 @@ export default function GalleryPage() {
           <div className="max-w-3xl mx-auto text-center space-y-10">
             <div className="w-20 h-20 bg-gold-400 rounded-full mx-auto" />
 
-            <h2 className="text-4xl md:text-5xl font-playfair font-bold text-black">
+            <h2 className="text-4xl md:text-5xl font-bold text-black">
               גם את יכולה לראות שינוי
             </h2>
 

@@ -23,7 +23,7 @@ export function Footer() {
 
           {/* Quick Links */}
           <div>
-            <h3 className="text-lg font-playfair font-semibold mb-4">
+            <h3 className="text-lg font-bold font-semibold mb-4">
               קישורים מהירים
             </h3>
             <div className="flex flex-col gap-2">
@@ -68,7 +68,7 @@ export function Footer() {
 
           {/* Contact */}
           <div>
-            <h3 className="text-lg font-playfair font-semibold mb-4">
+            <h3 className="text-lg font-bold font-semibold mb-4">
               יצירת קשר
             </h3>
             <div className="flex flex-col gap-3">

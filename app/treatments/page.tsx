@@ -32,7 +32,7 @@ export default function TreatmentsPage() {
               <div className="w-3 h-3 bg-gold-400 rounded-full" />
               <div className="h-px w-16 bg-white" />
             </div>
-            <h1 className="text-5xl md:text-6xl lg:text-7xl font-playfair font-bold leading-tight">
+            <h1 className="text-5xl md:text-6xl lg:text-7xl font-bold leading-tight">
               כל עור הוא עולם<br />לכן גם הטיפול שלך אישי
             </h1>
             <p className="text-xl text-white/80 leading-relaxed max-w-2xl mx-auto">
@@ -76,7 +76,7 @@ export default function TreatmentsPage() {
                   {/* Content Section */}
                   <div className="space-y-6">
                     <div>
-                      <h2 className="text-4xl font-playfair font-bold text-black mb-4">
+                      <h2 className="text-4xl font-bold text-black mb-4">
                         {treatment.title}
                       </h2>
                       <div className="h-px w-12 bg-gold-400 mb-6" />
@@ -120,7 +120,7 @@ export default function TreatmentsPage() {
         <div className="container mx-auto px-6 md:px-8 lg:px-12 relative z-10">
           <div className="max-w-3xl mx-auto text-center space-y-10">
             <div className="w-20 h-20 bg-gold-400 rounded-full mx-auto" />
-            <h2 className="text-4xl md:text-5xl font-playfair font-bold leading-tight">
+            <h2 className="text-4xl md:text-5xl font-bold leading-tight">
               לא בטוחה איזה טיפול<br />מתאים לך?
             </h2>
             <div className="h-px w-32 bg-white mx-auto" />

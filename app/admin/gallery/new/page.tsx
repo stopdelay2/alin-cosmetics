@@ -59,7 +59,7 @@ export default function NewGalleryItemPage() {
             <ArrowRight className="w-4 h-4" />
           </Link>
         </Button>
-        <h2 className="text-3xl font-playfair font-bold text-gray-800">
+        <h2 className="text-3xl font-bold text-gray-800">
           תמונה חדשה
         </h2>
       </div>

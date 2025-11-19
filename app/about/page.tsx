@@ -32,7 +32,7 @@ export default function AboutPage() {
                   <div className="w-3 h-3 bg-gold-400 rounded-full" />
                 </div>
 
-                <h1 className="text-5xl md:text-6xl lg:text-7xl font-playfair font-bold leading-tight">
+                <h1 className="text-5xl md:text-6xl lg:text-7xl font-bold leading-tight">
                   שלום,<br />אני אלין
                 </h1>
 
@@ -76,7 +76,7 @@ export default function AboutPage() {
             <div className="text-center mb-16">
               <div className="flex items-center justify-center gap-4 mb-6">
                 <div className="w-12 h-12 border-2 border-black rounded-full" />
-                <h2 className="text-4xl md:text-5xl font-playfair font-bold text-black">
+                <h2 className="text-4xl md:text-5xl font-bold text-black">
                   הערכים שלי
                 </h2>
                 <div className="h-px w-20 bg-black" />
@@ -93,7 +93,7 @@ export default function AboutPage() {
                     <div className="w-12 h-12 rounded-full bg-black group-hover:bg-gold-400 flex items-center justify-center transition-colors">
                       {value.icon}
                     </div>
-                    <h3 className="text-2xl font-playfair font-bold text-black">
+                    <h3 className="text-2xl font-bold text-black">
                       {value.title}
                     </h3>
                   </div>
@@ -116,7 +116,7 @@ export default function AboutPage() {
           <div className="max-w-3xl mx-auto text-center space-y-10">
             <div className="w-20 h-20 bg-gold-400 rounded-full mx-auto" />
 
-            <h2 className="text-4xl md:text-5xl font-playfair font-bold">
+            <h2 className="text-4xl md:text-5xl font-bold">
               התמדה, אמון וסבלנות
             </h2>
 
@@ -146,7 +146,7 @@ export default function AboutPage() {
         <div className="container mx-auto px-6 md:px-8 lg:px-12">
           <div className="max-w-6xl mx-auto">
             <div className="text-center mb-16">
-              <h2 className="text-4xl md:text-5xl font-playfair font-bold text-black mb-4">
+              <h2 className="text-4xl md:text-5xl font-bold text-black mb-4">
                 הסמכות והתמחויות
               </h2>
               <div className="h-px w-20 bg-gold-400 mx-auto" />
@@ -177,7 +177,7 @@ export default function AboutPage() {
 
         <div className="container mx-auto px-6 md:px-8 lg:px-12 relative z-10">
           <div className="max-w-3xl mx-auto text-center space-y-10">
-            <h2 className="text-4xl md:text-5xl font-playfair font-bold">
+            <h2 className="text-4xl md:text-5xl font-bold">
               רוצה לדעת מה באמת מתאים לעור שלך?
             </h2>
             <div className="h-px w-32 bg-white mx-auto" />

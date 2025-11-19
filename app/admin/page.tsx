@@ -16,7 +16,7 @@ export default async function AdminPage() {
   return (
     <div className="space-y-8">
       <div>
-        <h2 className="text-3xl font-playfair font-bold text-gray-800 mb-2">
+        <h2 className="text-3xl font-bold text-gray-800 mb-2">
           לוח בקרה
         </h2>
         <p className="text-gray-600">סקירה כללית של תוכן האתר</p>

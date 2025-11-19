@@ -13,7 +13,7 @@ export default function AdminLayout({
       <header className="bg-white border-b border-gray-200">
         <div className="container mx-auto px-4 py-4">
           <div className="flex items-center justify-between">
-            <h1 className="text-2xl font-playfair font-bold text-gray-800">
+            <h1 className="text-2xl font-bold text-gray-800">
               Alin Cosmetics - ניהול תוכן
             </h1>
             <Button asChild variant="outline">

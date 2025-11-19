@@ -39,7 +39,7 @@ export default async function TestimonialsPage() {
               <div className="h-px w-16 bg-white" />
             </div>
 
-            <h1 className="text-5xl md:text-6xl lg:text-7xl font-playfair font-bold leading-tight">
+            <h1 className="text-5xl md:text-6xl lg:text-7xl font-bold leading-tight">
               נשים אמיתיות<br />תוצאות אמיתיות
             </h1>
 
@@ -120,7 +120,7 @@ export default async function TestimonialsPage() {
               {stats.map((stat, index) => (
                 <div key={index} className="space-y-6">
                   <div className="w-40 h-40 rounded-full border-2 border-gold-400 flex items-center justify-center mx-auto">
-                    <div className="text-4xl md:text-5xl font-playfair font-bold text-gold-400">
+                    <div className="text-4xl md:text-5xl font-bold text-gold-400">
                       {stat.number}
                     </div>
                   </div>
@@ -146,7 +146,7 @@ export default async function TestimonialsPage() {
                 <div className="w-3 h-3 bg-gold-400 rounded-full" />
                 <div className="h-px w-16 bg-black" />
               </div>
-              <h2 className="text-4xl md:text-5xl font-playfair font-bold text-black mb-4">
+              <h2 className="text-4xl md:text-5xl font-bold text-black mb-4">
                 שתפי את החוויה שלך
               </h2>
               <p className="text-lg text-black/70">
@@ -168,7 +168,7 @@ export default async function TestimonialsPage() {
           <div className="max-w-3xl mx-auto text-center space-y-10">
             <div className="w-20 h-20 bg-gold-400 rounded-full mx-auto" />
 
-            <h2 className="text-4xl md:text-5xl font-playfair font-bold text-white">
+            <h2 className="text-4xl md:text-5xl font-bold text-white">
               ראיתי נשים רבות שעשו שינוי אמיתי - עכשיו תורך.
             </h2>
 

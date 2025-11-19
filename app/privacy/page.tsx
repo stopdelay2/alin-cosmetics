@@ -24,7 +24,7 @@ export default function PrivacyPage() {
               <div className="h-px w-16 bg-white" />
             </div>
 
-            <div className="text-4xl md:text-5xl font-playfair font-bold leading-tight">
+            <div className="text-4xl md:text-5xl font-bold leading-tight">
               📜 מדיניות פרטיות
             </div>
 
@@ -58,7 +58,7 @@ export default function PrivacyPage() {
               </p>
 
               <div className="pt-8">
-                <h2 className="text-2xl font-playfair font-bold text-black mb-4">
+                <h2 className="text-2xl font-bold text-black mb-4">
                   1. מידע שאנו אוספים
                 </h2>
 
@@ -99,7 +99,7 @@ export default function PrivacyPage() {
               </div>
 
               <div className="pt-8">
-                <h2 className="text-2xl font-playfair font-bold text-black mb-4">
+                <h2 className="text-2xl font-bold text-black mb-4">
                   2. מטרות השימוש במידע
                 </h2>
                 <p>אנו משתמשים במידע לצורך:</p>
@@ -115,7 +115,7 @@ export default function PrivacyPage() {
               </div>
 
               <div className="pt-8">
-                <h2 className="text-2xl font-playfair font-bold text-black mb-4">
+                <h2 className="text-2xl font-bold text-black mb-4">
                   3. מסירת מידע לצד שלישי
                 </h2>
                 <p>אנו עשויים להעביר מידע לגופים הבאים במידת הצורך:</p>
@@ -133,7 +133,7 @@ export default function PrivacyPage() {
               </div>
 
               <div className="pt-8">
-                <h2 className="text-2xl font-playfair font-bold text-black mb-4">
+                <h2 className="text-2xl font-bold text-black mb-4">
                   4. Cookies וטכנולוגיות מעקב
                 </h2>
                 <p>האתר עושה שימוש ב-Cookies לצורך:</p>
@@ -147,7 +147,7 @@ export default function PrivacyPage() {
               </div>
 
               <div className="pt-8">
-                <h2 className="text-2xl font-playfair font-bold text-black mb-4">
+                <h2 className="text-2xl font-bold text-black mb-4">
                   5. שמירת מידע ואבטחתו
                 </h2>
                 <p>
@@ -160,7 +160,7 @@ export default function PrivacyPage() {
               </div>
 
               <div className="pt-8">
-                <h2 className="text-2xl font-playfair font-bold text-black mb-4">
+                <h2 className="text-2xl font-bold text-black mb-4">
                   6. זכויות המשתמשת
                 </h2>
                 <p>על פי חוק הגנת הפרטיות בישראל, עומדות לרשותך הזכויות הבאות:</p>
@@ -177,7 +177,7 @@ export default function PrivacyPage() {
               </div>
 
               <div className="pt-8">
-                <h2 className="text-2xl font-playfair font-bold text-black mb-4">
+                <h2 className="text-2xl font-bold text-black mb-4">
                   7. דיוור ושיווק (חוק הספאם)
                 </h2>
                 <p>
@@ -195,7 +195,7 @@ export default function PrivacyPage() {
               </div>
 
               <div className="pt-8">
-                <h2 className="text-2xl font-playfair font-bold text-black mb-4">
+                <h2 className="text-2xl font-bold text-black mb-4">
                   8. קטינים
                 </h2>
                 <p>
@@ -205,7 +205,7 @@ export default function PrivacyPage() {
               </div>
 
               <div className="pt-8">
-                <h2 className="text-2xl font-playfair font-bold text-black mb-4">
+                <h2 className="text-2xl font-bold text-black mb-4">
                   9. שינויים במדיניות
                 </h2>
                 <p>
@@ -215,7 +215,7 @@ export default function PrivacyPage() {
               </div>
 
               <div className="pt-8">
-                <h2 className="text-2xl font-playfair font-bold text-black mb-4">
+                <h2 className="text-2xl font-bold text-black mb-4">
                   10. יצירת קשר
                 </h2>
                 <p>לשאלות בנוגע למדיניות הפרטיות:</p>

@@ -70,8 +70,8 @@ const config = {
         },
       },
       fontFamily: {
-        playfair: ['var(--font-playfair)', 'serif'],
-        inter: ['var(--font-inter)', 'sans-serif'],
+        alef: ['var(--font-alef)', 'sans-serif'],
+        sans: ['var(--font-alef)', 'sans-serif'],
       },
       borderRadius: {
         lg: "var(--radius)",

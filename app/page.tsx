@@ -54,7 +54,7 @@ export default function HomePage() {
                 <div className="w-3 h-3 bg-gold-400 rounded-full" />
               </div>
 
-              <div className="text-5xl md:text-6xl lg:text-7xl xl:text-8xl font-playfair font-bold text-white leading-tight drop-shadow-2xl">
+              <div className="text-5xl md:text-6xl lg:text-7xl xl:text-8xl font-bold text-white leading-tight drop-shadow-2xl">
                 לפעמים<br />
                 העור שלנו<br />
                 פשוט מבקש<br />
@@ -144,7 +144,7 @@ export default function HomePage() {
               />
             </div>
             <h2
-              className="text-3xl md:text-4xl font-playfair font-bold mb-4 transition-colors duration-1000"
+              className="text-3xl md:text-4xl font-bold mb-4 transition-colors duration-1000"
               style={{ color: scrollProgress > 0.2 ? 'white' : 'black' }}
             >
               מהיוטיוב שלנו
@@ -250,7 +250,7 @@ export default function HomePage() {
               <div className="w-12 h-12 border-2 border-current rounded-full"
                    style={{ color: scrollProgress > 0.3 ? 'white' : 'black' }} />
               <h2
-                className="text-4xl md:text-5xl font-playfair font-bold transition-colors"
+                className="text-4xl md:text-5xl font-bold transition-colors"
                 style={{ color: scrollProgress > 0.3 ? 'white' : 'black' }}
               >
                 הטיפולים
@@ -285,7 +285,7 @@ export default function HomePage() {
                     </div>
                     {/* Content */}
                     <div className="p-6 space-y-3">
-                      <h3 className="text-xl font-playfair font-bold">
+                      <h3 className="text-xl font-bold">
                         {treatment.title}
                       </h3>
                       <div className="h-px w-12 bg-gold-400" />
@@ -339,7 +339,7 @@ export default function HomePage() {
           <div className="max-w-3xl mx-auto text-center space-y-10">
             <div className="w-20 h-20 bg-gold-400 rounded-full mx-auto" />
 
-            <h2 className="text-4xl md:text-5xl lg:text-6xl font-playfair font-bold text-black leading-tight">
+            <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold text-black leading-tight">
               אני אלין,
             </h2>
 
@@ -386,7 +386,7 @@ export default function HomePage() {
               <div className="h-px w-12 bg-gold-400" />
             </div>
 
-            <h2 className="text-3xl md:text-4xl font-playfair font-bold text-black">
+            <h2 className="text-3xl md:text-4xl font-bold text-black">
               רוצה לדעת מה מתאים לעור שלך?
             </h2>
 
@@ -416,7 +416,7 @@ export default function HomePage() {
           {/* Gold circle accent */}
           <div className="w-24 h-24 bg-gold-400 rounded-full mx-auto mb-8" />
 
-          <h2 className="text-5xl md:text-7xl font-playfair font-bold leading-tight">
+          <h2 className="text-5xl md:text-7xl font-bold leading-tight">
             העור שלך<br />
             יכול להרגיש<br />
             אחרת

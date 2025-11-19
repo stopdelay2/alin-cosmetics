@@ -1,20 +1,15 @@
 import type { Metadata } from "next"
-import { Playfair_Display, Inter } from "next/font/google"
+import { Alef } from "next/font/google"
 import Script from "next/script"
 import "./globals.css"
 import { Navigation } from "@/components/navigation"
 import { Footer } from "@/components/footer"
 import { WhatsAppButton } from "@/components/whatsapp-button"
 
-const playfair = Playfair_Display({
-  subsets: ["latin"],
-  variable: "--font-playfair",
-  display: "swap",
-})
-
-const inter = Inter({
-  subsets: ["latin"],
-  variable: "--font-inter",
+const alef = Alef({
+  subsets: ["hebrew", "latin"],
+  weight: ["400", "700"],
+  variable: "--font-alef",
   display: "swap",
 })
 
@@ -49,8 +44,8 @@ export default function RootLayout({
   children: React.ReactNode
 }>) {
   return (
-    <html lang="he" dir="rtl" className={`${playfair.variable} ${inter.variable}`}>
-      <body className="antialiased">
+    <html lang="he" dir="rtl" className={alef.variable}>
+      <body className="antialiased font-alef">
         {/* Google Ads Pixel */}
         <Script
           src="https://www.googletagmanager.com/gtag/js?id=AW-17738121003"

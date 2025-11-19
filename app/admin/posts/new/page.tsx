@@ -70,7 +70,7 @@ export default function NewPostPage() {
             <ArrowRight className="w-4 h-4" />
           </Link>
         </Button>
-        <h2 className="text-3xl font-playfair font-bold text-gray-800">
+        <h2 className="text-3xl font-bold text-gray-800">
           מאמר חדש
         </h2>
       </div>

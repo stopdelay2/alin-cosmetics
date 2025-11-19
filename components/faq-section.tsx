@@ -91,7 +91,7 @@ export function FAQSection() {
                 <div className="h-px w-16 bg-gold-400" />
               </div>
 
-              <h1 className="text-3xl md:text-4xl lg:text-5xl font-playfair font-bold text-black mb-6 leading-tight">
+              <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold text-black mb-6 leading-tight">
                 שאלות נפוצות לנשים שמחפשות קוסמטיקאית בקריות וקוסמטיקאיות מומלצות באזור
               </h1>
 

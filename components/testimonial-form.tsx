@@ -67,7 +67,7 @@ export function TestimonialForm() {
               />
             </svg>
           </div>
-          <h3 className="text-2xl font-playfair font-bold text-black">
+          <h3 className="text-2xl font-bold text-black">
             תודה רבה!
           </h3>
           <p className="text-black/70">

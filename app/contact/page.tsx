@@ -77,7 +77,7 @@ export default function ContactPage() {
               <div className="h-px w-16 bg-white" />
             </div>
 
-            <h1 className="text-5xl md:text-6xl lg:text-7xl font-playfair font-bold leading-tight">
+            <h1 className="text-5xl md:text-6xl lg:text-7xl font-bold leading-tight">
               בואי נדבר<br />על העור שלך
             </h1>
 
@@ -89,10 +89,11 @@ export default function ContactPage() {
       </section>
 
       {/* Contact Form & Info */}
-      <section className="py-32 bg-white relative">
-        {/* Decorative circles */}
-        <div className="absolute top-20 left-10 w-64 h-64 border border-black/5 rounded-full" />
-        <div className="absolute bottom-20 right-10 w-40 h-40 bg-gold-400/5 rounded-full blur-2xl" />
+      <section className="py-32 bg-gradient-to-b from-cream-50 via-rose-50/30 to-white relative overflow-hidden">
+        {/* Decorative elements - softer and more organic */}
+        <div className="absolute top-10 -left-20 w-96 h-96 bg-rose-100/40 rounded-full blur-3xl" />
+        <div className="absolute bottom-10 -right-20 w-80 h-80 bg-gold-200/30 rounded-full blur-3xl" />
+        <div className="absolute top-1/2 left-1/2 w-64 h-64 bg-cream-200/50 rounded-full blur-3xl transform -translate-x-1/2 -translate-y-1/2" />
 
         <div className="container mx-auto px-6 md:px-8 lg:px-12 relative z-10">
           <div className="max-w-6xl mx-auto">
@@ -101,15 +102,15 @@ export default function ContactPage() {
               <div className="space-y-12">
                 {/* Direct WhatsApp Button Section */}
                 <div>
-                  <div className="mb-6">
-                    <div className="flex items-center gap-4 mb-6">
-                      <div className="w-12 h-12 border-2 border-black rounded-full" />
-                      <div className="h-px flex-1 bg-gold-400" />
+                  <div className="mb-8">
+                    <div className="flex items-center gap-4 mb-8">
+                      <div className="w-14 h-14 bg-gradient-to-br from-rose-100 to-gold-200 rounded-full shadow-sm" />
+                      <div className="h-0.5 flex-1 bg-gradient-to-l from-gold-300/60 to-rose-200/40 rounded-full" />
                     </div>
-                    <h2 className="text-3xl md:text-4xl font-playfair font-bold text-black mb-4 leading-tight">
+                    <h2 className="text-3xl md:text-4xl font-bold text-gray-800 mb-5 leading-tight">
                       רוצה לשאול שאלה קצרה<br />על העור שלך?
                     </h2>
-                    <p className="text-black/70 text-lg leading-relaxed">
+                    <p className="text-gray-600 text-lg leading-relaxed">
                       לחצי וייפתח לך וואטסאפ בצ'אט אישי איתי.
                     </p>
                   </div>
@@ -147,44 +148,44 @@ export default function ContactPage() {
                       window.open(url, "_blank")
                     }}
                     size="lg"
-                    className="w-full bg-[#25D366] text-white hover:bg-[#128C7E] transition-colors text-xl py-8 shadow-lg hover:shadow-xl"
+                    className="w-full bg-[#25D366] text-white hover:bg-[#1FAD55] transition-all duration-300 text-xl py-8 shadow-xl hover:shadow-2xl hover:scale-[1.02] rounded-2xl"
                   >
                     לפתיחת וואטסאפ עכשיו
                   </Button>
 
-                  <div className="mt-4 space-y-2">
-                    <p className="text-sm text-black/60 text-center">
+                  <div className="mt-6 space-y-3 text-center">
+                    <p className="text-sm text-gray-500">
                       אפשר לשאול, להתלבט ולקבל כיוון לפני שמחליטים על טיפול.
                     </p>
-                    <p className="text-xs text-black/50 text-center">
+                    <p className="text-xs text-gray-400 bg-cream-100/50 py-2 px-4 rounded-full inline-block">
                       לא מצרפת לקבוצות. שיחה אישית בלבד.
                     </p>
                   </div>
                 </div>
 
                 {/* Divider */}
-                <div className="flex items-center gap-4">
-                  <div className="h-px flex-1 bg-black/10" />
-                  <span className="text-black/40 text-sm">או</span>
-                  <div className="h-px flex-1 bg-black/10" />
+                <div className="flex items-center gap-4 my-8">
+                  <div className="h-px flex-1 bg-gradient-to-r from-transparent via-rose-200 to-transparent" />
+                  <span className="text-gray-400 text-sm bg-white px-4 py-1 rounded-full shadow-sm">או</span>
+                  <div className="h-px flex-1 bg-gradient-to-l from-transparent via-rose-200 to-transparent" />
                 </div>
 
                 {/* Form Section */}
                 <div>
-                  <div className="mb-6">
-                    <h3 className="text-xl font-bold text-black mb-2">
+                  <div className="mb-8">
+                    <h3 className="text-xl font-bold text-gray-800 mb-3">
                       מעדיפה להשאיר פרטים ונדבר כשנוח לך?
                     </h3>
-                    <p className="text-black/60 text-sm">
+                    <p className="text-gray-500 text-sm leading-relaxed">
                       השאירי מספר ואני אחזור אלייך בוואטסאפ עם תשובה אישית.
                     </p>
                   </div>
 
-                  <Card className="border-2 border-black/10 rounded-none shadow-none">
-                    <CardContent className="p-6">
-                      <form onSubmit={handleSubmit} className="space-y-4">
+                  <Card className="border-2 border-rose-100/50 rounded-3xl shadow-lg bg-white/80 backdrop-blur-sm">
+                    <CardContent className="p-8">
+                      <form onSubmit={handleSubmit} className="space-y-5">
                         <div className="space-y-2">
-                          <Label htmlFor="name" className="text-sm">שם פרטי</Label>
+                          <Label htmlFor="name" className="text-sm text-gray-700 font-medium">שם פרטי</Label>
                           <Input
                             id="name"
                             value={formData.name}
@@ -193,12 +194,12 @@ export default function ContactPage() {
                             }
                             placeholder="איך לפנות אלייך?"
                             required
-                            className="border-black/20"
+                            className="border-rose-200/60 focus:border-rose-300 rounded-xl bg-cream-50/30"
                           />
                         </div>
 
                         <div className="space-y-2">
-                          <Label htmlFor="phone" className="text-sm">טלפון</Label>
+                          <Label htmlFor="phone" className="text-sm text-gray-700 font-medium">טלפון</Label>
                           <Input
                             id="phone"
                             type="tel"
@@ -208,12 +209,12 @@ export default function ContactPage() {
                             }
                             placeholder="מספר לנייד"
                             required
-                            className="border-black/20"
+                            className="border-rose-200/60 focus:border-rose-300 rounded-xl bg-cream-50/30"
                           />
                         </div>
 
                         <div className="space-y-2">
-                          <Label htmlFor="message" className="text-sm">איך אפשר לעזור לך? <span className="text-black/50">(לא חובה)</span></Label>
+                          <Label htmlFor="message" className="text-sm text-gray-700 font-medium">איך אפשר לעזור לך? <span className="text-gray-400 font-normal">(לא חובה)</span></Label>
                           <Textarea
                             id="message"
                             value={formData.message}
@@ -222,24 +223,25 @@ export default function ContactPage() {
                             }
                             placeholder="לדוגמה: אקנה, יובש, פיגמנטציה..."
                             rows={3}
-                            className="border-black/20"
+                            className="border-rose-200/60 focus:border-rose-300 rounded-xl bg-cream-50/30"
                           />
                         </div>
 
                         <Button
                           type="submit"
                           size="lg"
-                          className="w-full bg-black text-white hover:bg-gold-400 hover:text-black transition-colors text-base py-6"
+                          className="w-full bg-gradient-to-r from-gray-800 to-gray-900 text-white hover:from-gold-400 hover:to-gold-500 hover:text-gray-900 transition-all duration-300 text-base py-6 rounded-xl shadow-md hover:shadow-lg"
                           disabled={isSubmitting}
                         >
                           {isSubmitting ? "שולחת..." : "שליחת פרטים לחזרה בוואטסאפ"}
                         </Button>
 
-                        <div className="pt-2 space-y-1">
-                          <p className="text-xs text-black/50 text-center">
-                            ⏱️ זמן תגובה ממוצע: עד חצי שעה
+                        <div className="pt-4 space-y-2">
+                          <p className="text-xs text-gray-500 text-center flex items-center justify-center gap-2">
+                            <span className="inline-block w-2 h-2 bg-green-400 rounded-full animate-pulse"></span>
+                            זמן תגובה ממוצע: עד חצי שעה
                           </p>
-                          <p className="text-xs text-black/50 text-center">
+                          <p className="text-xs text-gray-400 text-center bg-rose-50/50 py-2 px-4 rounded-full">
                             אין התחייבות לטיפול. קודם מדברות, אחר כך מחליטות.
                           </p>
                         </div>
@@ -251,24 +253,24 @@ export default function ContactPage() {
 
               {/* Contact Info */}
               <div className="space-y-8">
-                <div className="mb-8">
-                  <div className="flex items-center gap-4 mb-6">
-                    <div className="h-px flex-1 bg-gold-400" />
-                    <div className="w-12 h-12 border-2 border-black rounded-full" />
+                <div className="mb-10">
+                  <div className="flex items-center gap-4 mb-8">
+                    <div className="h-0.5 flex-1 bg-gradient-to-r from-gold-300/60 to-rose-200/40 rounded-full" />
+                    <div className="w-14 h-14 bg-gradient-to-br from-rose-100 to-gold-200 rounded-full shadow-sm" />
                   </div>
-                  <h2 className="text-4xl font-playfair font-bold text-black mb-4">
+                  <h2 className="text-3xl md:text-4xl font-bold text-gray-800 mb-2">
                     פרטי התקשרות
                   </h2>
                 </div>
 
                 <div className="space-y-4">
-                  <Card className="border-2 border-black/10 rounded-none shadow-none hover:border-gold-400 transition-all duration-300">
+                  <Card className="border-2 border-rose-100/40 rounded-2xl shadow-md hover:shadow-lg hover:border-rose-200/60 transition-all duration-300 bg-white/70 backdrop-blur-sm">
                     <CardContent className="p-6">
                       <a
                         href="tel:0543175631"
                         className="flex items-center gap-4 group"
                       >
-                        <div className="w-14 h-14 border-2 border-black rounded-full flex items-center justify-center group-hover:bg-black group-hover:text-white transition-all">
+                        <div className="w-14 h-14 border-2 border-rose-200/60 rounded-full bg-gradient-to-br from-cream-100 to-rose-50 flex items-center justify-center group-hover:bg-black group-hover:text-white transition-all">
                           <Phone className="w-6 h-6 text-current" />
                         </div>
                         <div>
@@ -281,7 +283,7 @@ export default function ContactPage() {
                     </CardContent>
                   </Card>
 
-                  <Card className="border-2 border-black/10 rounded-none shadow-none hover:border-gold-400 transition-all duration-300">
+                  <Card className="border-2 border-rose-100/40 rounded-2xl shadow-md hover:shadow-lg hover:border-rose-200/60 bg-white/70 backdrop-blur-sm transition-all duration-300">
                     <CardContent className="p-6">
                       <button
                         onClick={() => {
@@ -318,7 +320,7 @@ export default function ContactPage() {
                     </CardContent>
                   </Card>
 
-                  <Card className="border-2 border-black/10 rounded-none shadow-none hover:border-gold-400 transition-all duration-300">
+                  <Card className="border-2 border-rose-100/40 rounded-2xl shadow-md hover:shadow-lg hover:border-rose-200/60 bg-white/70 backdrop-blur-sm transition-all duration-300">
                     <CardContent className="p-6">
                       <a
                         href="https://instagram.com/alin.cosmetics__"
@@ -326,7 +328,7 @@ export default function ContactPage() {
                         rel="noopener noreferrer"
                         className="flex items-center gap-4 group"
                       >
-                        <div className="w-14 h-14 border-2 border-black rounded-full flex items-center justify-center group-hover:bg-gradient-to-br group-hover:from-purple-400 group-hover:to-pink-400 group-hover:border-transparent transition-all">
+                        <div className="w-14 h-14 border-2 border-rose-200/60 rounded-full bg-gradient-to-br from-cream-100 to-rose-50 flex items-center justify-center group-hover:bg-gradient-to-br group-hover:from-purple-400 group-hover:to-pink-400 group-hover:border-transparent transition-all">
                           <Instagram className="w-6 h-6 text-current group-hover:text-white" />
                         </div>
                         <div>
@@ -337,7 +339,7 @@ export default function ContactPage() {
                     </CardContent>
                   </Card>
 
-                  <Card className="border-2 border-black/10 rounded-none shadow-none hover:border-gold-400 transition-all duration-300">
+                  <Card className="border-2 border-rose-100/40 rounded-2xl shadow-md hover:shadow-lg hover:border-rose-200/60 bg-white/70 backdrop-blur-sm transition-all duration-300">
                     <CardContent className="p-6">
                       <a
                         href="https://www.youtube.com/@AlinCosmeticsIsrael"
@@ -359,7 +361,7 @@ export default function ContactPage() {
                   <Card className="border-2 border-black/10 rounded-none shadow-none">
                     <CardContent className="p-6">
                       <div className="flex items-center gap-4">
-                        <div className="w-14 h-14 border-2 border-black rounded-full flex items-center justify-center">
+                        <div className="w-14 h-14 border-2 border-rose-200/60 rounded-full bg-gradient-to-br from-cream-100 to-rose-50 flex items-center justify-center">
                           <MapPin className="w-6 h-6 text-current" />
                         </div>
                         <div>
@@ -373,7 +375,7 @@ export default function ContactPage() {
                   <Card className="border-2 border-black/10 rounded-none shadow-none">
                     <CardContent className="p-6">
                       <div className="flex items-start gap-4">
-                        <div className="w-14 h-14 border-2 border-black rounded-full flex items-center justify-center flex-shrink-0">
+                        <div className="w-14 h-14 border-2 border-rose-200/60 rounded-full bg-gradient-to-br from-cream-100 to-rose-50 flex items-center justify-center flex-shrink-0">
                           <Clock className="w-6 h-6 text-current" />
                         </div>
                         <div>
@@ -409,7 +411,7 @@ export default function ContactPage() {
                 <div className="w-3 h-3 bg-gold-400 rounded-full" />
                 <div className="h-px w-16 bg-white" />
               </div>
-              <h2 className="text-4xl md:text-5xl font-playfair font-bold">
+              <h2 className="text-4xl md:text-5xl font-bold">
                 שאלות נפוצות
               </h2>
             </div>

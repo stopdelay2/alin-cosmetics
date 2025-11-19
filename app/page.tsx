@@ -62,7 +62,8 @@ export default function HomePage() {
               </div>
 
               <p className="text-xl md:text-2xl text-white/90 leading-relaxed max-w-xl drop-shadow-lg mb-4 sm:mb-0">
-                טיפול פנים עדין, מקצועי ומותאם אישית
+                טיפול פנים עדין, מקצועי ומותאם אישית<br />
+                <span className="text-lg text-white/80">בקליניקה חדשה עם מכשור מתקדם בקריית ים</span>
               </p>
 
               <div className="flex flex-col sm:flex-row gap-4 items-start sm:pt-8">
@@ -352,8 +353,8 @@ export default function HomePage() {
 
               <p className="text-xl text-black/70 leading-relaxed">
                 אהבה אמיתית לעור ולנשים שמבקשות להרגיש יפות ובטוחות.<br />
-                כל טיפול בקליניקה שלי נולד מהקשבה, מגע עדין ותשומת לב אמיתית לפרטים הקטנים<br />
-                כי יופי מתחיל כשאת מרגישה טוב עם עצמך.
+                כל טיפול בקליניקה החדשה שלי נולד מהקשבה, מגע עדין ותשומת לב אמיתית לפרטים הקטנים.<br />
+                עם מכשור מתקדם וסביבה נקייה ומזמינה – כי יופי מתחיל כשאת מרגישה טוב עם עצמך.
               </p>
             </div>
 

@@ -82,7 +82,8 @@ export default function ContactPage() {
             </h1>
 
             <p className="text-xl text-white/80 leading-relaxed">
-              מוזמנת ליצור קשר בכל דרך שנוחה לך
+              מוזמנת לקליניקה החדשה בקריית ים<br />
+              <span className="text-lg">ליצור קשר בכל דרך שנוחה לך</span>
             </p>
           </div>
         </div>

@@ -44,7 +44,8 @@ export default async function TestimonialsPage() {
             </h1>
 
             <p className="text-xl text-white/80 leading-relaxed">
-              מה שהלקוחות שלי אומרות על החוויה והתוצאות
+              מה שהלקוחות שלי אומרות על החוויה והתוצאות<br />
+              <span className="text-lg text-white/70">בקליניקה החדשה בקריית ים</span>
             </p>
           </div>
         </div>

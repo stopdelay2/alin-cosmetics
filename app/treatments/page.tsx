@@ -36,7 +36,8 @@ export default function TreatmentsPage() {
               כל עור הוא עולם<br />לכן גם הטיפול שלך אישי
             </h1>
             <p className="text-xl text-white/80 leading-relaxed max-w-2xl mx-auto">
-              כל טיפול מותאם במיוחד לסוג העור שלך, למצבו ולמטרות שלך
+              כל טיפול מותאם במיוחד לסוג העור שלך, למצבו ולמטרות שלך<br />
+              <span className="text-lg text-white/70">במכשור מתקדם, בקליניקה חדשה ונקייה בקריית ים</span>
             </p>
           </div>
         </div>

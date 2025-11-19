@@ -122,11 +122,13 @@ export default function ContactPage() {
                         })
                       }
 
+                      // Track conversion in Google Ads
                       if (typeof window !== 'undefined' && (window as any).gtag_report_conversion) {
                         (window as any).gtag_report_conversion(url)
-                      } else {
-                        window.open(url, "_blank")
                       }
+
+                      // Always open WhatsApp
+                      window.open(url, "_blank")
                     }}
                     size="lg"
                     className="w-full bg-[#25D366] text-white hover:bg-[#128C7E] transition-colors text-xl py-8 shadow-lg hover:shadow-xl"

@@ -117,6 +117,259 @@ export default function RootLayout({
           />
         </noscript>
 
+        {/* LocalBusiness Schema */}
+        <Script id="local-business-schema" type="application/ld+json">
+          {JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "BeautySalon",
+            "name": "Alin Cosmetics",
+            "alternateName": "אלין קוסמטיקס",
+            "description": "קליניקת טיפולי פנים מקצועית בקריית ים. מתמחים באקנה, רוזציאה, פיגמנטציה, אנטי אייג'ינג ומיקרונידלינג.",
+            "image": "https://alincosmetics.com/images/logo.png",
+            "logo": "https://alincosmetics.com/images/logo.png",
+            "@id": "https://alincosmetics.com",
+            "url": "https://alincosmetics.com",
+            "telephone": "+972-54-317-5631",
+            "email": "alincosmeticsglow@gmail.com",
+            "priceRange": "₪₪",
+            "address": {
+              "@type": "PostalAddress",
+              "streetAddress": "שדרות ז'בוטינסקי 28",
+              "addressLocality": "קריית ים",
+              "addressRegion": "חיפה",
+              "postalCode": "2920028",
+              "addressCountry": "IL"
+            },
+            "geo": {
+              "@type": "GeoCoordinates",
+              "latitude": "32.8425",
+              "longitude": "35.0669"
+            },
+            "openingHoursSpecification": [
+              {
+                "@type": "OpeningHoursSpecification",
+                "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday"],
+                "opens": "09:00",
+                "closes": "21:00"
+              },
+              {
+                "@type": "OpeningHoursSpecification",
+                "dayOfWeek": "Friday",
+                "opens": "08:00",
+                "closes": "15:00"
+              },
+              {
+                "@type": "OpeningHoursSpecification",
+                "dayOfWeek": "Sunday",
+                "opens": "09:00",
+                "closes": "21:00"
+              }
+            ],
+            "aggregateRating": {
+              "@type": "AggregateRating",
+              "ratingValue": "5",
+              "bestRating": "5",
+              "worstRating": "1",
+              "ratingCount": "50"
+            },
+            "founder": {
+              "@type": "Person",
+              "name": "Alin Rudenko",
+              "jobTitle": "קוסמטיקאית מוסמכת",
+              "sameAs": [
+                "https://instagram.com/alin.cosmetics__",
+                "https://www.youtube.com/@AlinCosmeticsIsrael"
+              ]
+            },
+            "paymentAccepted": "Cash, Credit Card, Bit",
+            "currenciesAccepted": "ILS",
+            "areaServed": {
+              "@type": "City",
+              "name": "קריות"
+            },
+            "serviceArea": [
+              {
+                "@type": "City",
+                "name": "קריית ים"
+              },
+              {
+                "@type": "City",
+                "name": "קריית ביאליק"
+              },
+              {
+                "@type": "City",
+                "name": "קריית מוצקין"
+              },
+              {
+                "@type": "City",
+                "name": "חיפה"
+              }
+            ],
+            "hasOfferCatalog": {
+              "@type": "OfferCatalog",
+              "name": "טיפולי פנים",
+              "itemListElement": [
+                {
+                  "@type": "Offer",
+                  "itemOffered": {
+                    "@type": "Service",
+                    "name": "טיפול באקנה ועור מגורה",
+                    "description": "טיפול מקצועי לעור אקנתי ומגורה, כולל ניקוי עמוק ומוצרים מקצועיים"
+                  }
+                },
+                {
+                  "@type": "Offer",
+                  "itemOffered": {
+                    "@type": "Service",
+                    "name": "טיפול רוזציאה ואדמומיות",
+                    "description": "טיפול מיוחד לעור רגיש עם רוזציאה ואדמומיות"
+                  }
+                },
+                {
+                  "@type": "Offer",
+                  "itemOffered": {
+                    "@type": "Service",
+                    "name": "טיפול פיגמנטציה וכתמי שמש",
+                    "description": "טיפול להבהרת כתמים ואיחוד גוון העור"
+                  }
+                },
+                {
+                  "@type": "Offer",
+                  "itemOffered": {
+                    "@type": "Service",
+                    "name": "מיקרונידלינג",
+                    "description": "טיפול מתקדם לחידוש העור ושיפור מרקם"
+                  }
+                },
+                {
+                  "@type": "Offer",
+                  "itemOffered": {
+                    "@type": "Service",
+                    "name": "אנטי אייג'ינג",
+                    "description": "טיפולים נגד הזדקנות העור ומיצוק"
+                  }
+                },
+                {
+                  "@type": "Offer",
+                  "itemOffered": {
+                    "@type": "Service",
+                    "name": "פוטותרפיה",
+                    "description": "טיפול באור לשיפור מרקם העור"
+                  }
+                }
+              ]
+            }
+          })}
+        </Script>
+
+        {/* Organization Schema */}
+        <Script id="organization-schema" type="application/ld+json">
+          {JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "Organization",
+            "name": "Alin Cosmetics",
+            "alternateName": "אלין קוסמטיקס",
+            "url": "https://alincosmetics.com",
+            "logo": "https://alincosmetics.com/images/logo.png",
+            "contactPoint": {
+              "@type": "ContactPoint",
+              "telephone": "+972-54-317-5631",
+              "contactType": "customer service",
+              "areaServed": "IL",
+              "availableLanguage": ["Hebrew", "Russian"]
+            },
+            "sameAs": [
+              "https://instagram.com/alin.cosmetics__",
+              "https://www.youtube.com/@AlinCosmeticsIsrael"
+            ],
+            "foundingDate": "2024-10",
+            "founder": {
+              "@type": "Person",
+              "name": "Alin Rudenko"
+            }
+          })}
+        </Script>
+
+        {/* Person Schema - Alin Rudenko */}
+        <Script id="person-schema" type="application/ld+json">
+          {JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "Person",
+            "name": "Alin Rudenko",
+            "alternateName": "אלין רודנקו",
+            "jobTitle": "קוסמטיקאית מוסמכת",
+            "description": "קוסמטיקאית מקצועית עם ניסיון של מעל 8 שנים בטיפולי פנים, מתמחה בעור רגיש ובעייתי",
+            "worksFor": {
+              "@type": "Organization",
+              "name": "Alin Cosmetics"
+            },
+            "address": {
+              "@type": "PostalAddress",
+              "addressLocality": "קריית ים",
+              "addressCountry": "IL"
+            },
+            "sameAs": [
+              "https://instagram.com/alin.cosmetics__",
+              "https://www.youtube.com/@AlinCosmeticsIsrael"
+            ],
+            "knowsAbout": [
+              "טיפולי פנים",
+              "קוסמטיקה פרא רפואית",
+              "טיפול באקנה",
+              "רוזציאה",
+              "פיגמנטציה",
+              "מיקרונידלינג",
+              "אנטי אייג'ינג"
+            ]
+          })}
+        </Script>
+
+        {/* BreadcrumbList Schema */}
+        <Script id="breadcrumb-schema" type="application/ld+json">
+          {JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "BreadcrumbList",
+            "itemListElement": [
+              {
+                "@type": "ListItem",
+                "position": 1,
+                "name": "בית",
+                "item": "https://alincosmetics.com"
+              },
+              {
+                "@type": "ListItem",
+                "position": 2,
+                "name": "טיפולים",
+                "item": "https://alincosmetics.com/treatments"
+              },
+              {
+                "@type": "ListItem",
+                "position": 3,
+                "name": "אודות",
+                "item": "https://alincosmetics.com/about"
+              },
+              {
+                "@type": "ListItem",
+                "position": 4,
+                "name": "המלצות",
+                "item": "https://alincosmetics.com/testimonials"
+              },
+              {
+                "@type": "ListItem",
+                "position": 5,
+                "name": "גלריה",
+                "item": "https://alincosmetics.com/gallery"
+              },
+              {
+                "@type": "ListItem",
+                "position": 6,
+                "name": "צור קשר",
+                "item": "https://alincosmetics.com/contact"
+              }
+            ]
+          })}
+        </Script>
+
         <Navigation />
         <main className="min-h-screen">
           {children}

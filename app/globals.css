@@ -36,7 +36,7 @@
     max-width: 100vw;
   }
   body {
-    @apply bg-cream-50 text-foreground font-inter;
+    @apply bg-cream-50 text-foreground;
     font-feature-settings: "rlig" 1, "calt" 1;
   }
   h1, h2, h3, h4, h5, h6 {

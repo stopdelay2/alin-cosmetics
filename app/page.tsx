@@ -31,7 +31,7 @@ export default function HomePage() {
             src="/images/main.jpeg"
             alt="Alin Cosmetics"
             fill
-            className="object-cover object-[25%_center] md:object-[70%_center]"
+            className="object-cover object-[10%_center] md:object-[70%_center]"
             priority
             quality={100}
           />
@@ -171,7 +171,7 @@ export default function HomePage() {
             </div>
             <div className="aspect-[9/16] w-full max-w-[315px] mx-auto">
               <iframe
-                src="https://www.youtube.com/embed/zomzced34n0"
+                src="https://www.youtube.com/embed/Gly29OgGDno"
                 title="YouTube Shorts"
                 allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
                 allowFullScreen

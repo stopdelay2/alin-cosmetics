@@ -47,26 +47,26 @@ export default function HomePage() {
         {/* Content Overlay - Positioned Left */}
         <div className="relative z-20 container mx-auto px-6 md:px-8 lg:px-12 py-20">
           <div className="max-w-7xl mx-auto flex justify-start">
-            <div className="max-w-2xl space-y-8 flex flex-col">
+            <div className="max-w-2xl space-y-8">
               {/* Small accent line */}
-              <div className="flex items-center gap-4 mb-8 order-2 md:order-1">
+              <div className="flex items-center gap-4 mb-8">
                 <div className="h-px w-16 bg-white" />
                 <div className="w-3 h-3 bg-gold-400 rounded-full" />
               </div>
 
-              <p className="text-xl md:text-2xl text-white/90 leading-relaxed max-w-xl drop-shadow-lg mb-4 sm:mb-0 order-1 md:order-3">
-                טיפול פנים עדין, מקצועי ומותאם אישית<br />
-                <span className="text-lg text-white/80">בקליניקה חדשה עם מכשור מתקדם בקריית ים</span>
-              </p>
-
-              <div className="text-5xl md:text-6xl lg:text-7xl xl:text-8xl font-bold text-white leading-tight drop-shadow-2xl order-3 md:order-2">
+              <div className="text-5xl md:text-6xl lg:text-7xl xl:text-8xl font-bold text-white leading-tight drop-shadow-2xl">
                 לפעמים<br />
                 העור שלנו<br />
                 פשוט מבקש<br />
                 רגע של הקשבה
               </div>
 
-              <div className="flex flex-col sm:flex-row gap-4 items-start sm:pt-8 order-4">
+              <p className="text-xl md:text-2xl text-white/90 leading-relaxed max-w-xl drop-shadow-lg mb-4 sm:mb-0">
+                טיפול פנים עדין, מקצועי ומותאם אישית<br />
+                <span className="text-lg text-white/80">בקליניקה חדשה עם מכשור מתקדם בקריית ים</span>
+              </p>
+
+              <div className="flex flex-col sm:flex-row gap-4 items-start sm:pt-8">
                 <Button
                   asChild
                   size="lg"
@@ -85,7 +85,7 @@ export default function HomePage() {
               </div>
 
               {/* Small decorative circles at bottom */}
-              <div className="flex gap-3 pt-12 order-5">
+              <div className="flex gap-3 pt-12">
                 <div className="w-2 h-2 bg-white rounded-full" />
                 <div className="w-2 h-2 bg-gold-400 rounded-full" />
                 <div className="w-2 h-2 bg-white rounded-full" />

@@ -31,7 +31,7 @@ export default function HomePage() {
             src="/images/main.jpeg"
             alt="Alin Cosmetics"
             fill
-            className="object-cover object-[70%_center]"
+            className="object-cover object-[25%_center] md:object-[70%_center]"
             priority
             quality={100}
           />
@@ -46,7 +46,7 @@ export default function HomePage() {
 
         {/* Content Overlay - Positioned Left */}
         <div className="relative z-20 container mx-auto px-6 md:px-8 lg:px-12 py-20">
-          <div className="max-w-7xl mx-auto flex justify-start lg:justify-end">
+          <div className="max-w-7xl mx-auto flex justify-start">
             <div className="max-w-2xl space-y-8">
               {/* Small accent line */}
               <div className="flex items-center gap-4 mb-8">

@@ -49,12 +49,12 @@ export default function HomePage() {
           <div className="max-w-7xl mx-auto flex justify-start">
             <div className="max-w-2xl space-y-8 flex flex-col">
               {/* Small accent line */}
-              <div className="flex items-center gap-4 mb-8 order-1 md:order-1">
+              <div className="flex items-center gap-4 mb-8 order-2 md:order-1">
                 <div className="h-px w-16 bg-white" />
                 <div className="w-3 h-3 bg-gold-400 rounded-full" />
               </div>
 
-              <p className="text-xl md:text-2xl text-white/90 leading-relaxed max-w-xl drop-shadow-lg mb-4 sm:mb-0 order-2 md:order-3">
+              <p className="text-xl md:text-2xl text-white/90 leading-relaxed max-w-xl drop-shadow-lg mb-4 sm:mb-0 order-1 md:order-3">
                 טיפול פנים עדין, מקצועי ומותאם אישית<br />
                 <span className="text-lg text-white/80">בקליניקה חדשה עם מכשור מתקדם בקריית ים</span>
               </p>

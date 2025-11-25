@@ -31,7 +31,7 @@ export default function HomePage() {
             src="/images/main.jpeg"
             alt="Alin Cosmetics"
             fill
-            className="object-cover object-[15%_center] md:object-[70%_center]"
+            className="object-cover object-[10%_center] md:object-[70%_center]"
             priority
             quality={100}
           />

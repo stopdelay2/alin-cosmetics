@@ -162,7 +162,7 @@ export default function HomePage() {
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-6xl mx-auto">
             <div className="aspect-[9/16] w-full max-w-[315px] mx-auto">
               <iframe
-                src="https://www.youtube.com/embed/-lruYYi_IkY"
+                src="https://www.youtube.com/embed/1wA0LkUWHYM"
                 title="YouTube Shorts"
                 allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
                 allowFullScreen

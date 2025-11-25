@@ -399,6 +399,23 @@ export default function ContactPage() {
         </div>
       </section>
 
+      {/* YouTube Video Section */}
+      <section className="py-20 bg-white relative overflow-hidden">
+        <div className="container mx-auto px-6 md:px-8 lg:px-12">
+          <div className="max-w-md mx-auto">
+            <div className="aspect-[9/16] w-full">
+              <iframe
+                src="https://www.youtube.com/embed/Gly29OgGDno"
+                title="YouTube Shorts"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                allowFullScreen
+                className="w-full h-full rounded-2xl shadow-xl"
+              />
+            </div>
+          </div>
+        </div>
+      </section>
+
       {/* FAQ Section - Black Background */}
       <section className="py-32 bg-black text-white relative overflow-hidden">
         {/* Decorative circles */}

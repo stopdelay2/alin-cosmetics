@@ -28,7 +28,7 @@ export default function HomePage() {
         {/* Full Background Image */}
         <div className="absolute inset-0 z-0">
           <Image
-            src="/images/1.png"
+            src="/images/main.jpeg"
             alt="Alin Cosmetics"
             fill
             className="object-cover object-[70%_center]"

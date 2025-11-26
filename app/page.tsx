@@ -161,34 +161,13 @@ export default function HomePage() {
           {/* YouTube Shorts Grid */}
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-6xl mx-auto">
             <div className="aspect-[9/16] w-full max-w-[315px] mx-auto">
-              <iframe
-                src="https://www.youtube.com/embed/1wA0LkUWHYM"
-                title="YouTube Shorts"
-                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                allowFullScreen
-                loading="lazy"
-                className="w-full h-full rounded-lg"
-              />
+              <YouTubeLazyEmbed videoId="1wA0LkUWHYM" title="טיפול פנים מקצועי - Alin Cosmetics" />
             </div>
             <div className="aspect-[9/16] w-full max-w-[315px] mx-auto">
-              <iframe
-                src="https://www.youtube.com/embed/Gly29OgGDno"
-                title="YouTube Shorts"
-                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                allowFullScreen
-                loading="lazy"
-                className="w-full h-full rounded-lg"
-              />
+              <YouTubeLazyEmbed videoId="Gly29OgGDno" title="תוצאות טיפול פנים - לפני ואחרי" />
             </div>
             <div className="aspect-[9/16] w-full max-w-[315px] mx-auto">
-              <iframe
-                src="https://www.youtube.com/embed/lvFQcJFMec0"
-                title="YouTube Shorts"
-                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                allowFullScreen
-                loading="lazy"
-                className="w-full h-full rounded-lg"
-              />
+              <YouTubeLazyEmbed videoId="lvFQcJFMec0" title="טיפולי עור בקריית ים" />
             </div>
           </div>
 
@@ -535,6 +514,47 @@ const treatments = [
     alt: "טיפול פיגמנטציה וכתמי שמש - הבהרת העור בקריות",
   },
 ]
+
+// YouTube Lazy Load Component
+function YouTubeLazyEmbed({ videoId, title }: { videoId: string; title: string }) {
+  const [isLoaded, setIsLoaded] = useState(false)
+
+  if (isLoaded) {
+    return (
+      <iframe
+        src={`https://www.youtube.com/embed/${videoId}?autoplay=1`}
+        title={title}
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+        allowFullScreen
+        className="w-full h-full rounded-lg"
+      />
+    )
+  }
+
+  return (
+    <button
+      onClick={() => setIsLoaded(true)}
+      className="relative w-full h-full rounded-lg overflow-hidden group cursor-pointer bg-black"
+      aria-label={`הפעל סרטון: ${title}`}
+    >
+      {/* YouTube Thumbnail */}
+      <img
+        src={`https://img.youtube.com/vi/${videoId}/maxresdefault.jpg`}
+        alt={title}
+        className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
+        loading="lazy"
+      />
+      {/* Play Button Overlay */}
+      <div className="absolute inset-0 flex items-center justify-center bg-black/20 group-hover:bg-black/30 transition-colors">
+        <div className="w-16 h-16 md:w-20 md:h-20 bg-red-600 rounded-full flex items-center justify-center shadow-lg group-hover:scale-110 transition-transform">
+          <svg className="w-8 h-8 md:w-10 md:h-10 text-white mr-[-4px]" fill="currentColor" viewBox="0 0 24 24">
+            <path d="M8 5v14l11-7z" />
+          </svg>
+        </div>
+      </div>
+    </button>
+  )
+}
 
 // Instagram Embed Component
 function InstagramEmbed({ url }: { url: string }) {

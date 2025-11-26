@@ -14,8 +14,8 @@ const alef = Alef({
 })
 
 export const metadata: Metadata = {
-  title: "קוסמטיקאית בקריות | Alin Cosmetics – טיפולי פנים, ניקוי עמוק ופיגמנטציה",
-  description: "מחפשת קוסמטיקאית בקריות עם חוות דעת מעולות? Alin Cosmetics מציעה טיפולי פנים מקצועיים לכל סוגי העור, כולל ניקוי עמוק, טיפול באקנה, אנטי אייג'ינג ופיגמנטציה. קוסמטיקאית פרא רפואית בקריות עם ניסיון ושיטות קוסמטיקה מתקדמות.",
+  title: "קוסמטיקאית בקריות | Alin Cosmetics טיפולי פנים",
+  description: "מחפשת קוסמטיקאית בקריות עם חוות דעת מעולות? אלין מציעה טיפולי פנים מקצועיים, ניקוי עמוק, טיפול באקנה ופיגמנטציה עם שיטות קוסמטיקה מתקדמות.",
   keywords: "קוסמטיקאית מוסמכת, טיפולי פנים, אקנה, רוזציאה, מיקרונידלינג, קריית ים, חיפה",
   icons: {
     icon: '/images/logo.png',
@@ -23,13 +23,16 @@ export const metadata: Metadata = {
   },
   alternates: {
     canonical: 'https://www.alincosmetics.com/',
+    languages: {
+      'he-IL': 'https://www.alincosmetics.com/',
+    },
   },
   openGraph: {
-    title: "קוסמטיקאית בקריות | Alin Cosmetics – טיפולי פנים, ניקוי עמוק ופיגמנטציה",
-    description: "מחפשת קוסמטיקאית בקריות עם חוות דעת מעולות? Alin Cosmetics מציעה טיפולי פנים מקצועיים לכל סוגי העור, כולל ניקוי עמוק, טיפול באקנה, אנטי אייג'ינג ופיגמנטציה.",
+    title: "קוסמטיקאית בקריות | Alin Cosmetics טיפולי פנים",
+    description: "מחפשת קוסמטיקאית בקריות עם חוות דעת מעולות? אלין מציעה טיפולי פנים מקצועיים, ניקוי עמוק, טיפול באקנה ופיגמנטציה עם שיטות קוסמטיקה מתקדמות.",
     type: "website",
     locale: "he_IL",
-    url: 'https://alincosmetics.com',
+    url: 'https://www.alincosmetics.com',
     images: [
       {
         url: '/images/1.png',

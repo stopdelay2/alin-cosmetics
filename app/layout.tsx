@@ -21,6 +21,9 @@ export const metadata: Metadata = {
     icon: '/images/logo.png',
     apple: '/images/logo.png',
   },
+  alternates: {
+    canonical: 'https://www.alincosmetics.com/',
+  },
   openGraph: {
     title: "קוסמטיקאית בקריות | Alin Cosmetics – טיפולי פנים, ניקוי עמוק ופיגמנטציה",
     description: "מחפשת קוסמטיקאית בקריות עם חוות דעת מעולות? Alin Cosmetics מציעה טיפולי פנים מקצועיים לכל סוגי העור, כולל ניקוי עמוק, טיפול באקנה, אנטי אייג'ינג ופיגמנטציה.",

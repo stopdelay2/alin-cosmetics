@@ -1,6 +1,6 @@
 import Link from "next/link"
 import Image from "next/image"
-import { Instagram, Phone, MapPin, Youtube } from "lucide-react"
+import { Instagram, Phone, MapPin, Youtube, Facebook, ExternalLink } from "lucide-react"
 
 export function Footer() {
   return (
@@ -100,6 +100,24 @@ export function Footer() {
               >
                 <Youtube className="w-4 h-4" />
                 <span>AlinCosmeticsIsrael</span>
+              </a>
+              <a
+                href="https://www.facebook.com/Alin.RudenkoCosmetics"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="flex items-center gap-2 text-sm text-gray-600 hover:text-gold-400 transition-colors"
+              >
+                <Facebook className="w-4 h-4" />
+                <span>Alin Cosmetics</span>
+              </a>
+              <a
+                href="https://easy.co.il/page/10157586"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="flex items-center gap-2 text-sm text-gray-600 hover:text-gold-400 transition-colors"
+              >
+                <ExternalLink className="w-4 h-4" />
+                <span>Easy - דף העסק</span>
               </a>
             </div>
           </div>

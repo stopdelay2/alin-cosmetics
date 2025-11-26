@@ -2,6 +2,7 @@ import type { Metadata } from "next"
 import { Alef } from "next/font/google"
 import Script from "next/script"
 import "./globals.css"
+import { PromoBanner } from "@/components/promo-banner"
 import { Navigation } from "@/components/navigation"
 import { Footer } from "@/components/footer"
 import { WhatsAppButton } from "@/components/whatsapp-button"
@@ -234,6 +235,7 @@ export default function RootLayout({
           })}
         </Script>
 
+        <PromoBanner />
         <Navigation />
         <main className="min-h-screen">
           {children}

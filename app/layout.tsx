@@ -48,6 +48,15 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="he" dir="rtl" className={alef.variable}>
+      <head>
+        {/* Preload hero image for faster FCP */}
+        <link
+          rel="preload"
+          href="/images/main.jpeg"
+          as="image"
+          type="image/jpeg"
+        />
+      </head>
       <body className="antialiased font-alef">
         {/* Google Ads Pixel */}
         <Script

@@ -65,6 +65,8 @@ export default function TreatmentsPage() {
                         src={treatment.image}
                         alt={treatment.title}
                         fill
+                        loading={index === 0 ? "eager" : "lazy"}
+                        priority={index === 0}
                         className="object-cover"
                       />
                     )}

@@ -166,6 +166,7 @@ export default function HomePage() {
                 title="YouTube Shorts"
                 allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
                 allowFullScreen
+                loading="lazy"
                 className="w-full h-full rounded-lg"
               />
             </div>
@@ -175,6 +176,7 @@ export default function HomePage() {
                 title="YouTube Shorts"
                 allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
                 allowFullScreen
+                loading="lazy"
                 className="w-full h-full rounded-lg"
               />
             </div>
@@ -184,6 +186,7 @@ export default function HomePage() {
                 title="YouTube Shorts"
                 allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
                 allowFullScreen
+                loading="lazy"
                 className="w-full h-full rounded-lg"
               />
             </div>
@@ -281,6 +284,7 @@ export default function HomePage() {
                         src={treatment.image}
                         alt={treatment.title}
                         fill
+                        loading="lazy"
                         className="object-cover group-hover:scale-110 transition-transform duration-500"
                       />
                     </div>

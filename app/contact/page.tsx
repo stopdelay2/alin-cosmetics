@@ -409,6 +409,7 @@ export default function ContactPage() {
                 title="YouTube Shorts"
                 allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
                 allowFullScreen
+                loading="lazy"
                 className="w-full h-full rounded-2xl shadow-xl"
               />
             </div>

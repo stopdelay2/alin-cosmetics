@@ -139,6 +139,17 @@ export function Footer() {
               חדרי בריחה מפחידים בחיפה
             </a>
           </p>
+          <p className="mt-1 text-xs text-gray-400">
+            רוצה אתר כזה + שיווק?{" "}
+            <a
+              href="https://wa.me/972525813627"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="hover:text-gold-400 transition-colors underline"
+            >
+              שלחי הודעה
+            </a>
+          </p>
         </div>
       </div>
     </footer>

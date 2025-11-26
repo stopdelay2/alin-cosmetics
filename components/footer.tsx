@@ -126,6 +126,17 @@ export function Footer() {
 
         <div className="mt-8 pt-8 border-t border-gold-100 text-center text-sm text-gray-500">
           <p>© {new Date().getFullYear()} Alin Cosmetics. כל הזכויות שמורות.</p>
+          <p className="mt-2 text-xs text-gray-400">
+            אתר זה נבנה על ידי לוסט{" "}
+            <a
+              href="https://lo-st.co.il/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="hover:text-gold-400 transition-colors underline"
+            >
+              חדרי בריחה מפחידים בחיפה
+            </a>
+          </p>
         </div>
       </div>
     </footer>

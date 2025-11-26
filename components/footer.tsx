@@ -45,12 +45,14 @@ export function Footer() {
               >
                 לקוחות משתפות
               </Link>
+              {/* Gallery link hidden temporarily
               <Link
                 href="/gallery"
                 className="text-sm text-gray-600 hover:text-gold-400 transition-colors"
               >
                 לפני ואחרי
               </Link>
+              */}
               <Link
                 href="/contact"
                 className="text-sm text-gray-600 hover:text-gold-400 transition-colors"

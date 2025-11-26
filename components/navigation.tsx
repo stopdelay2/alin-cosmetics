@@ -12,7 +12,7 @@ const navItems = [
   { href: "/treatments", label: "טיפולים ותוצאות" },
   { href: "/about", label: "הסיפור שלי" },
   { href: "/testimonials", label: "לקוחות משתפות" },
-  { href: "/gallery", label: "לפני ואחרי" },
+  // { href: "/gallery", label: "לפני ואחרי" }, // Hidden temporarily
   { href: "/contact", label: "קביעת תור" },
 ]
 

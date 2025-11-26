@@ -53,7 +53,7 @@ export default function AboutPage() {
                 <div className="relative border-2 border-white/20 rounded-none overflow-hidden">
                   <img
                     src="/images/alinalin.jpeg"
-                    alt="אלין - קוסמטיקאית מוסמכת"
+                    alt="אלין רודנקו - קוסמטיקאית מוסמכת ומומחית לטיפולי פנים בקריית ים"
                     className="w-full h-auto"
                     loading="eager"
                   />

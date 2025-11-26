@@ -229,7 +229,7 @@ function GalleryGrid({ items }: { items: typeof allGalleryItems }) {
                 {item.id === 1 ? (
                   <img
                     src="/images/1after.jpeg"
-                    alt="אחרי הטיפול"
+                    alt="תוצאות טיפול פנים - אחרי הטיפול בקליניקת Alin Cosmetics"
                     className="w-full h-auto"
                     loading="eager"
                   />
@@ -244,7 +244,7 @@ function GalleryGrid({ items }: { items: typeof allGalleryItems }) {
                 {item.id === 1 ? (
                   <img
                     src="/images/1before.jpeg"
-                    alt="לפני הטיפול"
+                    alt="לפני טיפול פנים - מצב העור לפני הטיפול בקליניקת Alin Cosmetics"
                     className="w-full h-auto"
                     loading="eager"
                   />

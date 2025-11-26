@@ -63,7 +63,7 @@ export default function TreatmentsPage() {
                     {treatment.image && (
                       <Image
                         src={treatment.image}
-                        alt={treatment.title}
+                        alt={treatment.alt}
                         fill
                         loading={index === 0 ? "eager" : "lazy"}
                         priority={index === 0}
@@ -157,6 +157,7 @@ const treatments = [
     ],
     suitable: "עור שמני, מעורב, נוטה לפצעונים ודלקות",
     image: "/images/2.png",
+    alt: "טיפול אקנה מקצועי - ניקוי עמוק ואיזון העור בקריית ים",
   },
   {
     title: "רוזציאה",
@@ -170,6 +171,7 @@ const treatments = [
     ],
     suitable: "עור רגיש, רוזציאה, אדמומיות כרונית, עור מגרה",
     image: "/images/roza.jpeg",
+    alt: "טיפול רוזציאה - הרגעת עור רגיש והפחתת אדמומיות",
   },
   {
     title: "צלקות וכתמים",
@@ -183,6 +185,7 @@ const treatments = [
     ],
     suitable: "צלקות, פוסט אקנה, כתמים, מרקם לא אחיד",
     image: "/images/postakna.jpeg",
+    alt: "טיפול צלקות וכתמי אקנה - שיפור מרקם העור",
   },
   {
     title: "אנטי אייג'ינג",
@@ -196,6 +199,7 @@ const treatments = [
     ],
     suitable: "עור בוגר, יבש, עור עם קמטים וסימני הזדקנות",
     image: "/images/anti.jpeg",
+    alt: "טיפול אנטי אייג'ינג - מיצוק והצערת העור בקריות",
   },
   {
     title: "מיקרונידלינג מבוקר",
@@ -209,6 +213,7 @@ const treatments = [
     ],
     suitable: "צלקות, נקבוביות מורחבות, מרקם לא אחיד, עור עייף",
     image: "/images/microble.jpeg",
+    alt: "מיקרונידלינג מקצועי - חידוש העור וייצור קולגן",
   },
   {
     title: "פוטותרפיה",
@@ -222,6 +227,7 @@ const treatments = [
     ],
     suitable: "אקנה, אדמומיות, עור שמני, נזקי שמש",
     image: "/images/phototerapi.jpeg",
+    alt: "פוטותרפיה - טיפול באור לשיפור מרקם העור",
   },
   {
     title: "פיגמנטציה",
@@ -235,5 +241,6 @@ const treatments = [
     ],
     suitable: "כתמי עור, מלזמה, היפרפיגמנטציה, כתמי שמש",
     image: "/images/pegment.jpeg",
+    alt: "טיפול פיגמנטציה - הבהרת כתמי עור וכתמי שמש",
   },
 ]

@@ -29,7 +29,7 @@ export default function HomePage() {
         <div className="absolute inset-0 z-0">
           <Image
             src="/images/main.jpeg"
-            alt="Alin Cosmetics"
+            alt="אלין קוסמטיקס - קליניקת טיפולי פנים מקצועית בקריית ים"
             fill
             className="object-cover object-[55%_center] md:object-[70%_center]"
             priority
@@ -282,7 +282,7 @@ export default function HomePage() {
                     <div className="relative h-48 bg-cream-100 overflow-hidden">
                       <Image
                         src={treatment.image}
-                        alt={treatment.title}
+                        alt={treatment.alt}
                         fill
                         loading="lazy"
                         className="object-cover group-hover:scale-110 transition-transform duration-500"
@@ -496,36 +496,43 @@ const treatments = [
     title: "אקנה ועור מגורה",
     description: "נחזיר לעור שלך שקט וברק. טיפול שמנקה ומאזן בעדינות, בלי לגרות את העור.",
     image: "/images/2.png",
+    alt: "טיפול פנים לאקנה ועור מגורה - ניקוי עמוק בקריית ים",
   },
   {
     title: "רוזציאה ואדמומיות",
     description: "רוגע אמיתי לעור רגיש. טיפול שמפחית אדמומיות ומחזיר ביטחון ונוחות יומיומית.",
     image: "/images/roza.jpeg",
+    alt: "טיפול רוזציאה ואדמומיות - קוסמטיקאית מומחית לעור רגיש",
   },
   {
     title: "צלקות וכתמים",
     description: "בהירות חדשה לעור שלך. תהליך הדרגתי שמחזיר אחידות ומרקם חלק.",
     image: "/images/postakna.jpeg",
+    alt: "טיפול בצלקות אקנה וכתמי עור - תוצאות לפני ואחרי",
   },
   {
     title: "אנטי אייג'ינג עדין",
     description: "עור מוצק וזוהר בכל גיל. מיצוק עדין, החזרת לחות ושיפור מרקם העור בלי חומרים קיצוניים.",
     image: "/images/anti.jpeg",
+    alt: "טיפול אנטי אייג'ינג - מיצוק והצערת העור בקריות",
   },
   {
     title: "מיקרונידלינג מבוקר",
     description: "חידוש אמיתי לעור עייף וצלקתי. טיפול מתקדם עם יד עדינה ותוצאות נראות לעין.",
     image: "/images/microble.jpeg",
+    alt: "טיפול מיקרונידלינג מקצועי - חידוש העור בקריית ים",
   },
   {
     title: "פוטותרפיה",
     description: "אור מרפא לעור שלך. שיפור מרקם, הפחתת אדמומיות וטיפול יעיל באקנה.",
     image: "/images/phototerapi.jpeg",
+    alt: "טיפול פוטותרפיה - טיפול באור לשיפור מרקם העור",
   },
   {
     title: "פיגמנטציה",
     description: "גוון אחיד ובהיר יותר. טיפול ממוקד שמעניק לעור מראה צעיר ורענן.",
     image: "/images/pegment.jpeg",
+    alt: "טיפול פיגמנטציה וכתמי שמש - הבהרת העור בקריות",
   },
 ]
 

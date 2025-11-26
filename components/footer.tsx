@@ -72,12 +72,13 @@ export function Footer() {
               יצירת קשר
             </h3>
             <div className="flex flex-col gap-3">
+              <p className="text-sm font-semibold text-gray-800">Alin Cosmetics</p>
               <a
-                href="tel:0543175631"
+                href="tel:+972543175631"
                 className="flex items-center gap-2 text-sm text-gray-600 hover:text-gold-400 transition-colors"
               >
                 <Phone className="w-4 h-4" />
-                <span>054-3175631</span>
+                <span dir="ltr">+972-54-317-5631</span>
               </a>
               <div className="flex items-center gap-2 text-sm text-gray-600">
                 <MapPin className="w-4 h-4" />

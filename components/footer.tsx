@@ -140,7 +140,7 @@ export function Footer() {
             </a>
           </p>
           <p className="mt-1 text-xs text-gray-400">
-            רוצה אתר כזה + שיווק?{" "}
+            צריכה עזרה במסע שלך בדיגיטל?{" "}
             <a
               href="https://wa.me/972525813627"
               target="_blank"

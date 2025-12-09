@@ -150,6 +150,16 @@ export function Footer() {
               שלחי הודעה
             </a>
           </p>
+          <p className="mt-1 text-xs text-gray-400">
+            <a
+              href="https://danielromanov.com"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="hover:text-gold-400 transition-colors underline"
+            >
+              דירות למכירה בקריות
+            </a>
+          </p>
         </div>
       </div>
     </footer>
